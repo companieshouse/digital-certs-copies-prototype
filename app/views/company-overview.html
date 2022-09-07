@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageTitle %}
+  Order a certified document
+{% endblock %}
+
+
+{% block content %}
+
+  {% set overviewHtml %}
+  {% endset -%}
+
+  <h1 class="govuk-heading-l">JOHN LEWIS </h1>
+  <p class="govuk-body">Company number 00233462</p>
+
+  {{ govukButton({
+  text: "Follow this company"
+  }) }}
+
+  {{ govukButton({
+  text: "File for this company"
+  }) }}
+
+  {% set filingHistoryHtml %}
+
+
+
+  {% endset -%}
+
+  {% set peopleHtml %}
+  {% endset -%}
+
+  {% set viewallHtml %}
+
+  <h2 class="govuk-heading-l"> Company snapshot</h2>
+
+  {{ govukDetails({
+  summaryText: "What's included in the company snapshot",
+  html: "<p class='govuk-body'>The latest 100 entries for:</p>
+
+  <ul class='govuk-list govuk-list--bullet'>
+    <li>Filing history</li>
+    <li>Officers</li>
+    <li>Persons with significant control</li>
+    <li>Charges</li>
+    <li>Insolvency</li>
+    <li>Registers</li>
+  </ul>"
+}) }}
+
+  {{ govukButton({
+  text: "View company information snapshot",
+  classes: "govuk-button--secondary"
+  }) }}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-l"> Order a certificate</h2>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <p class='govuk-body'>Use this service to order a signed certificate of incorporation, which can include key details about the company and a statement of good standing. </p>
+
+      {{ govukDetails({
+        summaryText: "What you'll need",
+        html: "<p class='govuk-body'>To use the service, you'll need:</p>
+
+        <ul class='govuk-list govuk-list--bullet'>
+          <li>to choose the company information you want to be included on the certificate</li>
+          <li> the address you want the certificate to be delivered to (UK or international)</li>
+          <li>a credit or debit card for payment</li>
+        </ul>"
+    }) }}
+
+    {{ govukButton({
+      text: "Order certificate",
+      classes: "govuk-button--secondary",
+      href:"order-a-certificate1-2"
+      }) }}
+
+    </div/>
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-l"> Order a certified document</h2>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <p class='govuk-body'>Use this service to order a certified copy of a document from a company's filing history. </p>
+
+      {{ govukDetails({
+      summaryText: "What you'll need",
+      html: "<p class='govuk-body'>To use the service, you'll need:</p>
+
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>to choose the document you want to be certified</li>
+        <li> the address you want the document to be delivered to (UK or international)</li>
+        <li>a credit or debit card for payment</li>
+      </ul>"
+      }) }}
+
+
+  {{ govukButton({
+  text: "Order certified document",
+  classes: "govuk-button--secondary",
+  href:"order-certified-document"
+  }) }}
+  {% endset -%}
+
+
+  {{ govukTabs({
+  items: [
+    {
+      label: "Overview",
+      id: "overview",
+      panel: {
+        html: overviewHtml
+      }
+    },
+    {
+      label: "Filing History",
+      id: "filing-history",
+      panel: {
+        html: filingHistoryHtml
+      }
+    },
+    {
+      label: "People",
+      id: "people",
+      panel: {
+        html: peopleHtml
+      }
+    },
+    {
+      label: "Charges",
+      id: "charges",
+      panel: {
+        html: peopleHtml
+      }
+    },
+    {
+      label: "Insolvency",
+      id: "insolvency",
+      panel: {
+        html: peopleHtml
+      }
+    },
+    {
+      label: "More",
+      id: "view-all",
+      panel: {
+        html: viewallHtml
+      }
+    }
+  ]
+}) }}
+
+{% endblock %}

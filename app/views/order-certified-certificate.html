@@ -1,0 +1,79 @@
+<!-- copied from order certified doc, change to make order certificate -->
+{% extends "layout.html" %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Order a certificate
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/#view-all"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/order-certified-document" method="post">
+      <h1 class="govuk-heading-xl">Order a certificate</h1>
+
+      <p class="govuk-body-l">Use this service to order a signed certificate of incorporation for a company, including all company name changes. </p>
+
+      <p class="govuk-body">You can add certain information to the certificate, including:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>a statement of good standing</li>
+          <li>registered office address</li>
+          <li>directors</li>
+          <li>secretaries</li>
+          <li>company objects</li>
+        </ul>
+
+        <div class="govuk-inset-text">
+          This certificate is different to the incorporation documents that were issued when the company was formed. Copies of these can be ordered through the <a href="order-certified-document" class="govuk-link">Order a certified document service</a>.
+        </div>
+
+  <!--      <h2 class="govuk-heading-s">Ordering incorporation documents</h2>
+
+        <p class="govuk-body">Orders for incorporation documents consist of only the memorandum and articles. If these are not available, we will include IN01 or an equivalent documents instead.</p>
+
+
+          <p class="govuk-body">You cannot use this service to order:</p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>a copy of the certificate of incorporation that was issued when the company was formed. It can only be ordered by calling Companies House on 0303 1234 500.</li>
+            <li> a certificate that confirms company details and can include a statement of good standing (also known as a certificate of good standing). For this, you'll need to use our <a href="#" class="govuk-link">Order a certificate service</a>.</li>
+          </ul> -->
+
+
+
+        <p class="govuk-body">Ordering a certified document takes around 5 minutes.</p>
+
+        {{ govukButton({
+          text: "Start now",
+          classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+          isStartButton: true
+        }) }}
+
+        <h2 class="govuk-heading-m">Fee</h2>
+
+  <p class="govuk-body">Certificates cost:</p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>£15 for standard dispatch to a UK or international address. We will aim to dispatch the certificate within 10 working days</li>
+    <li>£50 for express dispatch to a UK or international address. Orders received before 11am will be dispatched the next working day</li>
+  </ul>
+        <p class="govuk-body">The express dispatch option can include an email copy of the certificate. This will be sent to the email address used to place the order.</p>
+
+        <p class="govuk-body">You can pay by debit or credit card. You cannot pay using a Companies House account.</p>
+
+    
+
+
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
