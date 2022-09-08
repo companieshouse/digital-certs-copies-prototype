@@ -1,0 +1,252 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Check your order details
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "delivery-address-name"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+        <form action="" method="post">
+
+            <h1 class="govuk-heading-xl">Check your certificate</h1>
+
+
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                      Company name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      THE GIRLS&#39; DAY SCHOOL TRUST
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> company name</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Company number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      00006400
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> company number</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Certificate type
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Incorporation with all company name changes
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> certificate type</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Statement of good standing
+                    </dt>
+                    <dd class="govuk-summary-list__value statementOfGoodStanding">
+                      Yes
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> statement of good standing</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Registered office address
+                    </dt>
+                    <dd class="govuk-summary-list__value registeredOfficeAddress">
+                      Current address
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> Registered office address</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      The names of all current company directors
+                    </dt>
+                    <dd class="govuk-summary-list__value currentCompanyDirectorsNames">
+                      No
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> current company directors names</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      The names of all current secretaries
+                    </dt>
+                    <dd class="govuk-summary-list__value currentSecretariesNames">
+                      No
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> current secretaries names</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Company objects
+                    </dt>
+                    <dd class="govuk-summary-list__value companyObjects">
+                      No
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> company objects</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key govuk-!-width-one-half">
+                      Delivery method
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Standard
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> delivery method</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Email copy required
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Email only available for express delivery method
+                    </dd>
+
+                      <dd class="govuk-summary-list__actions">
+
+                          <a class="govuk-link" href="">
+                            <span class="govuk-visually-hidden"> email copy required</span>
+                            </a>
+
+                      </dd>
+
+                  </div>
+
+
+            </dl>
+
+
+
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Change your certificate",
+                href:""
+              }) }}
+
+              {{ govukButton({
+                text: "Return to your basket",
+                classes: "govuk-button--secondary",
+                href:"basket-items.html"
+              }) }}
+            </div>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

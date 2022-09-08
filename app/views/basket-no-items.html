@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your basket -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "delivery-address-name"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form action="/payment-review" method="post">
+
+            <h1 class="govuk-heading-xl">Your basket</h1>
+
+
+
+
+
+
+          <p class="govuk-body">Your basket is empty, find a company to start ordering. </p>
+
+
+            {{ govukButton({
+              text: "Find a company",
+              href:""
+            }) }}
+
+
+
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

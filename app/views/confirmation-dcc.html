@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+
+{% block beforeContent %}
+ {{ govukBackLink({
+    text: "Back to search",
+    href: "start"
+  }) }}
+{% endblock %}
+
+{% block pageTitle %}
+   Order received
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Order received",
+        html: "Your order reference number<br><strong>ORD-168827-927371</strong>"
+      }) }}
+
+      <h1 class="govuk-heading-m">What happens next</h1>
+      <p class="govuk-body">Express orders received before 11am will be dispatched the same day. Orders received after 11am will be dispatched the next working day. we aim to dispatch standard delivery items within 10 working days.</p>
+
+      {{ govukInsetText({
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>You will not be sent an email confirmation of this order.</p>
+
+        <ul class='govuk-list'>
+        <li>
+          <img src='/public/images/print-icon.png'  alt='Print icon'/>
+          <a class='govuk-link' href='javascript:window.print()'>
+            Print your order confirmation
+          </a>
+        </li>
+      </ul>"
+
+      }) }}
+
+      <h2 class="govuk-heading-m">Delivery details</h2>
+
+            {{ govukSummaryList({
+              classes: 'govuk-!-margin-bottom-9',
+              rows: [
+                {
+                  key: {
+                    text: "Delivery address"
+                  },
+                  value: {
+                    html: "Mr Jamies Hanson </br> 48 Tonna Road </br> Barry </br> CF45 8YG"
+                  }
+                }
+              ]
+            }) }}
+
+
+      <h2 class="govuk-heading-m">Your payment details</h2>
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Amount paid",
+                  classes: 'govuk-!-width-one-half'
+                },
+                value: {
+                  text: "£50",
+                  classes: 'govuk-!-width-one-half'
+                }
+              },
+              {
+                key: {
+                  text: "Payment reference"
+                },
+                value: {
+                  text: "RS5VSN6DRE"
+                }
+              },
+              {
+                key: {
+                  text: "Date and time of payment"
+                },
+                value: {
+                  html: "11 March 2020 – 10:56:14"
+                }
+              }
+            ]
+          }) }}
+
+        <h2 class="govuk-heading-m">How to contact us</h2>
+          <p class="govuk-body">Email <a href="mailto:enquiries@companieshouse.gov.uk" class="govuk-link">enquiries@companieshouse.gov.uk</a> if you have questions about your order.</p>
+          <p>Include your order reference number when you contact us. </p>
+
+        </div>
+  </div>
+{% endblock %}

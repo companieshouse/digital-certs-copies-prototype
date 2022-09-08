@@ -1,0 +1,298 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your basket -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "delivery-address-name"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form action="/payment-review" method="post">
+
+            <h1 class="govuk-heading-xl">Your basket</h1>
+
+            <h2 class="govuk-heading-m">Missing image requests</h2>
+
+
+            {{ govukTable({
+              caption: "",
+
+
+              head: [
+                {
+                  html: "Date filed"
+
+                },
+                {
+                  html: "Document type"
+
+                },
+                {
+                  html: "Description"
+
+                },
+                {
+                  html: "Company number"
+                },
+
+                {
+                  html: "Fee"
+                },
+                {
+                html: '<span class="govuk-visually-hidden">Remove</span>'
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    text: "7 July 2022"
+                  },
+                  {
+                    text: "AA"
+                  },
+                  {
+                  html: "Accounts for 'small' co. Made up to 25/07/94."
+                  },
+                  {
+                    text:"12889207"
+                  },
+                  {
+                    text:"£3"
+                  },
+                  {
+                    html:'<a href="javascript:void(0)">Remove <span class="govuk-visually-hidden">accounts for small co. Made up to 25/07/94</span></a>'
+                  }
+                ]
+              ]
+          }) }}
+
+    </div>
+
+      <div class="govuk-grid-column-two-thirds">
+      <p>It can take us several hours to check the availability of a document. We will aim to add it to the company's filing history the same day if you submit your request before 3pm, Monday to Friday (excluding bank holidays).</p>
+      <p>If you submit your request after 3pm or at the weekend, we will add the document the next working day.</p>
+    </div>
+<div class="govuk-grid-column-full">
+
+<h2 class="govuk-heading-m govuk-!-margin-top-9">Items for delivery</h2>
+<h2 class="govuk-heading-m">Certified documents</h2>
+
+        {{ govukTable({
+          caption: "",
+
+
+          head: [
+          {
+            html: "Date filed",
+            classes: 'govuk-!-width-one-quarter'
+          },
+          {
+            html: "Document type",
+            classes: 'govuk-!-width-half'
+          },
+            {
+              html: "Description",
+              classes: 'govuk-!-width-one-quarter'
+            },
+            {
+              html: "Company number"
+            },
+
+            {
+              html: "Delivery method"
+            },
+            {
+              html: "Fee"
+            },
+            {
+              html: '<span class="govuk-visually-hidden">Remove</span>'
+            }
+
+          ],
+          rows: [
+            [
+            {
+              text: "7 Jul 1987"
+            },
+              {
+                text: "AA"
+              },
+              {
+              html: "Accounts made for 'small' co. Made up to 31/03/87"
+              },
+              {
+                text:"12889207"
+              },
+              {
+                text:"Standard"
+              },
+              {
+                text:"£15"
+              },
+
+              {
+                html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">accounts for small co. Made up to 31/03/87</span></a>'
+              }
+            ],
+            [
+            {
+              text: "17 Dec 1995"
+            },
+              {
+                text: "AA"
+              },
+              {
+              html: "Accounts made for 'small' co. Made up to 30/11/1995"
+              },
+              {
+                text:"00006400"
+              },
+              {
+                text:"Standard"
+              },
+              {
+                text:"£15"
+              },
+
+              {
+                html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">accounts for small co. Made up to 30/11/95</span></a>'
+              }
+            ]
+          ]
+      }) }}
+      <h2 class="govuk-heading-m">Certified certificates</h2>
+
+              {{ govukTable({
+                caption: "",
+
+
+                head: [
+                {
+                  html: "Certificate type"
+                },
+                {
+                  html: "Company number"
+                },
+                  {
+                    html: "Delivery method"
+                  },
+                  {
+                    html: "Fee"
+                  },
+                  {
+                    html: '<span class="govuk-visually-hidden">View or change</span>'
+
+                  },
+                  {
+                    html: '<span class="govuk-visually-hidden">Remove</span>'
+
+                  }
+
+                ],
+                rows: [
+                  [
+                  {
+                    text: "Dissolution with all company name changes"
+                  },
+                    {
+                      text: "12889207"
+                    },
+                    {
+                    html: "Standard"
+                    },
+                    {
+                      text:"£15"
+                    },
+                    {
+                      html:'<a href="javascript:void(0)">View or change <span class="govuk-visually-hidden">Certificate options - Dissolution with all company name changes - 12889207</span></a>'
+                    },
+                    {
+                      html:'<a href="javascript:void(0)">Remove <span class="govuk-visually-hidden">Dissolution with all company name changes - 12889207</span></a>'
+                    }
+                  ]
+                ]
+            }) }}
+</div>
+
+<div class="govuk-grid-column-two-thirds">
+<h2 class="govuk-heading-m">Delivery details</h2>
+
+
+
+            {{ govukSummaryList({
+              classes: 'govuk-!-margin-bottom-9',
+              rows: [
+                {
+                  key: {
+                    text: "Address"
+                  },
+                  value: {
+                    text: "64 Zoo Lane, London, W1 2OO"
+                  },
+                  actions: {
+                    items: [
+                    {
+                      href: "#",
+                      text: "Change",
+                      visuallyHiddenText: "address"
+                    }
+                    ]
+                  }
+                }
+
+            ]
+          }) }}
+        </div>
+          <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body">For standard delivery we aim to send your items within 10 working days.</p>
+<!-- This should only be shown if there are standard delivery items in the basket - dynamic -->
+<p class="govuk-body">If we recieve your order with express delivery before 11am we will send your items the same day. Express orders recieved after 11am will be sent the next working day. </p>
+<!-- This should only be shown if there are express delivery items in the basket - dynamic -->
+          </div>
+<div class="govuk-grid-column-full">
+  <h2 class="govuk-heading-l">Total £48</h2>
+
+
+
+
+            <!--  <p class="govuk-body">To select a different document, <a href='/filter-document-list' class='govuk-body govuk-link'>start the order again</a>. </p>-->
+
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue to payment",
+                href:"https://products.payments.service.gov.uk/pay/b14267b9d0084cc3be7027bd71eac8b6"
+              }) }}
+
+              {{ govukButton({
+                text: "Add another document",
+                classes: "govuk-button--secondary"
+              }) }}
+            </div>
+</div>
+
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+{% endblock %}
