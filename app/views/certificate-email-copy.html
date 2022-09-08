@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose certificate information
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "CHS-signin"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Would you like an email copy of the certificate?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="certificate-email-copy" name="certificate-email-copy" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="certificate-email-copy">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="certificate-email-copy-2" name="certificate-email-copy" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="certificate-email-copy-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+<br>
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+</div>
+
+</div>
+{% endblock %}
