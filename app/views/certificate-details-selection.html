@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose certificate information
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "CHS-signin"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/certificate-details-incorporation" method="post">
+
+        {{ govukCheckboxes({
+            idPrefix: "more-info",
+            name: "more-info",
+            fieldset: {
+            legend: {
+            text: "What information would you like to be included on the certificate?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            value: "good-standing",
+            text: "Statement of good standing",
+            hint: {
+        text: "A statement that the company is in good standing (not added if the company is not in good standing)."
+        }
+        },
+        {
+              value: "registered-office",
+              text: "Registered office address",
+              hint: {
+          text: "This can include current and previous addresses. No dates are included."
+        }
+        },
+          {
+              value: "directors",
+              text: "Directors",
+              hint: {
+          text: "Details of all current directors."
+        }
+        },
+          {
+              value: "secretaries",
+              text: "Secretaries",
+              hint: {
+          text: "Details of all current secretaries."
+        }
+        },
+            {
+              value: "company-objects",
+              text: "Company objects",
+              hint: {
+          text: "Summary of company objects."
+        }
+        }
+        ]
+        }) }}
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+  </form>
+<!-- cannot get this to appear! <p class="govuk-body">Jump to <a href="#" class="govuk-link">HTML example</a>.</p> -->
+</div>
+
+</div>
+
+{% endblock %}

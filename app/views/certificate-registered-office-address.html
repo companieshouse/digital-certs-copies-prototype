@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose certificate information
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "CHS-signin"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What registered office address information do you need?
+      </h1>
+      <!-- can't get this spacing or colour right -->
+      <body>
+      <p style=$govuk-secondary-text-colour: govuk-colour("dark-grey", $legacy: "grey-1");>No dates will be included on your certificate</p>
+    </body>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="what-registered-office-address-do-you-need" name="what-registered-office-address-do-you-need" type="radio" value="current-address">
+        <label class="govuk-label govuk-radios__label" for="what-registered-office-address-do-you-need">
+          Current address
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="what-registered-office-address-do-you-need-2" name="what-registered-office-address-do-you-need" type="radio" value="current-address-and-one-previous">
+        <label class="govuk-label govuk-radios__label" for="what-registered-office-address-do-you-need-2">
+          Current address and the one previous
+        </label>
+      </div>
+    </div>
+  </fieldset>
+<br>
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</div>
+
+</div>
+{% endblock %}
