@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/user-bar.html" %}
   {{ govukBackLink({
     text: "Back",
     href: "/#view-all"
@@ -23,7 +24,7 @@
     This order will be for THE GIRLS' DAY SCHOOL TRUST (00006400).
 
   </p>
-  <p class="govuk-body"> If you want to order a certificate for a different company, you will need to <a class="govuk-notification-banner__link" href="#">search for the company on the register,</a> then use the 'More' tab on the company page to re-enter this service.</p> 
+  <p class="govuk-body"> If you want to order a certificate for a different company, you will need to <a class="govuk-notification-banner__link" href="#">search for the company on the register,</a> then use the 'More' tab on the company page to re-enter this service.</p>
 {% endset %}
 
 {{ govukNotificationBanner({

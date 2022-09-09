@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/user-bar.html" %}
   {{ govukBackLink({
     text: "Back",
     href: "basket-items"

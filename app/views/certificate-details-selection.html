@@ -6,6 +6,7 @@ Choose certificate information
 
 {% set mainClasses = "govuk-main-wrapper--l" %}
 {% block beforeContent %}
+{% include "includes/user-bar.html" %}
   {{ govukBackLink({
     text: "Back",
     href: "order-certified-certificate"
