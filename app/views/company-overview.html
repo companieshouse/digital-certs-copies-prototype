@@ -5,17 +5,26 @@
 {% endset%}
 
 {% block pageTitle %}
-  Order a certified document
+  The Girls' Day School Trust
 {% endblock %}
 
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: ""
+  }) }}
+{% endblock %}
 
 {% block content %}
 
   {% set overviewHtml %}
   {% endset -%}
+  
+<p class="govuk-body"><a href="#" class="govuk-link">Advanced company search</a></p>
+  <h1 class="govuk-heading-l">THE GIRLS' DAY SCHOOL TRUST </h1>
+  <p class="govuk-body">Company number <strong>00006400</strong></p>
 
-  <h1 class="govuk-heading-l">JOHN LEWIS </h1>
-  <p class="govuk-body">Company number 00233462</p>
 
   {{ govukButton({
   text: "Follow this company"
