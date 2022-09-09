@@ -8,8 +8,9 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "filter-document-list"
+    href: "#"
   }) }}
+  <!-- need to have else if href to link back to either certs delivery options or docs delivery options -->
 {% endblock %}
 
 {% block content %}
@@ -190,7 +191,8 @@
               }) }}
 
           {{ govukButton({
-            text: "Add to basket"
+            text: "Add to basket",
+            href: "basket-items"
           }) }}
 
     {% endcall %}

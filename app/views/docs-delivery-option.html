@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose certificate information
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "filter-document-list"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Choose a delivery option
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-a-delivery-option" name="choose-a-delivery-option" type="radio" value="express-£50">
+        <label class="govuk-label govuk-radios__label" for="choose-a-delivery-option">
+          Express (£50)
+        </label>
+        <div id="choose-a-delivery-option-hint" class="govuk-hint govuk-radios__hint">
+          Orders received before 11am are dispatched the same day. Orders received after 11am will be dispatched the next working day.
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="choose-a-delivery-option-2" name="choose-a-delivery-option" type="radio" value="standard-£15">
+        <label class="govuk-label govuk-radios__label" for="choose-a-delivery-option-2">
+          Standard (£15)
+        </label>
+        <div id="choose-a-delivery-option-2-item-hint" class="govuk-hint govuk-radios__hint">
+          We will aim to dispatch the order within 10 working days.
+        </div>
+      </div>
+    </div>
+  </fieldset>
+<br>
+  {{ govukButton({
+    text: "Continue",
+    href: "delivery-details"
+  }) }}
+
+</div>
+
+</div>
+{% endblock %}

@@ -8,7 +8,7 @@ Choose certificate information
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "CHS-signin"
+    href: "certs-delivery-option"
   }) }}
 {% endblock %}
 
@@ -40,7 +40,7 @@ Choose certificate information
   {{ govukButton({
     text: "Continue"
   }) }}
-
+<!-- need to add if else href - link to delivery details if no email copy selected, link straight to basket if email selected -->
 </div>
 
 </div>
