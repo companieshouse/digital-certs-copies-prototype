@@ -39,7 +39,12 @@ ul#navigation {
 
 .searchfield {
   border: 10px solid #dee0e2;
+  margin-bottom: 10px;
+  .govuk-form-group {margin-bottom: 0;}
 }
+
+
+
 .company-search {
 margin-bottom: 0;
 }
