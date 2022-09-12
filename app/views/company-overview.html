@@ -20,6 +20,9 @@
 
   {% set overviewHtml %}
 
+
+
+
   <ul class='govuk-list'>
   <li>Registered office address</li>
   <li><strong>00006400</strong></li>
@@ -87,7 +90,19 @@
 
 
   {% endset -%}
-
+  <div class="searchfield">
+  {{ govukInput({
+    label: {
+      text: "Search",
+      classes: "govuk-visually-hidden",
+      isPageHeading: false
+    },
+    id: "ignore",
+    name: "ignore",
+    value: "Search for a company or officer",
+    classes: "company-search"
+  }) }}
+</div>
 <p class="govuk-body"><a href="#" class="govuk-link">Advanced company search</a></p>
   <h1 class="govuk-heading-l">THE GIRLS' DAY SCHOOL TRUST </h1>
   <p class="govuk-body">Company number <strong>00006400</strong></p>
