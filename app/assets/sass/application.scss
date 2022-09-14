@@ -25,7 +25,6 @@ ul#navigation {
   text-align: right;
   display: inline-block;
   float: right;
-
   li {
     display: inline;
     font-family: 'nta', Arial;
@@ -33,6 +32,11 @@ ul#navigation {
     overflow-wrap: break-word;
     a {margin-left: 0.9em;}
   }
+}
+
+
+.no-border-backlink {
+  border: none;
 }
 
 //Hacked styles for user bar (do not copy for live)
@@ -44,7 +48,3 @@ ul#navigation {
 }
 
 
-
-.company-search {
-margin-bottom: 0;
-}
