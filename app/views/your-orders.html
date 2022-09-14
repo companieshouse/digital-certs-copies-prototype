@@ -1,0 +1,94 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your orders -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/back-link.html" %}
+{% include "includes/user-bar.html" %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form action="/payment-review" method="post">
+
+            <h1 class="govuk-heading-xl">Your orders</h1>
+
+          <p class="govuk-body-l">Do we need content about order availability deadlines?</p>
+
+
+            {{ govukTable({
+              caption: "",
+
+
+              head: [
+                {
+                  html: "Date ordered"
+
+                },
+                {
+                  html: "Document type"
+
+                },
+                {
+                  html: "Description"
+
+                },
+                {
+                  html: "Company number"
+                },
+
+                {
+                  html: "Fee"
+                },
+                {
+                html: '<span class="govuk-visually-hidden">Download</span>'
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    text: "7 July 2022"
+                  },
+                  {
+                    text: "AA"
+                  },
+                  {
+                  html: "Accounts for 'small' co. Made up to 25/07/94."
+                  },
+                  {
+                    text:"12889207"
+                  },
+                  {
+                    text:"£3"
+                  },
+                  {
+                    html:'<a href="javascript:void(0)">Download <span class="govuk-visually-hidden">accounts for small co. Made up to 25/07/94</span></a>'
+                  }
+                ]
+              ]
+          }) }}
+
+    </div>
+
+
+
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+{% endblock %}
