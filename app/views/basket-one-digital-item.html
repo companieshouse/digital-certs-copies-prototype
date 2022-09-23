@@ -27,21 +27,23 @@
 
             <h1 class="govuk-heading-xl">Your basket</h1> 
 
-            <h2 class="govuk-heading-m">Certified documents</h2>
+
+            <span class="govuk-caption-xl">Certified documents</span>
+            <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
 
             {{ govukTable({
-              caption: "THE GIRLS DAY SCHOOL TRUST (00006400)",
+              caption: "",
 
               head: [
               {
-                html: "Date filed",
-                classes: 'govuk-!-width-one-quarter'
+                html: "Date filed"
               },
               {
                 html: "Document type"
               },
               {
-                html: "Description"
+                html: "Description",
+                classes: 'govuk-!-width-one-quarter'
               },
               {
                 html: "Dispatch method"
@@ -81,6 +83,8 @@
         </div>
       </div>
 
+
+
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
           <h2 class="govuk-heading-s">Delivery details</h2>
@@ -100,7 +104,7 @@
                       {
                         href: "#",
                         text: "Change",
-                        visuallyHiddenText: "address"
+                        visuallyHiddenText: "change"
                       }
                       ]
                     }
