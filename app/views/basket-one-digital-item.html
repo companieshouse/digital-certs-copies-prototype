@@ -1,0 +1,146 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your basket -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "delivery-details"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<form action="/payment-review" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+            <h1 class="govuk-heading-xl">Your basket</h1> 
+
+            <h2 class="govuk-heading-m">Certified documents</h2>
+
+            {{ govukTable({
+              caption: "THE GIRLS DAY SCHOOL TRUST (00006400)",
+
+              head: [
+              {
+                html: "Date filed",
+                classes: 'govuk-!-width-one-quarter'
+              },
+              {
+                html: "Document type"
+              },
+              {
+                html: "Description"
+              },
+              {
+                html: "Dispatch method"
+              },
+              {
+                html: "Fee"
+              },
+              {
+                html: '<span class="govuk-visually-hidden">Remove</span>'
+              }
+
+              ],
+              rows: [
+                [
+                {
+                  text: "7 Jul 1987"
+                },
+                  {
+                    text: "AA"
+                  },
+                  {
+                  html: "Accounts made for 'small' co. Made up to 31/03/87"
+                  },
+                  {
+                    text:"Standard"
+                  },
+                  {
+                    text:"£15"
+                  },
+
+                  {
+                    html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">accounts for small co. Made up to 31/03/87</span></a>'
+                  }
+                ]
+              ]
+          }) }}
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-s">Delivery details</h2>
+
+          {{ govukSummaryList({
+                classes: 'govuk-!-margin-bottom-9',
+                rows: [
+                  {
+                    key: {
+                      text: "Address"
+                    },
+                    value: {
+                      text: "64 Zoo Lane, London, W1 2OO"
+                    },
+                    actions: {
+                      items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "address"
+                      }
+                      ]
+                    }
+                  }
+
+              ]
+            }) }}
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+
+          <p class="govuk-body">For standard delivery we aim to send your items within 10 working days.</p>
+            <!-- This should only be shown if there are standard delivery items in the basket - dynamic -->
+            <p class="govuk-body">Express orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day. </p>
+            <!-- This should only be shown if there are express delivery items in the basket - dynamic -->
+
+                        <!--  <p class="govuk-body">To select a different document, <a href='/filter-document-list' class='govuk-body govuk-link'>start the order again</a>. </p>-->
+
+            <h4 class="govuk-heading-m">Total £48</h4>
+
+              <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue to payment",
+                href:"https://products.payments.service.gov.uk/pay/b14267b9d0084cc3be7027bd71eac8b6"
+              }) }}
+
+              {{ govukButton({
+                text: "Add another document",
+                classes: "govuk-button--secondary"
+              }) }}
+            </div>
+
+            <!--  <p class="govuk-body">To select a different document, <a href='/filter-document-list' class='govuk-body govuk-link'>start the order again</a>. </p>-->
+
+
+        </div>
+      </div>
+</form>
+
+
+{% endblock %}
