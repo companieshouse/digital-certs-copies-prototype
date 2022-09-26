@@ -27,106 +27,136 @@
 
             <h1 class="govuk-heading-xl">Your basket</h1>
 
-
-            <span class="govuk-caption-xl">Certified documents</span>
-            <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
-
-            {{ govukTable({
-              caption: "",
-
-              head: [
-              {
-                html: "Date filed"
-              },
-              {
-                html: "Document type"
-              },
-              {
-                html: "Description",
-                classes: 'govuk-!-width-one-quarter'
-              },
-              {
-                html: "Dispatch method"
-              },
-              {
-                html: "Fee"
-              },
-              {
-                html: '<span class="govuk-visually-hidden">Remove</span>'
-              }
-
-              ],
-              rows: [
-                [
-                {
-                  text: "7 Jul 1987"
-                },
-                  {
-                    text: "AA"
-                  },
-                  {
-                  html: "Accounts made for 'small' co. Made up to 31/03/87"
-                  },
-                  {
-                    text:"Standard"
-                  },
-                  {
-                    text:"£15"
-                  },
-
-                  {
-                    html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">accounts for small co. Made up to 31/03/87</span></a>'
-                  }
-                ]
-              ]
-          }) }}
-        </div>
-      </div>
-
-
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <h2 class="govuk-heading-s">Delivery details</h2>
-
-          {{ govukSummaryList({
-                classes: 'govuk-!-margin-bottom-9',
-                rows: [
-                  {
-                    key: {
-                      text: "Address"
-                    },
-                    value: {
-                      text: "64 Zoo Lane, London, W1 2OO"
-                    },
-                    actions: {
-                      items: [
-                      {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "change"
-                      }
-                      ]
-                    }
-                  }
-
-              ]
+            {{ govukButton({
+                text: "Add another document",
+                classes: "govuk-button--secondary"
             }) }}
-        </div>
-      </div>
+
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            <h2 class="govuk-heading-m">Certified documents</h2>
+
+             <div class="govuk-summary-card govuk-!-margin-bottom-4">
+                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">THE GIRLS DAY SCHOOL TRUST (00006400)</h3>
+                </div>
+
+                <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+                  {{ govukTable({
+                        caption: "",
+                        head: [
+                        {
+                          html: "Date filed"
+                        },
+                        {
+                          html: "Document type"
+                        },
+                        {
+                          html: "Description",
+                          classes: 'govuk-!-width-one-quarter'
+                        },
+                        {
+                          html: "Dispatch method"
+                        },
+                        {
+                          html: "Fee"
+                        },
+                        {
+                          html: '<span class="govuk-visually-hidden">Remove</span>'
+                        }
+
+                        ],
+                        rows: [
+                          [
+                          {
+                            text: "7 Jul 1987"
+                          },
+                            {
+                              text: "AA"
+                            },
+                            {
+                            html: "Accounts made for 'small' co. Made up to 31/03/87"
+                            },
+                            {
+                              text:"Digital"
+                            },
+                            {
+                              text:"£15"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">accounts for small co. Made up to 31/03/87</span></a>'
+                            }
+                          ]
+                        ]
+                    }) }}
+
+                    <p class="">
+                      <a href="#" class="govuk-link">Add another certified document</a>
+                      <a href="#" class="govuk-link govuk-!-margin-left-4">Add a certified certificate</a>
+                    </p>
+
+
+
+                  </div>
+
+                </div>
+
+
+
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-three-quarters">
+                  <h2 class="govuk-heading-m">Delivery details</h2>
+
+                  {{ govukSummaryList({
+                        classes: 'govuk-!-margin-bottom-9',
+                        rows: [
+                          {
+                            key: {
+                              text: "Address"
+                            },
+                            value: {
+                              text: "64 Zoo Lane, London, W1 2OO"
+                            },
+                            actions: {
+                              items: [
+                              {
+                                href: "#",
+                                text: "Change",
+                                visuallyHiddenText: "change"
+                              }
+                              ]
+                            }
+                          }
+
+                      ]
+                    }) }}
+                </div>
+              </div>
+
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
+
+          <!-- This should only be shown if there are digital items in the basket - dynamic -->
+
             <p class="govuk-body">Digital orders can take between 1 hour and x working days, depending on the information included. We’ll email to let you know when your order is ready to download from <a href="/your-orders">‘Your orders’</a>.</p>
-                  <!-- This should only be shown if there are digital delivery items in the basket - dynamic -->
+          
+          <!-- This should only be shown if there are standard delivery items in the basket - dynamic -->
           <p class="govuk-body">For standard delivery we aim to send your items within 10 working days.</p>
-            <!-- This should only be shown if there are standard delivery items in the basket - dynamic -->
-            <p class="govuk-body">Express orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day. </p>
-            <!-- This should only be shown if there are express delivery items in the basket - dynamic -->
 
-                        <!--  <p class="govuk-body">To select a different document, <a href='/filter-document-list' class='govuk-body govuk-link'>start the order again</a>. </p>-->
+          <!-- This should only be shown if there are express delivery items in the basket - dynamic -->
+          <p class="govuk-body">Express orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day. </p>
+          
 
-            <h4 class="govuk-heading-m">Total £48</h4>
+            <!--  <p class="govuk-body">To select a different document, <a href='/filter-document-list' class='govuk-body govuk-link'>start the order again</a>. </p>-->
+
+            <h4 class="govuk-heading-m">Total £15</h4>
 
               <div class="govuk-button-group">
               {{ govukButton({
@@ -134,10 +164,7 @@
                 href:"https://products.payments.service.gov.uk/pay/b14267b9d0084cc3be7027bd71eac8b6"
               }) }}
 
-              {{ govukButton({
-                text: "Add another document",
-                classes: "govuk-button--secondary"
-              }) }}
+              
             </div>
 
             <!--  <p class="govuk-body">To select a different document, <a href='/filter-document-list' class='govuk-body govuk-link'>start the order again</a>. </p>-->
