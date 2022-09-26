@@ -41,18 +41,30 @@ Choose certificate information
         value: "express",
         text: "Express (£50)",
         hint: {
-        text: "Orders received before 11am will be sent the same day. Orders received after 11am will be sent the next working day."
+        text: "Orders received before 11am will be sent the same day. Orders received after 11am will be sent the next working day. "
       }
       },
       {
         value: "standard",
         text: "Standard (£15)",
         hint: {
-        text: "We will aim to send the order within 10 working days.."
+        text: "We will aim to send the order within 10 working days."
       }
       }
     ]
   }) }}
+
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How will my order be sent?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <p>Standard UK orders are sent by Royal Mail 2nd Class post. Standard international orders are sent by Royal Mail International Standard post.</p>
+    <p>Express UK orders are sent by Royal Mail Signed For 1st Class post. Express international orders are sent by Royal Mail International Tracked post.</p>
+  </div>
+</details>
 
 <!-- <div class="govuk-grid-column-two-thirds-from-desktop">
   <fieldset class="govuk-fieldset">
