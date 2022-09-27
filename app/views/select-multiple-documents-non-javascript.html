@@ -1,0 +1,631 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add documents to order
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "CHS-signin"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Add documents to order</h1>
+
+  <span class="govuk-body govuk-!-font-size-36"><span class="govuk-!-font-weight-bold">JOHN LEWIS PLC </span></span></p>
+  <span class="govuk-body">Company number <span class="govuk-!-font-weight-bold">00233462</span></span>
+
+  <p class="govuk-!-margin-top-5">
+
+    {{ govukInsetText({
+        html: "<p class='govuk-body'> Select documents to add them to your order. </p>"
+      }) }}
+
+
+
+     {{ govukButton({
+              text: "Add documents to order",
+              href:"delivery-address-name"
+            }) }}
+  </p>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+ <div class="govuk-grid-column-full">
+
+
+  {{ govukTable({
+        caption: "",
+        head: [
+          {
+            text: "Select"
+          },
+          {
+            text: "Date filed",
+            classes: "no-wrap"
+          },
+          {
+            text: "Type",
+            classes: "document-type"
+          },
+          {
+            text: "Description"
+          },
+          {
+            text: "Fee"
+          }
+        ],
+        rows: [
+          [
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "10 Feb 2020",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AP01",
+     classes: 'document-type'
+   },
+   {
+     html: " <span class='govuk-body govuk-!-font-weight-bold'> Appointment </span> of Ms Sharon Michelle White as a director on 4 February 2020 <br> <span class='govuk-body-s'> Not currently available in the filing history. To request the document, add it to your order and we will try to include it.</span>"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "07 Feb 2020",
+     classes: 'no-wrap'
+   },
+   {
+     html: "TM01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Andrew Charles Mayfield as a director on 4 February 2020"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "31 Jan 2020",
+     classes: 'no-wrap'
+   },
+   {
+     html: "TM01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Paula Margaret Nickolds as a director on 23 January 2020"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "16 Aug 2019",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AA",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'>Group of companies' accounts </span> made up to 26 January 2019"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "15 Jul 2019",
+     classes: 'no-wrap'
+   },
+   {
+     html: "MR04",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'>Satisfaction of charge </span> 2 in full"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "15 Jul 2019",
+     classes: 'no-wrap'
+   },
+   {
+     html: "MR04",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'>Satisfaction of charge </span> 3 in full"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "15 Jul 2019",
+     classes: 'no-wrap'
+   },
+   {
+     html: "MR04",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'>Satisfaction of charge </span> 1 in full"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "05 Jul 2019",
+     classes: 'no-wrap'
+   },
+   {
+     html: "CS01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'>Confirmation statement </span>made on 27 June 2019 with updates"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "27 Jul 2018",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AA",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 27 January 2018"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "04 Jul 2018",
+     classes: 'no-wrap'
+   },
+   {
+     html: "CS01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'>Confirmation statement </span> made on 27 June 2018 with no updates"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "15 Feb 2018",
+     classes: 'no-wrap'
+   },
+   {
+     html: "TM02",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Keith Michael Hubber as a secretary on 31 January 2018"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "15 Feb 2018",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AP03",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Appointment </span> of Mr Peter Simpson as a secretary on 31 January 2018"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "10 Jul 2017",
+     classes: 'no-wrap'
+   },
+   {
+     html: "CS01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'>Confirmation statement </span> made on 27 June 2017 with updates"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "10 Jul 2017",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AD02",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Register inspection address </span> has been changed from Capita Registrars Limited 34 Beckenham Road Beckenham Kent BR3 4TU to 171 Victoria Street London SW1E 5NN"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "07 Jul 2017",
+     classes: 'no-wrap'
+   },
+   {
+     html: "PSC02",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Notification </span> of John Lewis Partnership Plc as a person with significant control on 6 April 2016"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "07 Jul 2017",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AD04",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Register(s) moved </span> to registered office address 171 Victoria Street London SW1E 5NN"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "29 Jun 2017",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AA",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "11 Jan 2017",
+     classes: 'no-wrap'
+   },
+   {
+     html: "AP01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Appointment </span> of Paula Margaret Nickolds as a director on 11 January 2017"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "25 Nov 2016",
+     classes: 'no-wrap'
+   },
+   {
+     html: "CH01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Director's details changed </span> for Mrs Berangere Michel on 1 September 2015"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "04 Nov 2016",
+     classes: 'no-wrap'
+   },
+   {
+     html: "SH19",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Statement of capital </span> on 4 November 2016 \nGBP 6,750,000.00"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "04 Nov 2016",
+     classes: 'no-wrap'
+   },
+   {
+     html: "CERT15",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Certificate of reduction of issued capital </span>"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "04 Nov 2016",
+     classes: 'no-wrap'
+   },
+   {
+     html: "OC138",
+     classes: 'document-type'
+   },
+   {
+     html: "Reduction of iss capital and minute (oc)"
+   },
+   {
+     text: "£15"
+   }
+],
+[
+  {
+     html: ' <div class="govuk-checkboxes govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" name="rowCheckBox" type="checkbox">
+                      <label class="govuk-label govuk-checkboxes__label">&nbsp</label></div></div>'
+              ,
+              classes: "no-wrap"
+   },
+   {
+     text: "01 Nov 2016",
+     classes: 'no-wrap'
+   },
+   {
+     html: "TM01",
+     classes: 'document-type'
+   },
+   {
+     html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Andrew John Street as a director on 28 October 2016"
+   },
+   {
+     text: "£15"
+   }
+]
+        ]
+      }) }}
+
+
+</div>
+<div class="pagination">
+  <a class="govuk-link" href="#"><span class="govuk-!-font-weight-bold">1</span></a>
+  <a class="govuk-link" href="#">2</a>
+  <a class="govuk-link" href="#">3</a>
+  <a class="govuk-link" href="#">Next</a>
+</div>
+
+
+
+{% endblock %}
