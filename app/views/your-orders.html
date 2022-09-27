@@ -24,6 +24,9 @@
             <h1 class="govuk-heading-xl">Your orders</h1>
 
           <p class="govuk-body-l">Do we need content about order availability deadlines?</p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+          <h2 class="govuk-heading-m">Certified documents</h2>
 
 
             {{ govukTable({
@@ -36,17 +39,22 @@
 
                 },
                 {
-                  html: "Document type"
-
-                },
-                {
-                  html: "Description"
-
+                  html: "Company name"
                 },
                 {
                   html: "Company number"
                 },
+                {
+                  html: "Document type"
 
+                },
+                {
+                  html: "Date filed"
+
+                },
+                {
+                  html: "Description"
+                },
                 {
                   html: "Fee"
                 },
@@ -61,13 +69,19 @@
                     text: "7 July 2022"
                   },
                   {
-                    text: "AA"
+                    text: "name "
                   },
                   {
-                  html: "Accounts for 'small' co. Made up to 25/07/94."
+                    text: "12889207"
                   },
                   {
-                    text:"12889207"
+                  html: "AA"
+                  },
+                  {
+                     text: "7 Jul 1987"
+                  },
+                  {
+                    text:"Accounts for 'small' co. Made up to 25/07/94."
                   },
                   {
                     text:"£3"
@@ -80,6 +94,9 @@
           }) }}
 
     </div>
+
+
+    <!--- add example of the grey table view here to review -->
 
 
 
