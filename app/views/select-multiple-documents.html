@@ -5,9 +5,10 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "includes/user-bar.html" %}
   {{ govukBackLink({
     text: "Back",
-    href: "CHS-signin"
+    href: "/#view-all"
   }) }}
 {% endblock %}
 
@@ -15,7 +16,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <form action="/filter-document-list" method="post">
+      <form action="/select-multiple-documents" method="post">
 
    <h1 class="govuk-heading-xl">Add documents to order</h1>
         
@@ -34,8 +35,8 @@
          }) }}
         {% endif %}
 
-        <span class="govuk-body govuk-!-font-size-36"><span class="govuk-!-font-weight-bold">JOHN LEWIS PLC </span></span></p>
-        <span class="govuk-body">Company number <span class="govuk-!-font-weight-bold">00233462</span></span>
+        <span class="govuk-body govuk-!-font-size-36"><span class="govuk-!-font-weight-bold"> THE GIRLS' DAY SCHOOL TRUST</span></span></p>
+        <span class="govuk-body">Company number <span class="govuk-!-font-weight-bold">00006400</span></span>
 
 
         <input type="hidden" name="selectedDocs" id="hiddenInput" />
@@ -49,8 +50,7 @@
        
 
             {{ govukButton({
-                    text: "Add documents to order",
-                    href: "docs-delivery-option"
+                    text: "Add documents to order"
             }) }}
        
 

@@ -5,6 +5,28 @@ const router = express.Router()
 
 
 
+// document selection page error message and routing
+router.post('/select-multiple-documents', function(req, res) {
+
+  var errors = [];
+    var noDocumentSelectedHasError = false;
+
+    if(req.session.data['selectedDocs'] == 0){
+        noDocumentSelectedHasError = true;
+  }
+
+  if(noDocumentSelectedHasError){
+    res.render('select-multiple-documents', {
+      errorNoDocumentSelected: noDocumentSelectedHasError
+        })
+  }
+  else
+  {
+    res.redirect('docs-delivery-option')
+  }
+
+}) 
+
 
 // Dispatch radio buttons routing
 
