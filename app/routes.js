@@ -34,7 +34,7 @@ router.post('/docs-delivery-option', function (req, res) {
 
     if(req.session.data['choose-dispatch-option'] == "digital"){
 
-      res.redirect('basket-one-digital-item')
+      res.redirect('basket-three-digital-items')
     }
     if(req.session.data['choose-dispatch-option'] == "express"){
 

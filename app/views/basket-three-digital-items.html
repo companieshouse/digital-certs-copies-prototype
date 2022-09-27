@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/user-bar.html" %}
+{% include "includes/user-bar-basket-items.html" %}
 
   {{ govukBackLink({
     text: "Back",
@@ -49,14 +49,15 @@
                         caption: "",
                         head: [
                         {
-                          html: "Date filed"
+                          html: "Date filed",
+                          class: "no-wrap"
                         },
                         {
                           html: "Document type"
                         },
                         {
                           html: "Description",
-                          classes: 'govuk-!-width-one-quarter'
+                          classes: 'govuk-!-width-one-third'
                         },
                         {
                           html: "Dispatch method"
@@ -70,6 +71,48 @@
 
                         ],
                         rows: [
+                          [
+                          {
+                            text: "04 Jul 2018"
+                          },
+                            {
+                              text: "CS01"
+                            },
+                            {
+                            html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
+                            },
+                            {
+                              text:"Digital"
+                            },
+                            {
+                              text:"£XX"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Confirmation statementmade on 27 June 2018 with no updates</span></a>'
+                            }
+                          ],
+                          [
+                          {
+                            text: "25 Nov 2016"
+                          },
+                            {
+                              text: "CH01"
+                            },
+                            {
+                            html: "<span class='govuk-body govuk-!-font-weight-bold'> Director's details changed </span> for Mrs Berangere Michel on 1 September 2015"
+                            },
+                            {
+                              text:"Digital"
+                            },
+                            {
+                              text:"£XX"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Director\'s details changed for Mrs Berangere Michel on 1 September 2015</span></a>'
+                            }
+                          ],
                           [
                           {
                             text: "7 Jul 1987"
@@ -91,12 +134,13 @@
                               html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">accounts for small co. Made up to 31/03/87</span></a>'
                             }
                           ]
+
                         ]
                     }) }}
 
                     <p class="">
                       <a href="select-multiple-documents" class="govuk-link">Add another certified document</a>
-                      <a href="#" class="govuk-link govuk-!-margin-left-4">Add a certified certificate</a>
+                      <a href="order-certified-certificate" class="govuk-link govuk-!-margin-left-4">Add a certified certificate</a>
                     </p>
 
 
