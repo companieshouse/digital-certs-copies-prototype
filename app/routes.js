@@ -34,16 +34,16 @@ router.post('/docs-delivery-option', function (req, res) {
 
     if(req.session.data['choose-dispatch-option'] == "digital"){
 
-      res.redirect('basket-three-digital-items')
+      res.redirect('basket/basket-one-digital-item')
     }
-    if(req.session.data['choose-dispatch-option'] == "express"){
+    else if(req.session.data['choose-dispatch-option'] == "paper"){
 
       res.redirect('delivery-details')
     }
-    else if(req.session.data['choose-dispatch-option'] == "standard"){
+    /* else if(req.session.data['choose-dispatch-option'] == "standard"){
 
       res.redirect('delivery-details')
-    }
+    } */
 })
 
 

@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
 {% block pageTitle %}
 Choose a dispatch option
@@ -19,8 +20,70 @@ Choose a dispatch option
   <div class="govuk-grid-column-two-thirds-from-desktop">
     <form action="/docs-delivery-option" method="post" novalidate>
 
+      {% set paperHtml %}
+      {{ govukRadios({
+          name: "choose-paper-option",
+          fieldset: {
+            legend: {
+              text: "Choose a paper document dispatch option",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "express",
+              text: "Express (£50)",
+              hint: {
+                text: "Orders received before 11am are sent out the same day. Orders received after 11am will be sent out the next working day. We send UK orders by Royal Mail 1st Class post and international orders by Royal Mail International post."
+              }
+            },
 
-    {{ govukRadios({
+            {
+              value: "standard",
+              text: "Standard (£15)",
+              hint: {
+              text: "We will aim to send out the order within 10 working days. We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail International post."
+            }
+            }
+          ]
+        }) }}
+      {% endset -%}
+
+      {{ govukCheckboxes({
+        name: "choose-dispatch-option",
+        fieldset: {
+          legend: {
+            text: "Choose a dispatch option",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Select all options that are relevant to you."
+        },
+        items: [
+          {
+            value: "digital",
+            text: "Digital (£XX)",
+            hint: {
+            text: "Your order will be available to download from 'Your orders' within 1 hour."
+          }
+          },
+          {
+            value: "paper",
+            text: "Paper",
+            conditional: {
+              html: paperHtml
+            }
+          }
+        ]
+      }) }}
+
+
+
+
+    <!-- {{ govukCheckboxes({
       name: "choose-dispatch-option",
       fieldset: {
         legend: {
@@ -28,6 +91,9 @@ Choose a dispatch option
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
+      },
+      hint: {
+        text: "Select all that apply."
       },
       items: [
         {
@@ -52,7 +118,7 @@ Choose a dispatch option
           }
         }
       ]
-    }) }}
+    }) }} -->
 
 
     {{ govukButton({
