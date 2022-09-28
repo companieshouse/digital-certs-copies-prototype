@@ -3,12 +3,75 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block content %}
+<div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Order confirmation
+  </h1>
+  <div class="govuk-panel__body">
+    Your reference number<br><strong>ORD-145116-625550</strong>
+  </div>
+</div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Confirmation email</h1>
+        <h2 class="govuk-heading-l">Your order summary</h2>
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Digital certified documents</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Item number</th>
+              <th scope="col" class="govuk-table__header">Date filed</th>
+              <th scope="col" class="govuk-table__header">Type</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header">Company number</th>
+              <th scope="col" class="govuk-table__header">Fee</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">MID-658716-625544</td>
+              <td class="govuk-table__cell">22 Aug 2002</td>
+              <td class="govuk-table__cell">288a</td>
+              <td class="govuk-table__cell">New director appointed</td>
+              <td class="govuk-table__cell">00006400</td>
+              <td class="govuk-table__cell">£XX</td>
+            </tr>
+
+          </tbody>
+        </table>
         <p class="govuk-body">
-          Add content.
+          We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others. <a href="/orders/your-orders-pending">Sign in to Companies House</a> to check the status of your order and download any digital items.
         </p>
+        <h3 class="govuk-heading-m">Delivery details</h3>
+        <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Sarah Philips
+    </dd>
+
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      72 Guild Street<br>London<br>SE23 6FH
+    </dd>
+
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">sarah.phillips@example.com</p>
+    </dd>
+
+  </div>
+</dl>
     </div>
   </div>
 {% endblock %}
