@@ -3,7 +3,7 @@
   Order a certificate
 {% endset%}
 {% block pageTitle %}
-Choose certificate information
+How many copies do you need?
 {% endblock %}
 
 {% set mainClasses = "govuk-main-wrapper--l" %}
@@ -21,11 +21,10 @@ Choose certificate information
       <form action="/certificate-additional-copies" method="post">
 
         {{ govukRadios({
-          classes:"govuk-radios--inline",
           name: "certs-additional-copies",
           fieldset: {
             legend: {
-              text: "Do you need additional copies?",
+              text: "How many copies do you need?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
@@ -35,12 +34,44 @@ Choose certificate information
           },
           items: [
             {
-              value: "yes-additional-copies",
-              text: "Yes"
+              value: "one",
+              text: "1"
             },
             {
-              value: "no-additional-copies",
-              text: "No"
+              value: "two",
+              text: "2"
+            },
+            {
+              value: "three",
+              text: "3"
+            },
+            {
+              value: "four",
+              text: "4"
+            },
+            {
+              value: "five",
+              text: "5"
+            },
+            {
+              value: "six",
+              text: "6"
+            },
+            {
+              value: "seven",
+              text: "7"
+            },
+            {
+              value: "eight",
+              text: "8"
+            },
+            {
+              value: "nine",
+              text: "9"
+            },
+            {
+              value: "ten",
+              text: "10"
             }
           ]
         }) }}

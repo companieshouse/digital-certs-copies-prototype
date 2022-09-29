@@ -1,77 +1,131 @@
 {% extends "layout.html" %}
 
 {% set mainClasses = "govuk-main-wrapper--l" %}
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
 
 {% block content %}
-<div class="govuk-panel govuk-panel--confirmation">
-  <h1 class="govuk-panel__title">
-    Order confirmation
-  </h1>
-  <div class="govuk-panel__body">
-    Your reference number<br><strong>ORD-145116-625550</strong>
-  </div>
-</div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Your order summary</h2>
-        <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m">Digital certified documents</caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Item number</th>
-              <th scope="col" class="govuk-table__header">Date filed</th>
-              <th scope="col" class="govuk-table__header">Type</th>
-              <th scope="col" class="govuk-table__header">Description</th>
-              <th scope="col" class="govuk-table__header">Company number</th>
-              <th scope="col" class="govuk-table__header">Fee</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">MID-658716-625544</td>
-              <td class="govuk-table__cell">22 Aug 2002</td>
-              <td class="govuk-table__cell">288a</td>
-              <td class="govuk-table__cell">New director appointed</td>
-              <td class="govuk-table__cell">00006400</td>
-              <td class="govuk-table__cell">£XX</td>
-            </tr>
+      {{ govukPanel({
+        titleText: "Order confirmation",
+        html: "Your reference number<br><strong>ORD-145116-625550</strong>"
+      }) }}
 
-          </tbody>
-        </table>
-        <p class="govuk-body">
+
+
+      <h1 class="govuk-heading-l">Your order summary</h1>
+
+        {{ govukTable({
+          caption: "",
+              head: [
+                {
+                  html: "Item number",
+                  class:no-wrap;
+                },
+                {
+                  html: "Date filed"
+                },
+                {
+                  html: "Type"
+                },
+                {
+                  html: "Description",
+                  classes: 'govuk-!-width-one-third'
+                },
+                {
+                  html: "Company number"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    html: "MID-658716-625544"
+                  },
+                  {
+                     text: "04 Jul 2018"
+                  },
+                  {
+                  html: "CS01"
+                  },
+                  {
+                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
+                  },
+                  {
+                    text: "00006400"
+                  },
+                  {
+                    text:"£XX"
+                  }
+                ],
+                [
+                  {
+                    html: "MID-658716-625546"
+                  },
+                  {
+                     text: "29 Jun 2017"
+                  },
+                  {
+                  html: "AA"
+                  },
+                  {
+                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
+                  },
+                  {
+                    text: "00006400"
+                  },
+                  {
+                    text:"£XX"
+                  }
+                ]
+              ]
+          }) }}
+        </strong>
+
+      <p class="govuk-body">
           We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others. <a href="/orders/your-orders-pending">Sign in to Companies House</a> to check the status of your order and download any digital items.
-        </p>
-        <h3 class="govuk-heading-m">Delivery details</h3>
-        <dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Sarah Philips
-    </dd>
+      </p>
 
-  </div>
+  
+      <h3 class="govuk-heading-m">Delivery details</h3>
+      <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Sarah Philips
+            </dd>
 
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Address
-    </dt>
-    <dd class="govuk-summary-list__value">
-      72 Guild Street<br>London<br>SE23 6FH
-    </dd>
+          </div>
 
-  </div>
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Email
-    </dt>
-    <dd class="govuk-summary-list__value">
-      <p class="govuk-body">sarah.phillips@example.com</p>
-    </dd>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              72 Guild Street<br>London<br>SE23 6FH
+            </dd>
 
-  </div>
-</dl>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">sarah.phillips@example.com</p>
+            </dd>
+
+          </div>
+        </dl>
     </div>
   </div>
+
 {% endblock %}
