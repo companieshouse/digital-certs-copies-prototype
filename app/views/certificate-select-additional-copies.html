@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% set serviceName %}
+  Order a certificate
+{% endset%}
+{% block pageTitle %}
+Choose certificate information
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "order-certified-certificate"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/certificate-additional-copies" method="post">
+
+        {{ govukRadios({
+          name: "certs-select-additional-copies",
+          fieldset: {
+            legend: {
+              text: "How many additional copies do you need?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "First copy is £XX and additional copies are £XX. You can order up to 10 additional copies."
+          },
+          items: [
+            {
+              value: "one",
+              text: "1"
+            },
+            {
+              value: "two",
+              text: "2"
+            },
+            {
+              value: "three",
+              text: "3"
+            },
+            {
+              value: "four",
+              text: "4"
+            },
+            {
+              value: "five",
+              text: "5"
+            },
+            {
+              value: "six",
+              text: "6"
+            },
+            {
+              value: "seven",
+              text: "7"
+            },
+            {
+              value: "eight",
+              text: "8"
+            },
+            {
+              value: "nine",
+              text: "9"
+            },
+            {
+              value: "ten",
+              text: "10"
+            }
+
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+  </form>
+
+</div>
+
+</div>
+
+{% endblock %}

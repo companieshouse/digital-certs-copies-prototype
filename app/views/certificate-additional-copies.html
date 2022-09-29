@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% set serviceName %}
+  Order a certificate
+{% endset%}
+{% block pageTitle %}
+Choose certificate information
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "order-certified-certificate"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="/certificate-additional-copies" method="post">
+
+        {{ govukRadios({
+          classes:"govuk-radios--inline",
+          name: "certs-additional-copies",
+          fieldset: {
+            legend: {
+              text: "Do you need additional copies?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "First copy is £XX and additional copies are £XX. You can order up to 10 additional copies."
+          },
+          items: [
+            {
+              value: "yes-additional-copies",
+              text: "Yes"
+            },
+            {
+              value: "no-additional-copies",
+              text: "No"
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+  </form>
+
+</div>
+
+</div>
+
+{% endblock %}
