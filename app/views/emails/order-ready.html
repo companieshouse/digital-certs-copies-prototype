@@ -11,13 +11,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukPanel({
-        titleText: "Order confirmation",
+        titleText: "Your digital order is ready",
         html: "Your reference number<br><strong>ORD-145116-625550</strong>"
       }) }}
 
+<p class="govuk-!-padding-top-5"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated">Sign in to your Companies House account</a> to download your digital items.</p>
+<p class="govuk-body">Digital items will be available to download for XX days.</p>
 
-
-      <h1 class="govuk-heading-l">Your order summary</h1>
+      <h1 class="govuk-heading-m">Your order summary</h1>
 
         {{ govukTable({
           caption: "",
@@ -87,44 +88,10 @@
                 ]
               ]
           }) }}
-        </strong>
+    <p class="govuk-body">Email <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> if you have questions about your order. Include your order reference number when you contact us.</p>
 
-      <p class="govuk-body">
-          We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others. <a href="/orders/your-orders-pending">Sign in to Companies House</a> to check the status of your order and download any digital items.
-      </p>
 
-  
-      <h3 class="govuk-heading-m">Delivery details</h3>
-      <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Sarah Philips
-            </dd>
 
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              72 Guild Street<br>London<br>SE23 6FH
-            </dd>
-
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body">sarah.phillips@example.com</p>
-            </dd>
-
-          </div>
-        </dl>
     </div>
   </div>
 

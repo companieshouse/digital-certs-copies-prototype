@@ -20,7 +20,7 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <form action="/remove-document" method="post">
 
-        <h1 class="govuk-heading-l">Are you sure you want to remove this document?</h1>
+        <h1 class="govuk-heading-l">Remove a document from your basket</h1>
 
 
          <dl class="govuk-summary-list">
@@ -64,14 +64,14 @@
               <p class="govuk-body">£15</p>
             </dd>
           </div>
-        </dl>   
+        </dl>
 
 
       {{ govukRadios({
         name: "remove-document",
         fieldset: {
           legend: {
-            text: "Are you sure?"
+            text: "Do you want to remove this document?"
           }
         },
         items: [

@@ -40,6 +40,9 @@
                   html: "Company number"
                 },
                 {
+                  html: "Dispatch method"
+                },
+                {
                   html: "Fee"
                 }
 
@@ -62,6 +65,9 @@
                     text: "00006400"
                   },
                   {
+                    text: "Digital"
+                  },
+                  {
                     text:"£XX"
                   }
                 ],
@@ -82,36 +88,33 @@
                     text: "00006400"
                   },
                   {
+                    text: "Standard"
+                  },
+                  {
                     text:"£XX"
                   }
                 ]
               ]
           }) }}
-        </strong>
+
 
       <p class="govuk-body">
-          We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others. <a href="/orders/your-orders-pending">Sign in to Companies House</a> to check the status of your order and download any digital items.
+          We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others. <a class="govuk-link govuk-link--no-visited-state" href="/orders/your-orders-pending">Sign in to Companies House</a> to check the status of your order and download any digital items.
       </p>
 
-  
+      <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post</a>.</p>
+
+
       <h3 class="govuk-heading-m">Delivery details</h3>
       <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Sarah Philips
-            </dd>
 
-          </div>
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Address
+              Delivery address
             </dt>
             <dd class="govuk-summary-list__value">
-              72 Guild Street<br>London<br>SE23 6FH
+              Sarah Philips<br>72 Guild Street<br>London<br>SE23 6FH
             </dd>
 
           </div>
@@ -125,6 +128,36 @@
 
           </div>
         </dl>
+
+        <h3 class="govuk-heading-m">Payment details</h3>
+        <dl class="govuk-summary-list">
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Amount paid
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £XX
+              </dd>
+
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Payment reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body">RS5VSN6DRE</p>
+              </dd>
+
+            </div>
+          </dl>
+          <p class="govuk-body"><a href="#">Sign in to view a more detailed summary of your order.</a></p>
+  <h3 class="govuk-heading-m">How to contact us</h3>
+  <p class="govuk-body">Email <a href="enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> if you have questions about your order.</p>
+
+  <p class="govuk-body">Include your order reference number when you contact us.
+</p>
     </div>
   </div>
 
