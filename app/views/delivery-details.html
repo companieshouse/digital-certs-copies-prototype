@@ -9,7 +9,7 @@
 {% include "includes/user-bar.html" %}
   {{ govukBackLink({
     text: "Back",
-    href: "#"
+    href: "javascript:history.back()"
   }) }}
   <!-- need to have else if href to link back to either certs delivery options or docs delivery options -->
 {% endblock %}
