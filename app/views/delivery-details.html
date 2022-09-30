@@ -17,7 +17,7 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/delivery-address-name" method="post">
+      <form action="/delivery-details" method="post">
         {% call govukFieldset({
           legend: {
             text: "What are the delivery details?",
@@ -192,8 +192,7 @@
               }) }}
 
           {{ govukButton({
-            text: "Add to basket",
-            href: "basket-items"
+            text: "Add to basket"
           }) }}
 
     {% endcall %}

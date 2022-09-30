@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Order a certified document
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/order-certified-document" method="post">
+      <h1 class="govuk-heading-xl">Payment screen</h1>
+
+        {{ govukButton({
+          text: "Continue",
+          href: "confirmation-dcc",
+          isStartButton: true
+        }) }}
+
+
+
+      </form>
+    </div>
+  </div>
+{% endblock %}

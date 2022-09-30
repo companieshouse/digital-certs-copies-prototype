@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/user-bar-basket-items.html" %}
+{% include "includes/user-bar-basket-three-items.html" %}
 
   {{ govukBackLink({
     text: "Back",
@@ -109,13 +109,13 @@
                           ],
                           [
                           {
-                            text: "29 Jun 2017"
+                            text: "04 Nov 2016"
                           },
                             {
-                              text: "AA"
+                              text: "SH19"
                             },
                             {
-                            html: "<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
+                            html: "<span class='govuk-body govuk-!-font-weight-bold'> Statement of capital </span> on 4 November 2016 GBP 6,750,000.00"
                             },
                             {
                               text:"Paper - Standard "
@@ -149,6 +149,40 @@
                 </div>
       </div>
     </div>
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+   
+    <h2 class="govuk-heading-m">Delivery details</h2>
+
+                  {{ govukSummaryList({
+                    classes: 'govuk-!-margin-bottom-9',
+                    rows: [
+                      {
+                        key: {
+                          text: "Address"
+                        },
+                        value: {
+                          text: "64 Zoo Lane, London, W1 2OO"
+                        },
+                        actions: {
+                          items: [
+                          {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "address"
+                          }
+                          ]
+                        }
+                      }
+
+                  ]
+                }) }}
+              </div>
+            </div>
+
+   
 
 
 

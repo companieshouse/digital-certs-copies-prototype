@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/user-bar-basket-items.html" %}
+{% include "includes/user-bar-basket-two-items.html" %}
 
   {{ govukBackLink({
     text: "Back",
@@ -145,7 +145,7 @@
 
         {{ govukButton({
             text: "Continue to payment",
-            href:"https://products.payments.service.gov.uk/pay/4bc32cbb602a4dc7957799cdc251b2c4"
+            href:"../payment"
         }) }}
 
 

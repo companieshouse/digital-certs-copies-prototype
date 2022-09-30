@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/user-bar-order-updated.html" %}
+{% include "includes/user-bar.html" %}
 {% include "includes/back-link.html" %}
 
 {% endblock %}
@@ -94,7 +94,7 @@
                     text:"£XX"
                   },
                   {
-                    html:'<a href="javascript:void(0)">Download <span class="govuk-visually-hidden"></span></a>'
+                    html:'<strong class="govuk-tag govuk-tag--blue">Pending </a>'
                   }
                 ],
                 [
@@ -120,11 +120,14 @@
                     text:"£XX"
                   },
                   {
-                    html:'<a href="javascript:void(0)">Download <span class="govuk-visually-hidden"></span></a>'
+                    html:'<strong class="govuk-tag govuk-tag--blue">Pending </a>'
                   }
                 ]
               ]
           }) }}
+
+          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-0">Deliery address: Add address here</p>
+
 
           <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-0">Payment reference: RS5VSN6DRE</p>
           <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-0">Fee: £XX</p>
