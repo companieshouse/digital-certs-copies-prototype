@@ -7,6 +7,10 @@
 
 {% from "govuk/components/panel/macro.njk" import govukPanel %}
 
+{% block pageTitle %}
+   Confirmation email -  Find and update company details - GOV.UK
+{% endblock %}
+
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -24,7 +28,10 @@
               head: [
                 {
                   html: "Item number",
-                  class:no-wrap;
+                  classes:no-wrap;
+                },
+                {
+                  html: "Company"
                 },
                 {
                   html: "Date filed"
@@ -35,9 +42,6 @@
                 {
                   html: "Description",
                   classes: 'govuk-!-width-one-third'
-                },
-                {
-                  html: "Company number"
                 },
                 {
                   html: "Dispatch method"
@@ -53,6 +57,9 @@
                     html: "MID-658716-625544"
                   },
                   {
+                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
+                  },
+                  {
                      text: "04 Jul 2018"
                   },
                   {
@@ -60,9 +67,6 @@
                   },
                   {
                     html:"<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
-                  },
-                  {
-                    text: "00006400"
                   },
                   {
                     text: "Digital"
@@ -76,6 +80,9 @@
                     html: "MID-658716-625546"
                   },
                   {
+                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
+                  },
+                  {
                      text: "29 Jun 2017"
                   },
                   {
@@ -83,9 +90,6 @@
                   },
                   {
                     html:"<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
-                  },
-                  {
-                    text: "00006400"
                   },
                   {
                     text: "Standard"
