@@ -40,7 +40,9 @@
 
 
                   {{ govukTable({
-                        caption: "",
+                        caption: "Certified documents for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                        captionClasses: "govuk-visually-hidden",
+                        classes: "govuk-!-margin-bottom-4",
                         head: [
                         {
                           html: "Date filed",
@@ -89,16 +91,16 @@
                         ]
                     }) }}
 
-                    <div class="govuk-button-group">
+                    <div class="govuk-button-group govuk-!-margin-bottom-0">
 
                       {{ govukButton({
                         text: "Add a certified document",
-                        classes: "govuk-button--secondary",
+                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
                         href:"../filter-document-list"
                       }) }}
                       {{ govukButton({
                         text: "Add a certified certificate",
-                        classes: "govuk-button--secondary",
+                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
                         href:"../order-certified-certificate"
                       }) }}
 
