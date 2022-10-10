@@ -5,7 +5,7 @@
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
         {{serviceName}}
         <span class="govuk-caption-xl">Version 1</span>
@@ -90,7 +90,7 @@
           <li>
             <a href="check-your-certificate">Check your certificate</a>
           </li>
-          <li>Need to add payment screens</li>
+          <li>GOV UK payment screen</li>
           <li>
             <a href="confirmation-dcc">Confirmation screen</a>
           </li>
@@ -164,20 +164,23 @@
           </ul>
 
 
-  <h4 class="govuk-heading-s">Certified certificate</h4>
+ <!-- <h4 class="govuk-heading-s">Certified certificate</h4>
 <ul class="govuk-list govuk-list--bullet">
             <li>
-              <a href="emails/appoint-submitted">Submitted</a>
+
+
+            
             </li>
 
-          </ul>
-          <h3 class="govuk-heading-s">Certified document</h3>
+          </ul> --> 
+
+          <h3 class="govuk-heading-m">Certified document</h3>
         <ul class="govuk-list govuk-list--bullet">
                     <li>
                       <a href="https://companieshouse.sharepoint.com/:w:/s/DigitalCertsCopies/EZjOrLk_Z19DnJOXgods0rAB6vfM3szkJAEyUvUN0s_H3g?e=gJwUBe" target="_blank">Cover sheet (opens in a new tab)</a>
                     </li>
                     <li>
-                      <a href="pdf/pdf-with-stamp" target="_blank">Certified document (opens in a new tab)</a>
+                      <a href="/public/certified-document/test-ad01-signed.pdf" alt="Certified document AD01 for SOLDATA LIMITED Company Number 02667726" width ="100% target="_blank";> Certified AD01 document</a>
                     </li>
 
                   </ul>
@@ -192,10 +195,10 @@
             <caption class="govuk-table__caption govuk-heading-l">Previous versions</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Version</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Tested on</th>
+                <th scope="col" class="govuk-table__header">Version</th>
+                <th scope="col" class="govuk-table__header ">Tested on</th>
                 <th scope="col" class="govuk-table__header govuk-!-width-one-third">Changes</th>
-                <th scope="col" class="govuk-table__header govuk-!-width-one-third">Status</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Status</th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -203,23 +206,71 @@
 
 
 
-            <!-- example of code for previous versions, commented out - use and adapt for dcc
+            <!-- example of code for previous versions, commented out - use and adapt for dcc -->
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
-                  <a href="https://directors-v5.herokuapp.com/">Version 5</a>
+                  <a href="https://">Version 1</a>
                 </th>
-                <td class="govuk-table__cell">22 March 2022</td>
+                <td class="govuk-table__cell"> <p style ="govuk-!-padding-bottom-5"> 4 October 2022 </p>
+
+                  {{ govukDetails({
+                      summaryText: "Summary of scenario",
+                      html: "Finding the service to order certified documents. <br> <br> Adding two digital documents and one paper document to their basket. Before proceeding with the order, one document is no longer needed in be ordered. <br> <br> Payment. Confirmation of the order and reviewing the process after ordering. Email indicating your order is ready and downloading documents.  "
+                    }) }}
+
+
+                  <p>  <br><br>  </p>
+                      
+
+                </td>
+
+
+
                 <td class="govuk-table__cell">
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                       <span class="govuk-details__summary-text">
-                        Changes included in version 5
+                        Changes included in version 1
                       </span>
                     </summary>
                     <div class="govuk-details__text">
+                      <p> Made changes to the following pages</p>
+                      <ul class="govuk-list--bulletlist">
+                        
+                        <li>
+                          <a href="docs-delivery-option">Choose a delivery option</a>
+                        </li>
+                        <li>
+                          <a href="basket/basket-one-digital-item">Your basket</a>
+                        </li>
+                        <li>
+                          <a href="remove-document">Remove a document from your basket</a>
+                        </li>
+                        <li>
+                          <a href="confirmation-dcc">Confirmation screen</a>
+                        </li>
+                        <li>
+                          <a href="orders/your-orders-pending">Your orders - pending (within account)</a>
+                        </li>
+                        <li>
+                          <a href="orders/your-orders-updated">Your orders - updated (within account)</a>
+                        </li>
+                        <li>
+                          <a href="basket/basket-no-items">Basket no items (within account)</a>
+                        </li>
+                      </ul>
+
+                      <p> Made changes to the following emails and documents </p>
+
                       <ul class="govuk-list--bulletlist">
                         <li>
-                        Here
+                          <a href="emails/confirmation-email">Confirmation email</a>
+                        </li>
+                        <li>
+                          <a href="emails/order-ready">Your order is ready</a>
+                        </li>
+                        <li>
+                          <a href="/public/certified-document/test-ad01-signed.pdf" alt="Certified document AD01 for SOLDATA LIMITED Company Number 02667726" width ="100% target="_blank";> Certified AD01 document</a>
                         </li>
                       </ul>
                     </div>
@@ -231,7 +282,7 @@
                   </strong>
                 </td>
               </tr>
-              <tr class="govuk-table__row">
+            <!--  <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
                   <a href="https://directors-v4.herokuapp.com/">Version 4</a>
                 </th>
