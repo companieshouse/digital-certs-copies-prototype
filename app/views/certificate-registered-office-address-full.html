@@ -19,7 +19,7 @@ Choose certificate information
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <form action="/certificate-registered-office-address" method="post">
+      <form action="/certificate-registereed-office-address" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -27,7 +27,7 @@ Choose certificate information
           name: "sign-in",
           fieldset: {
             legend: {
-              text: "What registered office address information do you need?",
+              text: "Choose from the full list of registered office addresses",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
@@ -43,6 +43,14 @@ Choose certificate information
             {
               value: "current-one-previous",
               text: "Current address and the one previous"
+            },
+            {
+              value: "current-two-previous",
+              text: "Current address and the two previous"
+            },
+            {
+              value: "all-addresses",
+              text: "All current and previous addresses"
             }
           ]
         }) }}
@@ -50,12 +58,8 @@ Choose certificate information
         {{ govukButton({
           text: "Continue"
         }) }}
-
-        <p class="govuk-body"> <a href="certificate-registered-office-address-full" class="govuk-link govuk-link--no-visited-state">I need additional address information</a> </p>
-
-</div>
-
-</div>
-</form>
+      </form>
+      <div>
+        
 </div>
 {% endblock %}

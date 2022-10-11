@@ -2,8 +2,64 @@ const express = require('express')
 const app = express()
 const router = express.Router()
 
-// Add your routes here - above the module.exports line
+// Add your routes here 
 
+////**** Routes for certified certificates
+
+
+router.post('/certificate-details-selection', function (req, res) {
+
+  res.redirect('certificate-registered-office-address')
+
+})
+
+router.post('/certificate-registered-office-address', function (req, res) {
+
+  res.redirect('certificate-director-selection')
+  
+})
+
+router.post('/certificate-registered-office-address', function (req, res) {
+
+  res.redirect('certificate-director-selection')
+  
+})
+
+router.post('/certificate-director-selection', function (req, res) {
+
+  res.redirect('certificate-secretary-selection')
+  
+})
+
+router.post('/certificate-secretary-selection', function (req, res) {
+
+  res.redirect('certs-delivery-option')
+  
+})
+
+
+
+
+router.post('/certs-delivery-option', function (req, res) {
+
+  res.redirect('certificate-email-copy')
+  
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////**** Routes for certified documents ****
 
 
 // document selection page error message and routing
