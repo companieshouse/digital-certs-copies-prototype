@@ -38,13 +38,93 @@ router.post('/certificate-secretary-selection', function (req, res) {
 })
 
 
-
-
 router.post('/certs-delivery-option', function (req, res) {
+
+  res.redirect('certificate-number-of-copies')
+  
+})
+
+router.post('/certificate-number-of-copies', function (req, res) {
 
   res.redirect('certificate-email-copy')
   
 })
+
+router.post('/certificate-email-copy', function (req, res) {
+
+  res.redirect('delivery-details')
+  
+})
+
+// Delivery details page is used for certs and certificates journey need to add routing to check journey
+router.post('/delivery-details', function(req, res) {
+
+  var errors = [];
+  var buildingStreetHasError = false;
+  var townCityHasError = false;
+  var postcodeHasError = false;
+  var firstNameHasError = false;
+  var lastNameHasError = false;
+  
+  if(req.session.data['first-name'] == ""){
+    firstNameHasError = true;
+    errors.push({text: "Enter your first name", href: "#first-name-error"});
+  }
+  
+  if(req.session.data['last-name'] == ""){
+        lastNameHasError = true;
+        errors.push({text: "Enter your last name", href: "#last-name-error"});
+  }
+
+  if(req.session.data['address-line-1'] == ""){
+    buildingStreetHasError = true;
+    errors.push({text: "Enter a building and street", href: "#building-street-error"});
+  }
+  
+  if(req.session.data['address-town'] == ""){
+        townCityHasError = true;
+        errors.push({text: "Enter a town or city", href: "#town-city-error"});
+  }
+
+  if(req.session.data['address-postcode'] == ""){
+        postcodeHasError = true;
+        errors.push({text: "Enter a postcode", href: "#postcode-error"});
+  }
+
+  if(buildingStreetHasError || townCityHasError || postcodeHasError){
+    res.render('delivery-details', {
+      errorFirstName: firstNameHasError,
+          errorLastName: lastNameHasError,
+          errorAddressLineOne: buildingStreetHasError,
+          errorTownCity: townCityHasError,
+          errorPostcode: postcodeHasError,
+          errorList: errors
+        })
+  }
+  else
+  {
+
+      res.redirect('basket/basket-mixed')
+    
+
+   /* if(app.settings.compType == 'incorporation')
+    {
+      res.redirect('check-details-incorporation')
+    }
+    else if(app.settings.compType == 'dissolved')
+    {
+      res.redirect('check-details-dissolved')
+    } */
+    
+  }
+})
+
+
+
+
+
+
+
 
 
 
