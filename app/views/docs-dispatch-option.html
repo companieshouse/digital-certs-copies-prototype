@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block pageTitle %}
+Choose a dispatch option -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "filter-document-list"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+    <form action="/docs-dispatch-option" method="post" novalidate>
+
+    {{ govukRadios({
+      name: "choose-paper-option",
+      fieldset: {
+        legend: {
+          text: "Choose a dispatch option",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "express",
+          text: "Express (£50)",
+          hint: {
+            text: "Orders received before 11am are sent out the same day. Orders received after 11am will be sent out the next working day. We send UK orders by Royal Mail 1st Class post and international orders by Royal Mail International post."
+          }
+        },
+        {
+          value: "standard",
+          text: "Standard (£15)",
+          hint: {
+            text: "We will aim to send out the order within 10 working days. We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail International post."
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+          text: "Continue"
+    }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
