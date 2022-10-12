@@ -31,13 +31,13 @@
                 <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-1 govuk-!-padding-right-3 govuk-!-padding-left-2">
                   <h2 class="govuk-heading-m govuk-!-font-weight-bold govuk-!-margin-0">ORD-168827-927371</h2>
 
-                  <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 </p>
-
-                  <p class="govuk-body">Delivery address: 64 Zoo Lane, London, W1 2000 </p>
+                  <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 2000</p>
 
                 </div>
 
-          <div class="govuk-!-padding-top-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+          <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-3  govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+          <h3 class="govuk-heading-m">Certified documents</h3>
           {{ govukTable({
               caption: "",
 
@@ -119,7 +119,8 @@
                 ],
                 [
                   {
-                    html: 'Payment reference:RS5VSN6DRE'
+                    html: 'Payment reference:RS5VSN6DRE',
+                    classes:'govuk-!-width-one-half'
                   },
                   {
                   html: ""
@@ -143,8 +144,6 @@
               ]
           }) }}
 
-         <!--- <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-0">Payment reference: RS5VSN6DRE</p>
-          <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-0">Fee: £XX</p> -->
 
         </div>
       </div>
