@@ -20,16 +20,17 @@
       }) }}
 
 
+      <p class="govuk-body">
+          We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others. <a class="govuk-link govuk-link--no-visited-state" href="/orders/your-orders-pending">Sign in to Companies House</a> to check the status of your order and download any digital items.
+      </p>
 
-      <h1 class="govuk-heading-l">Your order summary</h1>
+
+
+      <h2 class="govuk-heading-l">Your order summary</h2>
 
         {{ govukTable({
           caption: "",
               head: [
-                {
-                  html: "Item number",
-                  classes:"no-wrap"
-                },
                 {
                   html: "Company"
                 },
@@ -51,9 +52,6 @@
               rows: [
                 [
                   {
-                    html: "MID-658716-625544"
-                  },
-                  {
                     html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
                   },
                   {
@@ -70,9 +68,6 @@
                   }
                 ],
                 [
-                  {
-                    html: "MID-658716-625546"
-                  },
                   {
                     html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
                   },
@@ -93,9 +88,7 @@
           }) }}
 
 
-      <p class="govuk-body">
-          We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others. <a class="govuk-link govuk-link--no-visited-state" href="/orders/your-orders-pending">Sign in to Companies House</a> to check the status of your order and download any digital items.
-      </p>
+
 
      <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p>
 
@@ -124,7 +117,7 @@
           </div>
         </dl> -->
 
-        <h3 class="govuk-heading-m">Payment details</h3>
+        <h3 class="govuk-heading-m">Payment details</h2>
         <dl class="govuk-summary-list">
 
 
