@@ -19,27 +19,35 @@
 {% block content %}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-{% set html %}
-  <p class="govuk-notification-banner__heading">
-    This order will be for THE GIRLS' DAY SCHOOL TRUST (00006400).
-
-  </p>
-  <p class="govuk-body"> If you want to order a certificate for a different company, you will need to <a class="govuk-notification-banner__link" href="#">search for the company on the register,</a> then use the 'More' tab on the company page to re-enter this service.</p>
-  <p class="govuk-notification-banner__heading">
-    You can now order digital certified documents.
-
-  </p>
-  <p class="govuk-body">Some documents in this company's filing history may be available to order as a digital document.</p>
-
-{% endset %}
-
-{{ govukNotificationBanner({
-  html: html
-}) }}
-  <div class="govuk-grid-row">
+ <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form action="/order-certified-document" method="post">
+
+      {% set html %}
+        <p class="govuk-notification-banner__heading">You can now order digital certified documents.
+        </p>
+        <p class="govuk-body">Some documents in this company's filing history may be available to order as a digital document.</p>
+
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html
+      }) }}
+
+      <span class="govuk-caption-l">THE GIRLS' DAY SCHOOL TRUST</span>
+ 
       <h1 class="govuk-heading-xl">Order a certified document</h1>
+
+     <!--- {{ govukDetails({
+        summaryText: "If you want to order a certificate for a different company...",
+        text: "If you want to order a certificate for a different company..."
+      }) }}
+      -->
+
+      {{ govukInsetText({
+        html: 'If you want to order a certificate for a different company, you will need to <a class="govuk-notification-banner__link" href="#">search for the company on the register,</a> then use the \'More\' tab on the company page to re-enter this service.'
+      }) }}  
+
 
       <p class="govuk-body-l">Use this service to order a certified copy of a document in a company's filing history. </p>
 
