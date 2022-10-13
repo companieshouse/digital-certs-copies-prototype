@@ -104,17 +104,16 @@ router.post('/delivery-details', function(req, res) {
   else
   {
 
-      res.redirect('basket/basket-mixed')
-    
+/* Emma - need to check if they are on the certificates or certified docs journey */
 
-   /* if(app.settings.compType == 'incorporation')
+    if(app.settings.paperOption == 'standard')
     {
-      res.redirect('check-details-incorporation')
+      res.redirect('basket/basket-two-items')
     }
-    else if(app.settings.compType == 'dissolved')
+    else if(app.settings.paperOption == 'express')
     {
-      res.redirect('check-details-dissolved')
-    } */
+      res.redirect('basket/basket-three-items')
+    }
     
   }
 })
@@ -186,8 +185,24 @@ router.post('/docs-delivery-option', function (req, res) {
     }
     else if(req.session.data['choose-dispatch-option'] == "paper"){
 
+      res.redirect('/docs-dispatch-option')
 
-      if(req.session.data['choose-paper-option'] == "standard"){
+
+     /* if(req.session.data['choose-paper-option'] == "standard"){
+          app.set('paperOption','standard')
+          res.redirect('delivery-details')
+      }
+      else if(req.session.data['choose-paper-option'] == "express"){
+          app.set('paperOption','express')
+          res.redirect('delivery-details')
+      }   */   
+    }
+
+})
+
+router.post('/docs-dispatch-option', function (req, res) {
+
+   if(req.session.data['choose-paper-option'] == "standard"){
           app.set('paperOption','standard')
           res.redirect('delivery-details')
       }
@@ -195,7 +210,7 @@ router.post('/docs-delivery-option', function (req, res) {
           app.set('paperOption','express')
           res.redirect('delivery-details')
       }      
-    }
+
 
 })
 
@@ -203,7 +218,7 @@ router.post('/delivery-details', function (req, res) {
 
     if(app.settings.paperOption == 'standard')
     {
-      res.redirect('basket/basket-three-items')
+      res.redirect('basket/basket-two-items')
     }
     else if(app.settings.paperOption == 'express')
     {

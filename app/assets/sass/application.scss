@@ -59,4 +59,56 @@ ul#navigation {
     background: #f3f2f1;
   }
 
+// Adding a download icon
 
+
+.download-icon {
+  padding: 0.5em 0 0 2.1em;
+  background-image: url("/public/images/icon-file-download.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+// Styling download type and font-size
+
+
+.file-format-size {
+  display: block;
+  padding: 0.2em 0 0 2.2em;
+
+
+}
+
+
+// Styling call to action box on guidance to mirror GOV Whitehall styles
+
+
+.call-to-action {
+  margin: 2em 0;
+  background-color: #f3f2f1;
+  padding: 2em 2em 0.6em 2em;
+}
+
+
+// Styling email notification box to mirror GOV Whitehall styles
+
+
+.email-notification {
+  border: 1px solid #b1b4b6;
+  padding: 0.8em 1em 0.8em 1.8em;
+  display: inline-block;
+  background-image: url("/public/images/bell-icon.ico");
+  background-repeat: no-repeat;
+  background-size: 8%;
+  background-position: 3% 50%;
+}
+
+
+.print-notification {
+  background-image: url("/public/images/print-icon.png");
+  background-size: 12%;
+  background-position: 5% 50%;
+
+
+}
