@@ -29,6 +29,99 @@
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
+
+
+
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+<h2 class="govuk-heading-m">Missing image requests</h2>
+       <div class="govuk-summary-card govuk-!-margin-bottom-4">
+                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">THE GIRLS DAY SCHOOL TRUST (00006400)</h3>
+                </div>
+
+                <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+                  {{ govukTable({
+                       caption: "Missing image requests for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                      captionClasses: "govuk-visually-hidden",
+                       classes: "govuk-!-margin-bottom-4",
+                        head: [
+                        
+                        {
+                          html: "Date filed"
+                    
+                        },
+                        {
+                          html: "Document type"
+                        },
+                        {
+                          html: "Description"
+                        },
+                        {
+                          html: "Fee"
+                        },
+                        {
+                          html: '<span class="govuk-visually-hidden">Remove</span>'
+                        }
+
+                        ],
+                        rows: [
+                          [
+                          {
+                            text: "7 July 2022"
+                          },
+                            {
+                              text: "AA"
+                            },
+                            {
+                            text: "Accounts made for 'small' co. Made up to 25/07/94."
+                            },
+                        
+                            {
+                              text: "£XX"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Dissolution with all company name changes</span></a>'
+                            }
+                          ]
+                    
+                        ]
+                    }) }}
+<!--
+                    <div class="govuk-button-group govuk-!-margin-bottom-0">
+
+                      {{ govukButton({
+                        text: "Add a certified document",
+                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
+                        href:"../filter-document-list"
+                      }) }}
+                      {{ govukButton({
+                        text: "Add a certified certificate",
+                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
+                        href:"../order-certified-certificate"
+                      }) }}
+
+                    </div> -->
+
+                    <div class="govuk-button-group govuk-!-margin-bottom-0">
+                      <p class="govuk-body">It can take us several hours to check the availability of a document. We will aim to add it to the company's filing history the same day if you submit your request before 3pm, Monday to Friday (excluding bank holidays).</p>
+                      <p class="govuk-body">If you submit your request after 3pm or at the weekend, we will add the document the next working day.
+                    </div>
+                  </div>
+                </div>
+      </div>
+    </div>
+
+
+
+
+
+
             <h2 class="govuk-heading-m">Certified documents</h2>
 
              <div class="govuk-summary-card govuk-!-margin-bottom-4">
@@ -238,89 +331,7 @@
     </div>
 
 
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
 
-<h2 class="govuk-heading-m">Missing image requests</h2>
-       <div class="govuk-summary-card govuk-!-margin-bottom-4">
-                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">THE GIRLS DAY SCHOOL TRUST (00006400)</h3>
-                </div>
-
-                <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-
-
-                  {{ govukTable({
-                       caption: "Missing image requests for THE GIRLS DAY SCHOOL TRUST (00006400)",
-                      captionClasses: "govuk-visually-hidden",
-                       classes: "govuk-!-margin-bottom-4",
-                        head: [
-                        
-                        {
-                          html: "Date filed"
-                    
-                        },
-                        {
-                          html: "Document type"
-                        },
-                        {
-                          html: "Description"
-                        },
-                        {
-                          html: "Fee"
-                        },
-                        {
-                          html: '<span class="govuk-visually-hidden">Remove</span>'
-                        }
-
-                        ],
-                        rows: [
-                          [
-                          {
-                            text: "7 July 2022"
-                          },
-                            {
-                              text: "AA"
-                            },
-                            {
-                            text: "Accounts made for 'small' co. Made up to 25/07/94."
-                            },
-                        
-                            {
-                              text: "£XX"
-                            },
-
-                            {
-                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Dissolution with all company name changes</span></a>'
-                            }
-                          ]
-                    
-                        ]
-                    }) }}
-<!--
-                    <div class="govuk-button-group govuk-!-margin-bottom-0">
-
-                      {{ govukButton({
-                        text: "Add a certified document",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../filter-document-list"
-                      }) }}
-                      {{ govukButton({
-                        text: "Add a certified certificate",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../order-certified-certificate"
-                      }) }}
-
-                    </div> -->
-
-                    <div class="govuk-button-group govuk-!-margin-bottom-0">
-                      <p class="govuk-body">It can take us several hours to check the availability of a document. We will aim to add it to the company's filing history the same day if you submit your request before 3pm, Monday to Friday (excluding bank holidays).</p>
-                      <p class="govuk-body">If you submit your request after 3pm or at the weekend, we will add the document the next working day.
-                    </div>
-                  </div>
-                </div>
-      </div>
-    </div>
 
 
     
