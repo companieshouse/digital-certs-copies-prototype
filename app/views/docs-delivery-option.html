@@ -24,7 +24,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         name: "choose-dispatch-option",
         fieldset: {
           legend: {
-            text: "Choose a dispatch option",
+            text: "What type of document do you need?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -37,19 +37,30 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             value: "digital",
             text: "Digital (£XX)",
             hint: {
-            text: "Your order will be available to download from 'Your orders' within 1 hour."
+            text: "Digital copies will be a PDF document, signed with an approved Companies House electronic signature. Your order will be available to download from Your orders within 1 hour. "
           }
           },
           {
             value: "paper",
             text: "Paper",
             hint: {
-            text: "*** content ***"
+            text: "Paper copies will be signed in person by one of our officials. You can choose standard or express dispatch for paper documents."
           }
           }
         ]
       }) }}
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Costs and dispatch options for paper documents
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>Standard orders cost £15 for a certified document. Incorporation orders cost £30. We will aim to send your order within 10 working days.</p>
+          <p>Express orders cost £50 for a certified document. Incorporation orders cost £100. Orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day.</p>
 
+        </div>
+      </details>
 
     {{ govukButton({
           text: "Continue"
