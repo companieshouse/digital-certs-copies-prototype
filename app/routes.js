@@ -171,22 +171,12 @@ router.post('/docs-delivery-option', function (req, res) {
 
     if(req.session.data['choose-dispatch-option'] == "digital"){
 
-      if(app.set('paperOption')=="digital"){
-
-        res.redirect('basket/basket-two-items')
-
-      }
-      else{
-
-      app.set('paperOption','digital')
-      res.redirect('basket/basket-one-digital-item')
-
-      }
+        res.redirect('basket/basket-one-digital-item')
+       
     }
     else if(req.session.data['choose-dispatch-option'] == "paper"){
 
       res.redirect('/docs-dispatch-option')
-
 
      /* if(req.session.data['choose-paper-option'] == "standard"){
           app.set('paperOption','standard')
@@ -222,7 +212,7 @@ router.post('/delivery-details', function (req, res) {
     }
     else if(app.settings.paperOption == 'express')
     {
-      res.redirect('basket/basket-three-items')
+      res.redirect('basket/basket-two-items')
     }
 })
 
