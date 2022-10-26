@@ -81,6 +81,16 @@
           }) }}
         {% endif %}
 
+<!-- wasn't sure how to do this with the else/if so have done separately, can change it later -->
+        {{ govukInput({
+    label: {
+      text: 'Company name'
+    },
+    id: "company-name",
+    name: "company-name",
+    autocomplete: "company-name"
+  }) }}
+
         {% if errorAddressLineOne  == true %}
             {{ govukInput({
               label: {
