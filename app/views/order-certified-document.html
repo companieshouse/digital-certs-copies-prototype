@@ -96,7 +96,7 @@
 
 
 
-        <h2 class="govuk-heading-m">Fee</h2>
+       <!-- <h2 class="govuk-heading-m">Fee</h2>
         <h3 class="govuk-heading-m">Digital document</h3>
 
         <p class="govuk-body">It costs £XX for a digital certified document. Incorporation orders cost £XX.</p>
@@ -116,8 +116,46 @@
         <p class="govuk-body">It costs £50 for a certified document with express dispatch. The incorporation packages cost £100 with express dispatch.</p>
         <p>Orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day. The order can be sent to a UK or international address. </p>
         <p class="govuk-body">We send UK orders by Royal Mail 1st Class post and international orders by Royal Mail International post.</p>
-        <p class="govuk-body">You cannot pay using a Companies House account. </p>
-
+        <p class="govuk-body">You cannot pay using a Companies House account. </p> -->
+{{ govukTable({
+  caption: "Order type and fee",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Type"
+    },
+    {
+      text: "Fee"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Digital - electronic signature"
+      },
+      {
+        text: "£XX"
+      }
+    ],
+    [
+      {
+        text: "Standard post - wet signature"
+      },
+      {
+        text: "£15"
+      }
+    ],
+    [
+      {
+        text: "Express post - wet signature"
+      },
+      {
+        text: "£50"
+      }
+    ]
+  ]
+}) }}
       </form>
     </div>
   </div>
