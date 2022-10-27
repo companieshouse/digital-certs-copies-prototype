@@ -35,16 +35,22 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         items: [
           {
             value: "digital",
-            text: "Digital (£XX)",
+            html: '<p class="govuk-!-font-weight-bold"> Digital (£XX)</p>',
             hint: {
-            text: "Digital certified copies will be a PDF document, signed with an approved Companies House electronic signature. Your order will be available to download from Your orders within 1 hour. "
+            html: '<ul class="govuk-list govuk-list--bullet">
+                      <li>Digital certified copies will be a PDF document, signed with an approved Companies House electronic signature. </li>
+                      <li>Your order will be available to download from Your orders within 1 hour.</li>
+                    </ul>'
           }
           },
           {
             value: "paper",
-            text: "Paper",
+            html: '<p class="govuk-!-font-weight-bold"> Paper</p>',
             hint: {
-            text: "Paper certified copies will be signed in person by one of our officials. You can choose standard or express dispatch for paper documents."
+            html: '<ul class="govuk-list govuk-list--bullet">
+                      <li>Paper certified copies will be signed in person by one of our officials.</li>
+                      <li>You can choose standard or express dispatch for paper documents.</li>
+                    </ul>'
           }
           }
         ]
