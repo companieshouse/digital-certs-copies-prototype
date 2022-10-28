@@ -35,30 +35,24 @@ Choose certificate information
             },
             items: [
               {
-                value: "digital",
-                text: "Digital (£X)",
-                hint: {
-                text: "Content to be added."
-              }
-              },
-              {
                 value: "express",
                 text: "Express (£50)",
                 hint: {
-                text: "Orders received before 11am will be sent the same day. Orders received after 11am will be sent the next working day. "
+                text: "£50 for express dispatch to a UK or international address. Orders received before 11am will be sent out the same working day. Orders received after 11am will be sent out the next working day. We send UK orders by Royal Mail 1st Class post and international orders by Royal Mail International post. "
               }
               },
               {
                 value: "standard",
                 text: "Standard (£15)",
                 hint: {
-                text: "We will aim to send the order within 10 working days."
+                text: "We will aim to send out the order within 10 working days. We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail International Standard post."
               }
               }
             ]
           }) }}
+        </div>
 
-          <details class="govuk-details" data-module="govuk-details">
+          <!-- <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
               How will my order be sent?
@@ -68,16 +62,15 @@ Choose certificate information
             <p>Standard UK orders are sent by Royal Mail 2nd Class post. Standard international orders are sent by Royal Mail International Standard post.</p>
             <p>Express UK orders are sent by Royal Mail Signed For 1st Class post. Express international orders are sent by Royal Mail International Tracked post.</p>
           </div>
-        </details>
+        </details> -->
 
 
         {{ govukButton({
           text: "Continue"
         }) }}
-</div>
-</div>
 
-</form>
+      </form>
+    </div>
 </div>
 
 

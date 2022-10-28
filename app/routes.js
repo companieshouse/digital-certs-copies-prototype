@@ -9,7 +9,8 @@ const router = express.Router()
 
 router.post('/certificate-details-selection', function (req, res) {
 
-  res.redirect('certificate-registered-office-address')
+
+   res.redirect('certificate-registered-office-address')
 
 })
 
@@ -51,6 +52,9 @@ router.post('/certificate-number-of-copies', function (req, res) {
 })
 
 router.post('/certificate-email-copy', function (req, res) {
+
+  app.set('journey','certificates')
+  app.set('paperOption','')
 
   res.redirect('delivery-details')
   
@@ -106,7 +110,7 @@ router.post('/delivery-details', function(req, res) {
 
 /* Emma - need to check if they are on the certificates or certified docs journey */
 
-    if(app.settings.paperOption == 'standard')
+   /* if(app.settings.paperOption == 'standard')
     {
       res.redirect('basket/basket-two-items')
     }
@@ -114,25 +118,12 @@ router.post('/delivery-details', function(req, res) {
     {
       res.redirect('basket/basket-three-items')
     }
+*/
+
+
     
   }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -171,23 +162,29 @@ router.post('/docs-delivery-option', function (req, res) {
 
     if(req.session.data['choose-dispatch-option'] == "digital"){
 
-        res.redirect('basket/basket-one-digital-item')
+        res.redirect('interrupt-card')
        
     }
     else if(req.session.data['choose-dispatch-option'] == "paper"){
 
       res.redirect('/docs-dispatch-option')
 
-     /* if(req.session.data['choose-paper-option'] == "standard"){
+      if(req.session.data['choose-paper-option'] == "standard"){
           app.set('paperOption','standard')
           res.redirect('delivery-details')
       }
       else if(req.session.data['choose-paper-option'] == "express"){
           app.set('paperOption','express')
           res.redirect('delivery-details')
-      }   */   
+      }     
     }
 
+})
+
+//interrupt card routing for digital docs
+router.post('/interrupt-card', function (req, res) {
+
+  res.redirect('basket/basket-one-digital-item')
 })
 
 router.post('/docs-dispatch-option', function (req, res) {
@@ -199,10 +196,10 @@ router.post('/docs-dispatch-option', function (req, res) {
       else if(req.session.data['choose-paper-option'] == "express"){
           app.set('paperOption','express')
           res.redirect('delivery-details')
-      }      
+      }   
+})   
 
 
-})
 
 router.post('/delivery-details', function (req, res) {
 
@@ -214,6 +211,14 @@ router.post('/delivery-details', function (req, res) {
     {
       res.redirect('basket/basket-two-items')
     }
+    // take the user to the basket with certificate included 
+   /* else if(app.settings.journey == 'certificates')
+    {
+
+      //2 certified docs and 1 certificate
+      res.redirect('basket/basket-mixed')
+    }*/
+
 })
 
 module.exports = router

@@ -1,0 +1,167 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your orders -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+{% include "includes/back-link.html" %}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form action="/your-orders" method="post">
+
+          <h1 class="govuk-heading-xl">Your orders</h1>
+
+          <p class="govuk-body-l">Digital items will be ready to download within 1 hour of ordering.</p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+          <div class="govuk-summary-card govuk-!-margin-bottom-4">
+                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-1 govuk-!-padding-right-3 govuk-!-padding-left-2">
+                  <h2 class="govuk-heading-m govuk-!-font-weight-bold govuk-!-margin-0">ORD-168827-927371</h2>
+
+                  <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 2000</p>
+
+                </div>
+
+          <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-3  govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+          <h3 class="govuk-heading-m">Certified documents</h3>
+          {{ govukTable({
+              caption: "",
+
+
+              head: [
+                {
+                  html: "Company",
+                  classes: 'govuk-!-width-one-third'
+                },
+                {
+                  html: "Date filed"
+
+                },
+                {
+                  html: "Document type"
+
+                },
+                {
+                  html: "Description",
+                  classes: 'govuk-!-width-one-third'
+                },
+                 {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                },
+                {
+                html: 'Status<span class="govuk-visually-hidden">Download</span>'
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
+                  },
+                  {
+                  html: "CS01"
+                  },
+                  {
+                     text: "04 Jul 2018"
+                  },
+                  {
+                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
+                  },
+                  {
+                    text:"Digital"
+                  },
+                  {
+                    text:"£XX"
+                  },
+                  {
+                    html:'<strong class="govuk-tag govuk-tag--blue">Pending </a>'
+                  }
+                ],
+                [
+                  {
+                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
+                  },
+                  {
+                  html: "AA"
+                  },
+                  {
+                     text: "29 Jun 2017"
+                  },
+                  {
+                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
+                  },
+                  {
+                    text:"Paper - Standard"
+                  },
+                  {
+                    text:"£XX"
+                  },
+                  {
+                    text:'Order received'
+                  }
+                ],
+                [
+                  {
+                    html: 'Payment reference:RS5VSN6DRE',
+                    classes:'govuk-!-width-one-half'
+                  },
+                  {
+                  html: ""
+                  },
+                  {
+                     text: ""
+                  },
+                  {
+                    html:""
+                  },
+                  {
+                    text:""
+                  },
+                  {
+                    html:"<span class='govuk-body govuk-!-font-weight-bold'> £XX</span>"
+                  },
+                  {
+                    html:''
+                  }
+                ]
+              ]
+          }) }}
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+{% endblock %}
