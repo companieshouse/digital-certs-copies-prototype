@@ -145,5 +145,29 @@ ul#navigation {
     }
 
   }
+  }
 
+  //notification badge 
+
+  .notification-badge {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #d4351c;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-family: GDS Transport,arial,sans-serif;
+    font-size: 12px;
+    font-size: .75rem;
+    font-weight: 400;
+    font-weight: 600;
+    line-height: 1.25;
+    min-width: 10px;
+    padding: 1px 4px 0;
+    text-align: center;
+    white-space: nowrap;
 }
+
+
+
+
