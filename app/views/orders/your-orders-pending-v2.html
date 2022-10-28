@@ -19,25 +19,38 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-        <form action="/your-orders" method="post">
+        <form action="/orders/order-pennding" method="post">
 
-          <h1 class="govuk-heading-xl">Your orders</h1>
+          {% set html %}
+            <p class="govuk-notification-banner__heading">
+              You have 20 days left to download the digital documents.
+            </p>
+          {% endset %}
 
-          <p class="govuk-body-l">Digital items will be ready to download within 1 hour of ordering.</p>
+          {{ govukNotificationBanner({
+            html: html
+          }) }}
+
+
+
+          <span class="govuk-caption-l">Order reference</span>
+          <h1 class="govuk-heading-l">ORD-168827-927371</h1>
+
+          <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 <br> Payment reference:RS5VSN6DRE <br> Fee: XX </p>
+
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
           <div class="govuk-summary-card govuk-!-margin-bottom-4">
                 <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-1 govuk-!-padding-right-3 govuk-!-padding-left-2">
-                  <h2 class="govuk-heading-m govuk-!-font-weight-bold govuk-!-margin-0">ORD-168827-927371</h2>
 
-                  <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 2000</p>
+                  <h2 class="govuk-heading-m">Certified documents</h2>
 
                 </div>
 
           <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-3  govuk-!-padding-right-3 govuk-!-padding-left-2">
 
-          <h3 class="govuk-heading-m">Certified documents</h3>
+          
           {{ govukTable({
               caption: "",
 
@@ -119,8 +132,7 @@
                 ],
                 [
                   {
-                    html: 'Payment reference:RS5VSN6DRE',
-                    classes:'govuk-!-width-one-half'
+                    html: ''
                   },
                   {
                   html: ""
