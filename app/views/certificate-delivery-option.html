@@ -18,10 +18,10 @@ Choose a dispatch option -  Find and update company details - GOV.UK
 {% block content %}
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form action="/docs-delivery-option" method="post" novalidate>
+    <form action="certificate-delivery-option" method="post" novalidate>
 
       {{ govukCheckboxes({
-        name: "choose-dispatch-option",
+        name: "cert-digital-physical",
         fieldset: {
           legend: {
             text: "What type of document do you need?",
@@ -70,7 +70,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
 
     {{ govukButton({
           text: "Continue",
-          href:"certificate-details-selection"
+          href:"certificate-interrupt-card"
     }) }}
 
     </form>

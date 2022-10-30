@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Before you start – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+  {% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/interrupt-card" method="post">
+      <div class="interrupt-card">
+        <h1 class="govuk-heading-l">Before you order a digital document</h3> 
+
+        <p class="govuk-body">You should contact the person asking for the document to check if they will accept a digital document with an electronic Companies House signature.</p>
+        
+        <p class="govuk-body">Digital documents are only valid in digital form. You may need to order a paper document if the person who is asking for it needs a paper copy with a wet ink signature.</p>  
+
+
+        {{ govukButton({
+          text: "Continue",
+          href:"basket/basket-two-items"
+        }) }}
+
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

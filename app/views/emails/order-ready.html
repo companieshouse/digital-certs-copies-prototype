@@ -21,10 +21,13 @@
 
       <h2 class="govuk-heading-m">Download your documents</h2>
 
-      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated">Sign in to your Companies House account</a> to download your digital items.</p>
+      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated-v2">Sign in to your Companies House account</a> to download your digital items.</p>
     
 
-      <h2 class="govuk-heading-m">Your order summary</h2>
+      <h2 class="govuk-heading-l">Your order summary</h2>
+
+
+      <h3 class="govuk-heading-m">Certified documents</h3>
 
         {{ govukTable({
           caption: "",
@@ -60,16 +63,47 @@
                   {
                     text:"£XX"
                   }
-                ],
+                ]
+              ]
+          }) }}
+
+         <h3 class="govuk-heading-m">Certificates</h3>
+
+        {{ govukTable({
+          caption: "",
+              head: [
+                {
+                  html: "Company"
+                },
+                {
+                  html: "Certificate type"
+                },
+                {
+                  html: "Certificate contains",
+                  classes: 'govuk-!-width-one-third'
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
                 [
                   {
-                    text: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
+                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
                   },
                   {
-                     text: "29 Jun 2017"
+                     text: "Incorporation with all company name changes"
                   },
                   {
-                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
+                    html:"The names of all current company directors.<br>
+The names of all current secretaries."
+                  },
+                  {
+                    text: "Digital"
                   },
                   {
                     text:"£XX"

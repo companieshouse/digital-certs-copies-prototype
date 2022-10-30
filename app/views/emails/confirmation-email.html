@@ -23,7 +23,7 @@
           We’ve received your order.
       </p>
       <p class="govuk-body">
-          <a href="/orders/your-orders-pending">Sign in to view your order details</a> and check the status for each item.
+          <a href="/orders/your-orders-pending-v2">Sign in to view your order details</a> and check the status for each item.
       </p>
 
       <p class="govuk-body">
@@ -34,6 +34,8 @@
 
 
       <h2 class="govuk-heading-l">Your order summary</h2>
+
+      <h3 class="govuk-heading-m">Certified documents</h3>
 
         {{ govukTable({
           caption: "",
@@ -73,23 +75,6 @@
                   {
                     text:"£XX"
                   }
-                ],
-                [
-                  {
-                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
-                  },
-                  {
-                     text: "29 Jun 2017"
-                  },
-                  {
-                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
-                  },
-                  {
-                    text: "Paper - Standard"
-                  },
-                  {
-                    text:"£XX"
-                  }
                 ]
               ]
           }) }}
@@ -97,7 +82,52 @@
 
 
 
-      <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p>
+     <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
+
+      <h3 class="govuk-heading-m">Certificates</h3>
+
+        {{ govukTable({
+          caption: "",
+              head: [
+                {
+                  html: "Company"
+                },
+                {
+                  html: "Certificate type"
+                },
+                {
+                  html: "Certificate contains",
+                  classes: 'govuk-!-width-one-third'
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
+                  },
+                  {
+                     text: "Incorporation with all company name changes"
+                  },
+                  {
+                    html:"The names of all current company directors.<br>
+The names of all current secretaries."
+                  },
+                  {
+                    text: "Digital"
+                  },
+                  {
+                    text:"£XX"
+                  }
+                ]
+              ]
+          }) }}
 
 
       <h3 class="govuk-heading-m">Delivery details</h3>

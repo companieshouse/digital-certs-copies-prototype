@@ -6,6 +6,18 @@ const router = express.Router()
 
 ////**** Routes for certified certificates
 
+/*router.post('certificate-delivery-option', function (req, res) {
+
+  if(req.session.data['cert-digital-physical'] == "digital"){
+
+      res.redirect('certificate-interrupt-card')
+  }
+  else if(req.session.data['cert-digital-physical'] == "paper"){
+
+      res.redirect('certificate-details-selection')
+  }  
+
+})*/
 
 router.post('/certificate-details-selection', function (req, res) {
 
@@ -160,23 +172,15 @@ router.post('/select-multiple-documents', function(req, res) {
 router.post('/docs-delivery-option', function (req, res) {
 
 
-    if(req.session.data['choose-dispatch-option'] == "digital"){
+    if(req.session.data['docs-physical-digital'] == "digital"){
 
         res.redirect('interrupt-card')
        
     }
-    else if(req.session.data['choose-dispatch-option'] == "paper"){
+    else if(req.session.data['docs-physical-digital'] == "paper"){
 
       res.redirect('/docs-dispatch-option')
-
-      if(req.session.data['choose-paper-option'] == "standard"){
-          app.set('paperOption','standard')
-          res.redirect('delivery-details')
-      }
-      else if(req.session.data['choose-paper-option'] == "express"){
-          app.set('paperOption','express')
-          res.redirect('delivery-details')
-      }     
+     
     }
 
 })
@@ -184,7 +188,15 @@ router.post('/docs-delivery-option', function (req, res) {
 //interrupt card routing for digital docs
 router.post('/interrupt-card', function (req, res) {
 
-  res.redirect('basket/basket-one-digital-item')
+  if(req.session.data['docs-physical-digital'] == "digital"){
+
+          res.redirect('basket/basket-one-digital-item')
+      }
+      else if(req.session.data['docs-physical-digital'] == "physical"){
+
+          res.redirect('delivery-details')
+      }  
+
 })
 
 router.post('/docs-dispatch-option', function (req, res) {
