@@ -24,7 +24,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         name: "cert-digital-physical",
         fieldset: {
           legend: {
-            text: "What type of document do you need?",
+            text: "What type of certificate do you need?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -37,10 +37,12 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             value: "digital",
             text: "Digital (£XX)",
             hint: {
-            html: '<ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4">
-                      <li> A digital certificate will include company name and number, incorporation date, current registered office address, current directors and secretaries. A statement of good standing is not currently available.</li>
-                      <li>Digital certified copies will be a PDF document, signed with an approved Companies House electronic signature. </li>
-                      <li>Your order will be available to download from Your orders within 1 hour.</li>
+            html: '<p class="govuk-body  govuk-!-padding-top-4">Digital certificates will:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>include the company name and number, incorporation date, current registered office address, current directors and secretaries</li>
+                      <li>a PDF document, signed with an approved Companies House electronic signature</li>
+                      <li>be ready to download from Your orders within 1 hour</li>
+                      <li>be available to download for XX days</li>
                     </ul>'
           }
           },
@@ -48,9 +50,10 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             value: "paper",
             text: 'Paper',
             hint: {
-            html: '<ul class="govuk-list govuk-list--bullet govuk-!-padding-top-4">
-                      <li>Paper certified copies will be signed in person by one of our officials.</li>
-                      <li>You can choose standard or express dispatch for paper documents.</li>
+            html: '<p class="govuk-body  govuk-!-padding-top-4">Paper certificates will be signed in person by one of our officials. You can:</p>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>choose to add certain information to the certificate</li>
+                      <li>choose standard or express dispatch</li>
                     </ul>'
           }
           }
@@ -59,12 +62,12 @@ Choose a dispatch option -  Find and update company details - GOV.UK
       <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-            Costs and dispatch options for paper documents
+            Costs and dispatch options for paper certificates
           </span>
         </summary>
         <div class="govuk-details__text">
-          <p>Standard orders cost £15 for a certified document. Incorporation orders cost £30. We will aim to send your order within 10 working days.</p>
-          <p>Express orders cost £50 for a certified document. Incorporation orders cost £100. Orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day.</p>
+          <p>Standard orders cost £15 for a certified document. We will aim to send your order within 10 working days.</p>
+          <p>Express orders cost £50 for a certified document. Orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day.</p>
 
         </div>
       </details>

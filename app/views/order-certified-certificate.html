@@ -19,10 +19,11 @@
 {% endblock %}
 
 {% block content %}
+<!--
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 {% set html %}
-  <p class="govuk-notification-banner__heading">
+ <p class="govuk-notification-banner__heading">
     This order will be for THE GIRLS' DAY SCHOOL TRUST (00006400).
 
   </p>
@@ -31,22 +32,24 @@
     Try our new digital service.
 
   </p>
+  
   <p class="govuk-body"> You may get the option to choose a digital certificate for your order.</p>
+  
 
 {% endset %}
 
 {{ govukNotificationBanner({
   html: html
-}) }}
+}) }} -->
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form action="/order-certified-document" method="post">
       <h1 class="govuk-heading-xl">Order a certificate</h1>
 
-      <p class="govuk-body-l">Use this service to order a signed certificate of incorporation for a company, including all company name changes. </p>
+      <p class="govuk-body-l">Use this service to order a paper or digital signed certificate of incorporation for a company, including all company name changes. </p>
 
-      <p class="govuk-body">You can add certain information to the certificate, including:</p>
+      <p class="govuk-body">You can add certain information to a paper certificate, including:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>a statement of good standing</li>
           <li>registered office address</li>
@@ -54,6 +57,8 @@
           <li>secretaries</li>
           <li>company objects</li>
         </ul>
+
+      <p class="govuk-body">Digital certificates will include all information, except a statement of good standing. </p>
 
         <div class="govuk-inset-text">
           This certificate is different to the incorporation documents that were issued when the company was formed. Copies of these can be ordered through the <a href="order-certified-document" class="govuk-link">Order a certified document service</a>.
@@ -71,8 +76,15 @@
           </ul> -->
 
 
+        <h2 class="govuk-heading-m">Choosing paper or digital certificates</h2>
+        <p class="govuk-body">You can choose paper and digital certificates for most orders.</p>
 
-        <p class="govuk-body">Ordering a certified document takes around 5 minutes.</p>
+        <p class="govuk-body">You may need to order a paper certificate if the person who is asking for it needs:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>to include a statement of good standing</li>
+            <li>a paper copy with a wet ink signature</li>
+          </ul>
+
 
         {{ govukButton({
           text: "Start now",
@@ -81,19 +93,47 @@
           isStartButton: true
         }) }}
 
-
-        <h2 class="govuk-heading-m">Fee</h2>
-
-        <p class="govuk-body">Certificates cost:</p>
-
-        <ul class="govuk-list govuk-list--bullet">
-          <li>£XX for a digital certificate. Your order will be available to download from the ‘Your orders’ section of your Companies House account.</li>
-          <li>£15 for standard dispatch to a UK or international address. We will aim to send out the certificate within 10 working days.</li>
-          <li>£50 for express dispatch to a UK or international address. Orders received before 11am will be sent out the next working day. Orders received after 11am will be sent out the next working day.</li>
-        </ul>
+        {{ govukTable({
+                  caption: "Costs",
+                  captionClasses: "govuk-table__caption--m",
+                  firstCellIsHeader: true,
+                   head: [
+                    {
+                      text: "Service"
+                    },
+                    {
+                      text: "Cost"
+                    }
+                  ],
+                  rows: [
+                    [
+              {
+                text: "Digital service"
+              },
+              {
+                text: "£XX"
+              }
+            ],
+            [
+              {
+                text: "Standard paper service"
+              },
+              {
+                text: "£15"
+              }
+            ],
+            [
+              {
+                text: "Express paper service"
+              },
+              {
+                text: "£50"
+              }
+            ]
+          ]
+        }) }}
         <p class="govuk-body">The express dispatch option can include an email copy of the certificate. This will be sent to the email address used to place the order.</p>
 
-        <p class="govuk-body">You can pay by debit or credit card. You cannot pay using a Companies House account.</p>
 
 
 
