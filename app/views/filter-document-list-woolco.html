@@ -1,0 +1,568 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Select document to order -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "order-certified-document"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <form action="/filter-document-list" method="post">
+
+   <h1 class="govuk-heading-xl">Select document to order</h1>
+
+
+        {% if errorNoDocumentSelected  == true %}
+
+
+         {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: [
+            {
+              text: "Select documents to add to your order",
+              href: "#documentsSelectedCountTop"
+            }
+          ]
+         }) }}
+        {% endif %}
+
+
+        <p><span class="govuk-body govuk-!-font-size-36"><span class="govuk-!-font-weight-bold">THE WOOL COMPANY</span></span></p>
+        <p class="govuk-body">Company number <span class="govuk-!-font-weight-bold">10987888</span></p>
+        <p class="govuk-body">To order for a different company, <a href="">search for the company on the register</a>.</p>
+
+
+        <input type="hidden" name="selectedDocs" id="hiddenInput" />
+
+          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+          <div class="govuk-grid-column-one-quarter">
+
+            <h3 class="govuk-heading-m">Filter by category</h3>
+
+            {{ govukCheckboxes({
+              idPrefix: "documentType",
+              name: "documentType",
+              fieldset: {
+                legend: {
+                  classes: "govuk-fieldset__legend--xl"
+                }
+              },
+              items: [
+                {
+                  value: "type",
+                  text: "Show filing type"
+                }
+              ]
+            }) }}
+
+          </div>
+
+          <div class="govuk-grid-column-one-quarter">
+
+            {{ govukCheckboxes({
+            idPrefix: "filter-items",
+            name: "filter-items",
+            classes: "govuk-checkboxes--small",
+            fieldset: {
+              legend: {
+                text: "",
+                isPageHeading: false,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "accounts",
+                text: "Accounts",
+                name: "accounts"
+              },
+              {
+                value: "captial",
+                text: "Capital",
+                name: "capital"
+              },
+              {
+                value: "charges",
+                text: "Charges",
+                name: "charges"
+              }
+            ]
+          }) }}
+
+          </div>
+
+          <div class="govuk-grid-column-one-half">
+
+            {{ govukCheckboxes({
+          idPrefix: "filter-item-2",
+          name: "filter-item-2",
+          classes: "govuk-checkboxes--small",
+          fieldset: {
+            legend: {
+              text: "",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "confirmation-statements-annual-return",
+              text: "Confirmation statements / Annual returns",
+              name: "confirmation-statements-annual-return"
+            },
+            {
+              value: "incorporation",
+              text: "Incorporation",
+              name: "incorporation"
+            },
+            {
+              value: "officers",
+              text: "Officers",
+              name: "officers"
+            }
+          ]
+        }) }}
+        </div>
+
+
+         <div class="govuk-grid-column-full">
+
+
+          {{ govukTable({
+                caption: "",
+                head: [
+                  {
+                    text: "Date filed",
+                    classes: "no-wrap"
+                  },
+                  {
+                    text: "Type",
+                    classes: "document-type"
+                  },
+                  {
+                    text: "Description"
+                  },
+                  {
+                    text: "Order option",
+                    classes: 'no-wrap'
+                  }
+                ],
+                rows: [
+                  [
+           {
+             text: "10 Feb 2020",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AP01",
+             classes: 'document-type'
+           },
+           {
+             html: " <span class='govuk-body govuk-!-font-weight-bold'> Appointment </span> of Ms Sharon Michelle White as a director on 4 February 2020"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "07 Feb 2020",
+             classes: 'no-wrap'
+           },
+           {
+             html: "TM01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Andrew Charles Mayfield as a director on 4 February 2020"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "31 Jan 2020",
+             classes: 'no-wrap'
+           },
+           {
+             html: "TM01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Paula Margaret Nickolds as a director on 23 January 2020"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "16 Aug 2019",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AA",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'>Group of companies' accounts </span> made up to 26 January 2019"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "15 Jul 2019",
+             classes: 'no-wrap'
+           },
+           {
+             html: "MR04",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'>Satisfaction of charge </span> 2 in full"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "15 Jul 2019",
+             classes: 'no-wrap'
+           },
+           {
+             html: "MR04",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'>Satisfaction of charge </span> 3 in full"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "15 Jul 2019",
+             classes: 'no-wrap'
+           },
+           {
+             html: "MR04",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'>Satisfaction of charge </span> 1 in full"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "05 Jul 2019",
+             classes: 'no-wrap'
+           },
+           {
+             html: "CS01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'>Confirmation statement </span>made on 27 June 2019 with updates"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "27 Jul 2018",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AA",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 27 January 2018"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "04 Jul 2018",
+             classes: 'no-wrap'
+           },
+           {
+             html: "CS01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'>Confirmation statement </span> made on 27 June 2018 with no updates"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "15 Feb 2018",
+             classes: 'no-wrap'
+           },
+           {
+             html: "TM02",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Keith Michael Hubber as a secretary on 31 January 2018"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "15 Feb 2018",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AP03",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Appointment </span> of Mr Peter Simpson as a secretary on 31 January 2018"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "10 Jul 2017",
+             classes: 'no-wrap'
+           },
+           {
+             html: "CS01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'>Confirmation statement </span> made on 27 June 2017 with updates"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "10 Jul 2017",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AD02",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Register inspection address </span> has been changed from Capita Registrars Limited 34 Beckenham Road Beckenham Kent BR3 4TU to 171 Victoria Street London SW1E 5NN"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "07 Jul 2017",
+             classes: 'no-wrap'
+           },
+           {
+             html: "PSC02",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Notification </span> of John Lewis Partnership Plc as a person with significant control on 6 April 2016"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "07 Jul 2017",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AD04",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Register(s) moved </span> to registered office address 171 Victoria Street London SW1E 5NN"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "29 Jun 2017",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AA",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "11 Jan 2017",
+             classes: 'no-wrap'
+           },
+           {
+             html: "AP01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Appointment </span> of Paula Margaret Nickolds as a director on 11 January 2017"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "25 Nov 2016",
+             classes: 'no-wrap'
+           },
+           {
+             html: "CH01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Director's details changed </span> for Mrs Berangere Michel on 1 September 2015"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "04 Nov 2016",
+             classes: 'no-wrap'
+           },
+           {
+             html: "SH19",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Statement of capital </span> on 4 November 2016 \nGBP 6,750,000.00"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "04 Nov 2016",
+             classes: 'no-wrap'
+           },
+           {
+             html: "CERT15",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Certificate of reduction of issued capital </span>"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "04 Nov 2016",
+             classes: 'no-wrap'
+           },
+           {
+             html: "OC138",
+             classes: 'document-type'
+           },
+           {
+             html: "Reduction of iss capital and minute (oc)"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ],
+        [
+           {
+             text: "01 Nov 2016",
+             classes: 'no-wrap'
+           },
+           {
+             html: "TM01",
+             classes: 'document-type'
+           },
+           {
+             html: "<span class='govuk-body govuk-!-font-weight-bold'> Termination of appointment </span> of Andrew John Street as a director on 28 October 2016"
+           },
+           {
+              html: '<a href="docs-delivery-option" class="govuk-link">Select document</a>',
+              classes: 'no-wrap'
+           }
+        ]
+                ]
+              }) }}
+
+
+        </div>
+        <div class="pagination">
+          <a class="govuk-link" href="#"><span class="govuk-!-font-weight-bold">1</span></a>
+          <a class="govuk-link" href="#">2</a>
+          <a class="govuk-link" href="#">3</a>
+          <a class="govuk-link" href="#">Next</a>
+        </div>
+
+
+</form>
+</div>
+</div>
+{% endblock %}
