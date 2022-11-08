@@ -296,7 +296,13 @@
                 <th scope="row" class="govuk-table__header">
                   <a href="https://digital-certs-and-copies-v2.herokuapp.com/">Version 2</a>
                 </th>
-                <td class="govuk-table__cell">To be added</td>
+                <td class="govuk-table__cell">
+                    {{ govukDetails({
+                      summaryText: "Summary of scenario",
+                      html: "Finding the service to order certified documents. <br> <br> Adding one digital documents and one paper document to their basket.Payment. <br> <br> Confirmation of the order and reviewing the process after ordering. Email indicating your order is ready and downloading documents.<br> <br> Review the digital certified document within Adobe and the signature."
+                    }) }}
+
+                </td>
                 <td class="govuk-table__cell">
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
