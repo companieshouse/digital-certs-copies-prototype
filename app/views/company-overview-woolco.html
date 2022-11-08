@@ -1,0 +1,253 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageTitle %}
+  The Wool Company -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: ""
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% set overviewHtml %}
+
+
+
+
+  <ul class='govuk-list'>
+  <li>Registered office address</li>
+  <li><strong>Higher Hill Farm, Cardinham, Bodmin, United Kingdom, PL30 4EG</strong></li>
+    <br>
+  <li>Company status</li>
+  <li><strong>Active</strong></li>
+    <br>
+  <li>Company type</li>
+  <li><strong>Private limited company use of 'Limited' exemption</strong></li>
+    <br>
+    <br>
+  <h2 class="govuk-heading-m"> Accounts</h2>
+  <li>Next accounts made up to <strong>31 August 2022</strong> due by <strong>31 May 2023</strong></li>
+  <li>Last accounts made up to <strong>31 August 2021</strong></li>
+  <br>
+  <br>
+  <h2 class="govuk-heading-m"> Nature of business (SIC)</h2>
+    <li>46900 - Non-specialised wholesale trade</li>
+    <li>47990 - Other retail sale not in stores, stalls or markets</li>
+    
+    <br>
+    <br>
+  </ul>
+    {% from "govuk/components/table/macro.njk" import govukTable %}
+
+    {{ govukTable({
+      caption: "Previous company names",
+      captionClasses: "govuk-table__caption--m",
+      firstCellIsHeader: true,
+      head: [
+        {
+          text: "Name"
+        },
+        {
+          text: "Period"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "WOOL LIMITED"
+          },
+          {
+            text: "02 Oct 2018 - 03 Oct 2018"
+          }
+        ],
+        [
+          {
+            text: "WORLD'S FINEST FIBRES LIMITED"
+          },
+          {
+            text: "29 Sep 2017 - 02 Oct 2018"
+          }
+        ]
+      ]
+    }) }}
+
+
+  {% endset -%}
+  <div class="searchfield">
+  {{ govukInput({
+    label: {
+      text: "Search",
+      classes: "govuk-visually-hidden",
+      isPageHeading: false
+    },
+    id: "ignore",
+    name: "ignore",
+    value: "Search for a company or officer",
+    classes: "company-search"
+  }) }}
+</div>
+<p class="govuk-body"><a href="#" class="govuk-link">Advanced company search</a></p>
+  <h1 class="govuk-heading-l">THE WOOL COMPANY LIMITED </h1>
+  <p class="govuk-body">Company number <strong>10987888</strong></p>
+
+
+  {{ govukButton({
+  text: "Follow this company"
+  }) }}
+
+  {{ govukButton({
+  text: "File for this company"
+  }) }}
+
+
+  {% set filingHistoryHtml %}
+
+
+
+  {% endset -%}
+
+  {% set peopleHtml %}
+  {% endset -%}
+
+  {% set viewallHtml %}
+
+  <h2 class="govuk-heading-l"> Company snapshot</h2>
+
+  {{ govukDetails({
+  summaryText: "What's included in the company snapshot",
+  html: "<p class='govuk-body'>The latest 100 entries for:</p>
+
+  <ul class='govuk-list govuk-list--bullet'>
+    <li>Filing history</li>
+    <li>Officers</li>
+    <li>Persons with significant control</li>
+    <li>Charges</li>
+    <li>Insolvency</li>
+    <li>Registers</li>
+  </ul>"
+}) }}
+
+  {{ govukButton({
+  text: "View company information snapshot",
+  classes: "govuk-button--secondary"
+  }) }}
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-l"> Order a certificate</h2>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <p class='govuk-body'>Use this service to order a signed certificate of incorporation, which can include key details about the company and a statement of good standing. </p>
+
+      {{ govukDetails({
+        summaryText: "What you'll need",
+        html: "<p class='govuk-body'>To use the service, you'll need:</p>
+
+        <ul class='govuk-list govuk-list--bullet'>
+          <li>to choose the company information you want to be included on the certificate</li>
+          <li>a credit or debit card for payment</li>
+        </ul>
+        <p class='govuk-body'>To order a paper document, you'll also need the address you want the document to be delivered to (UK or international).</p>
+        "
+    }) }}
+
+    {{ govukButton({
+      text: "Order certificate",
+      classes: "govuk-button--secondary",
+      href:"order-certified-certificate"
+      }) }}
+
+    </div/>
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  <h2 class="govuk-heading-l"> Order a certified document</h2>
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-three-quarters">
+
+      <p class='govuk-body'>Use this service to order a paper or digital certified copy of a document from a company's filing history. </p>
+
+      {{ govukDetails({
+      summaryText: "What you'll need",
+      html: "<p class='govuk-body'>To use the service, you'll need:</p>
+
+      <ul class='govuk-list govuk-list--bullet'>
+        <li>to choose the document you want to be certified</li>
+        <li>a credit or debit card for payment</li>
+      </ul>
+      <p class='govuk-body'>To order a paper document, you'll also need the address you want the document to be delivered to (UK or international).</p>"
+      }) }}
+
+
+  {{ govukButton({
+  text: "Order certified document",
+  classes: "govuk-button--secondary",
+  href:"order-certified-document"
+  }) }}
+  {% endset -%}
+
+
+  {{ govukTabs({
+  items: [
+    {
+      label: "Overview",
+      id: "overview",
+      panel: {
+        html: overviewHtml
+      }
+    },
+    {
+      label: "Filing History",
+      id: "filing-history",
+      panel: {
+        html: filingHistoryHtml
+      }
+    },
+    {
+      label: "People",
+      id: "people",
+      panel: {
+        html: peopleHtml
+      }
+    },
+    {
+      label: "Charges",
+      id: "charges",
+      panel: {
+        html: peopleHtml
+      }
+    },
+    {
+      label: "Insolvency",
+      id: "insolvency",
+      panel: {
+        html: peopleHtml
+      }
+    },
+    {
+      label: "More",
+      id: "view-all",
+      panel: {
+        html: viewallHtml
+      }
+    }
+  ]
+}) }}
+
+{% endblock %}
