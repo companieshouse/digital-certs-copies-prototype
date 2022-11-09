@@ -354,18 +354,16 @@
                 </td>
               </tr> -->
 
-
-
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
-                  <a href="https://digital-certs-and-copies-v2.herokuapp.com/">Version 2</a>
+                  <a href="">Version 4</a>
                 </th>
                 <td class="govuk-table__cell">To be added</td>
                 <td class="govuk-table__cell">
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                       <span class="govuk-details__summary-text">
-                        Changes included in version 2
+                        Changes included in version 4
                       </span>
                     </summary>
                     <div class="govuk-details__text">
@@ -378,12 +376,138 @@
                   </details>
                 </td>
                 <td class="govuk-table__cell">
+                  <strong class="govuk-tag govuk-tag--red">
+                    Not ready for testing
+                  </strong>
+                </td>
+
+
+
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="">Version 3</a>
+                </th>
+                <td class="govuk-table__cell">{{ govukDetails({
+                      summaryText: "Summary of scenario",
+                      html: "Finding the service to order certified documents. <br> <br> Adding one digital document and one digital certified certificate to their basket. Payment. <br> <br> Confirmation of the order and reviewing the process after ordering. Email indicating your order is ready and downloading documents.<br> <br> Review the digital certified document and the new digital certified certificate within Adobe and the updated signature."
+                    }) }}
+                </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Changes included in version 3
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <ul class="govuk-list--bulletlist">
+                        <li>
+                        New style notification badge to basket menu
+                        </li>
+                        <li>
+                        <a href="/order-certified-document"> Start page documents</a> <p class="govuk-body">Services and costings in a table format. Heirarchy of information reviewed. </p>
+                        </li>
+                        <li>
+                        <a href="certificate-delivery-option"> What type of document do you need?</a> <p class="govuk-body">Information separated into bullet points.</p>
+                        </li>
+                        <li>
+                        <a href="interrupt-card"> Interrupt card certified documents </a> <p class="govuk-body">Interrupt card added to the journey.</p>
+                        </li>
+                        <li>
+                        <a href="basket/basket-one-digital-item"> Basket </a> <p class="govuk-body">Basket design reviewed and buttons placed underneath company name.</p>
+                        </li>
+                        <li>
+                        <a href="order-certified-certificate">Start page certificates </a> <p class="govuk-body">Services and costings in a table format. Heirarchy of information reviewed.</p>
+                        </li>
+
+                        <li>
+                        <a href="certificate-delivery-option"> What type of document do you need?</a> <p class="govuk-body">Information separated into bullet points.</p>
+                        </li>
+
+                        <li>
+                        <a href="certificate-interrupt-card">Interrupt card certificates </a> <p class="govuk-body">Certificate interrupt card added. Users need to check the digital option is accepted by the end user.</p>
+                        </li>
+
+                        <li>
+                        <a href="basket/basket-two-items"> Basket design </a> <p class="govuk-body">Separate boxes for the different document types. Buttons above boxes, below company name.</p>
+                        </li>
+
+                        <p class="govuk-body">Made changes to the documents:</p>
+
+                        <li>
+                        <p class="govuk-body">Updated the PDF cover sheet with company name and document information. A green button allowing the user to see the signature provence. </p>
+                        </li>
+
+                        
+                      </ul>
+                    </div>
+                  </details>
+                </td>
+
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag govuk-tag--green">
+                    Ready for testing
+                  </strong>
+                </td>
+              </tr> 
+
+
+
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="https://digital-certs-and-copies-v2.herokuapp.com/">Version 2</a>
+                </th>
+                <td class="govuk-table__cell">
+                    {{ govukDetails({
+                      summaryText: "Summary of scenario",
+                      html: "Finding the service to order certified documents. <br> <br> Adding one digital documents and one paper document to their basket.Payment. <br> <br> Confirmation of the order and reviewing the process after ordering. Email indicating your order is ready and downloading documents.<br> <br> Review the digital certified document within Adobe and the signature."
+                    }) }}
+
+                </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Changes included in version 2
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <ul class="govuk-list--bulletlist">
+                        <li>
+                        <a href="order-certified-document">Start page </a> <p class="govuk-body">Digital option - How digital and physical documents are certified.</p>
+                        </li>
+                        <li>
+                        <a href="docs-delivery-option">What type of document do you need?</a> <p class="govuk-body">Explaining the difference between physical and digital option.</p>
+                        </li>
+                        <li>
+                        <a href="docs-dispatch-option">Choose a dispatch option</a> <p class="govuk-body">Separate page for express and standard options.</p>
+                        </li>
+                        <li>
+                        <a href="confirmation-dcc">Confirmation page</a> <p class="govuk-body">Call to action at the top.</p>
+                        </li>
+                        <li>
+                        <a href="emails/confirmation-email">Confirmation email</a> <p class="govuk-body">Call to action at the top of the email.</p>
+                        </li>
+                        <li>
+                        <a href="emails/confirmation-email">Order ready email</a> <p class="govuk-body">Call to action at the top of the email.</p>
+                        </li>
+
+                        <p class="govuk-body">Made changes to the following emails and documents</p>
+
+                        <li>
+                        <a href="public/certified-document/Signed-cover-sheet-with-stamp-v1.PDF">Order ready email</a> <p class="govuk-body">PDF cover sheet and document with stamp and timestamp signature.</p>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </details>
+                </td>
+                <td class="govuk-table__cell">
                   <strong class="govuk-tag govuk-tag--green">
                     Ready for testing
                   </strong>
                 </td>
               </tr>
-        
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
                   <a href="https://digital-certs-and-copies-v1.herokuapp.com/">Version 1</a>
