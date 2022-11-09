@@ -115,51 +115,50 @@ ul#navigation {
 
 //Styles for interrupt card
 
-.interrupt-card {
-  background-color:#175B96; // this blue ensure sufficient colour contrast
-  color: #fff !important;
-  padding: 2em 2em 0em;
+// .interrupt-card {
+  //background-color:#175B96; // this blue ensure sufficient colour contrast
+ // color: #fff !important;
+ // padding: 2em 2em 0em;
 
-  h1, h2, h3, p, ul, li, a:link {
-    color:#fff;
-  }
-  a:hover, a:visited  {
-    color:   #f3f2f1		;
-  }
-  a:focus {
-    text-decoration:none;
-    color:  $govuk-focus-text-colour;
-    background-color:  $govuk-focus-colour	;
-  }
+ // h1, h2, h3, p, ul, li, a:link {
+ //   color:#fff;
+  //}
+ // a:hover, a:visited  {
+ //   color:   #f3f2f1		;
+ // }
+ // a:focus {
+ //   text-decoration:none;
+ //   color:  $govuk-focus-text-colour;
+ //   background-color:  $govuk-focus-colour	;
+ // }
 
-  .govuk-button {
-    background-color: #fff;
-    color: #000 !important;
-    &:visited {
-      background-color: #f3f2f1	;
-      color:  $govuk-focus-text-colour;
-    }
-    &:hover {
-      background-color: 	#b1b4b6 	;
-      color:  $govuk-focus-text-colour;
-    }
+ // .govuk-button {
+  //  background-color: #fff;
+ //   color: #000 !important;
+ //   &:visited {
+ //     background-color: #f3f2f1	;
+ //     color:  $govuk-focus-text-colour;
+ //   }
+ //   &:hover {
+ //     background-color: 	#b1b4b6 	;
+  //    color:  $govuk-focus-text-colour;
+ //   }
 
-  }
+ // }
   // trying to add styling for radio buttons 
-  .govuk-form-group {
-    background-color:#175B96; 
-  color: #fff !important;
+ // .govuk-form-group {
+ //   background-color:#175B96; 
+ // color: #fff !important;
 
 
-  }
+//  }
   // this has finally changed the radio labels! Not sure if we want it to look like this though
-  .govuk-label {
-    background-color:#175B96; 
-  color: #fff !important;
+ // .govuk-label {
+//    background-color:#175B96; 
+//  color: #fff !important;
 
-
-  }
-  }
+// }
+//  }
 
   //notification badge 
 
