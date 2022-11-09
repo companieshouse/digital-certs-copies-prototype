@@ -1,0 +1,150 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your orders -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+{% include "includes/back-link.html" %}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form action="/your-orders" method="post">
+
+          <h1 class="govuk-heading-xl">Your orders</h1>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+          {{ govukTable({
+            caption: "Your orders",
+            captionClasses: "govuk-table__caption--l govuk-visually-hidden",
+            firstCellIsHeader: true,
+            head: [
+              {
+                text: "Order reference"
+              },
+              {
+                text: "Date ordered"
+              },
+              {
+                html: "Order summary"
+              },
+              {
+                text: "Fee"
+              },
+              {
+                text: "Status"
+              }
+
+            ],
+            rows: [
+              [
+                {
+                  html: '<p class="govuk-body"><a href="/orders/your-orders-pending-v2" class="govuk-link">ORD-168827-927371</a></p>'
+                },
+                {
+                  text: "2 November 2022"
+                },
+                {
+                  html: "2 Certified certificate"
+                },
+                {
+                  text: "£XX"
+                },
+                {
+                  html: '<strong class="govuk-tag govuk-tag--blue">Pending </a>'
+                }
+              ],
+              [
+                {
+                  html: '<p class="govuk-body"><a href="/orders/your-orders-pending-v2" class="govuk-link">ORD-168896-453792</a></p>'
+                },
+                {
+                  text: "25 October 2022"
+                },
+                {
+                  html: "1 Certified document <br> 4 Certified certificate"
+                },
+                {
+                  text: "£XX"
+                },
+                {
+                  html: '<strong class="govuk-tag govuk-tag--green">Ready </a>'
+                }
+              ],
+              [
+                {
+                  html: '<p class="govuk-body"><a href="/orders/your-orders-pending-v2" class="govuk-link">ORD-164589-290643</a></p>'
+                },
+                {
+                  text: "20 October 2022"
+                },
+                {
+                  html: "3 Certified document <br>1 Certified certificate"
+                },
+                {
+                  text: "£XX"
+                },
+                {
+                  html: '<strong class="govuk-tag govuk-tag--green">Ready </a>'
+                }
+              ],
+              [
+                {
+                  html: '<p class="govuk-body"><a href="/orders/your-orders-pending-v2" class="govuk-link">ORD-168733-578425</a></p>'
+                },
+                {
+                  text: "30 August 2022"
+                },
+                {
+                  html: "4 Certified certificate"
+                },
+                {
+                  text: "£XX"
+                },
+                {
+                  html: '<strong class="govuk-tag govuk-tag--red">Expired </a>'
+                }
+              ],
+              [
+                {
+                  html: '<p class="govuk-body"><a href="/orders/your-orders-pending-v2" class="govuk-link">ORD-168638-0652871</a></p>'
+                },
+                {
+                  text: "21 July 2022"
+                },
+                {
+                  html: "1 Certified certificate"
+                },
+                {
+                  text: "£XX"
+                },
+                {
+                  html: '<strong class="govuk-tag govuk-tag--red">Expired </a>'
+                }
+              ]
+              
+              ]
+          }) }}
+
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+{% endblock %}
