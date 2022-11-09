@@ -26,30 +26,28 @@
             <li>a paper copy with a wet ink signature</li>
           </ul>
 
-          <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        Do you want a digital certificate?
-      </h1>
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="do-you-want-a-digital-doc" name="do-you-want-a-digital-doc" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="do-you-want-a-digital-doc">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="do-you-want-a-digital-doc-2" name="do-you-want-a-digital-doc" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="do-you-want-a-digital-doc-2">
-          No
-        </label>
-      </div>
-    </div>
+          {{ govukRadios({
 
-  </fieldset>
-</div>
+  name: "do-you-want-digital",
+  fieldset: {
+    legend: {
+      text: "Do you want a digital certificate?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+    
+  ]
+}) }}
 
 
         {{ govukButton({
