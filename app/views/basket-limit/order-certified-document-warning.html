@@ -1,0 +1,179 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Order a certified document -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/#view-all"
+  }) }}
+{% endblock %}
+
+{% block content %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+
+{% set html %}
+  <p class="govuk-notification-banner__heading">
+    Your basket is full. You cannot add more than 10 items to your order. <br> Remove some items before adding more.
+
+  </p>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html
+}) }}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/order-certified-document" method="post">
+<!--
+      {% set html %}
+        <p class="govuk-notification-banner__heading">You can now order digital certified documents.
+        </p>
+        <p class="govuk-body">Some documents in this company's filing history may be available to order as a digital document.</p>
+
+      {% endset %}
+
+      {{ govukNotificationBanner({
+        html: html
+      }) }}-->
+
+      <span class="govuk-caption-l">THE GIRLS' DAY SCHOOL TRUST</span>
+
+      <h1 class="govuk-heading-xl">Order a certified document</h1>
+
+     <!--- {{ govukDetails({
+        summaryText: "If you want to order a certificate for a different company...",
+        text: "If you want to order a certificate for a different company..."
+      }) }}
+      
+
+
+      <p class="govuk-body-l">Use this service to order a paper or digital certified copy of a document in a company's filing history. </p>
+
+ <!---{{ govukInsetText({
+        html: 'If you want to order a certificate for a different company, you will need to <a class="govuk-notification-banner__link" href="#">search for the company on the register</a>. Use the \'More\' tab on the company page to order a certified document or certificate.'
+      }) }}
+    -->
+
+
+      <p class="govuk-body">You'll need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>to sign in to or create a Companies House account</li>
+          <li>a debit or credit card</li>
+        </ul>
+      <p class="govuk-body">To order for a different company, <a href="">search for the company on the register</a>.</p>
+
+      <h2 class="govuk-heading-m">Choosing paper or digital documents</h2>
+      <p class="govuk-body">You can choose to order digital and paper copies of certified documents. You may need to order a paper document if the person who is asking for it needs a paper copy with a wet ink signature.</p> 
+      
+      <p class="govuk-body">You should contact the person asking for the document to check what they need before ordering.</p>
+
+      <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How are paper and digital documents certified?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Paper copies will be signed in person by one of our officials. Digital copies will be a PDF document, signed with an approved Companies House electronic signature.
+  </div>
+</details>
+
+
+
+        <h2 class="govuk-heading-m">Ordering incorporation documents</h2>
+
+        <p class="govuk-body">Orders for incorporation documents consist of the certificate of incorporation and all other documents from when the company was formed.</p>
+
+
+          <p class="govuk-body">You cannot use this service to order a certificate that confirms company details and can include a statement of good standing (known as a certificate of good standing). For this, you'll need to use our <a href="order-certified-certificate" class="govuk-link">Order a certificate service</a>.</p>
+
+
+
+
+
+        {{ govukButton({
+          text: "Start now",
+          href: "filter-document-list",
+          classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+          isStartButton: true
+        }) }}
+
+
+
+       <!-- <h2 class="govuk-heading-m">Fee</h2>
+        <h3 class="govuk-heading-m">Digital document</h3>
+
+        <p class="govuk-body">It costs £XX for a digital certified document. Incorporation orders cost £XX.</p>
+
+
+        <p>You cannot pay using a Companies House account.</p>
+
+        <h3 class="govuk-heading-m">Standard dispatch</h3>
+
+        <p class="govuk-body">It costs £15 for a certified document with standard dispatch. Incorporation orders cost £30. We will aim to send out the certificate within 10 working days. The order can be sent to a UK or international address.</p>
+
+        <p class="govuk-body">We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail International post.</p>
+
+        <p class="govuk-body">You cannot pay using a Companies House account. </p>
+
+        <h3 class="govuk-heading-m">Express dispatch</h3>
+        <p class="govuk-body">It costs £50 for a certified document with express dispatch. The incorporation packages cost £100 with express dispatch.</p>
+        <p>Orders received before 11am will be sent out the same day. Orders received after 11am will be sent out the next working day. The order can be sent to a UK or international address. </p>
+        <p class="govuk-body">We send UK orders by Royal Mail 1st Class post and international orders by Royal Mail International post.</p>
+        <p class="govuk-body">You cannot pay using a Companies House account. </p> -->
+        {{ govukTable({
+          caption: "Costs",
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: true,
+          head: [
+            {
+              text: "Service"
+            },
+            {
+              text: "Cost"
+            }
+          ],
+          rows: [
+            [
+              {
+                text: "Digital service"
+              },
+              {
+                text: "£XX"
+              }
+            ],
+            [
+              {
+                text: "Standard paper service"
+              },
+              {
+                text: "£15"
+              }
+            ],
+            [
+              {
+                text: "Express paper service"
+              },
+              {
+                text: "£50"
+              }
+            ]
+          ]
+        }) }}
+
+<p class="govuk-body"><a href="/guidance">Read the guidance</a> for more information, including how long each service takes. </p>
+      </form>
+    </div>
+  </div>
+{% endblock %}

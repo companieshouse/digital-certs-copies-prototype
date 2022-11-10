@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Before you start – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/back-link.html" %}
+  {% include "includes/user-bar.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+{{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+    {
+      text: "Your basket is full. You cannot add more than 10 items to your order",
+      href: "#basket-full"
+    },
+    {
+      text: "",
+      href: ""
+    }
+  ]
+}) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/interrupt-card" method="post">
+      <div class="interrupt-card">
+        <h1 class="govuk-heading-l">Basket limit reached</h3> 
+
+        <p class="govuk-body">You cannot add another item to your basket. The order limit is 10.</p>
+        <p class="govuk-body">View your basket to either contiue to payment or edit your order.</p>
+
+         
+
+
+
+  </fieldset>
+</div>
+
+
+
+
+       {{ govukButton({
+          text: "View basket"
+        }) }}
+
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

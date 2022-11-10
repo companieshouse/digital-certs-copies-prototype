@@ -1,0 +1,78 @@
+<!-- copied from order certified doc, change to make order certificate -->
+{% extends "layout.html" %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% set serviceName %}
+  Request a document
+{% endset%}
+{% block pageTitle %}
+  Request a document
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar-basket-items.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/#view-all"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+{% set html %}
+  <p class="govuk-notification-banner__heading">
+    Your basket is full. You cannot add more than 10 items to your order. <br> Remove some items before adding more.
+
+  </p>
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html
+}) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/order-certified-document" method="post">
+      <h1 class="govuk-heading-xl">Request a document</h1>
+
+      <p class="govuk-body-l">Use this service to ask us to add a document to a company's filing history if it is not currently available. </p>
+
+      <h2 class="govuk-heading-m">How long it takes</h2>
+      
+      <p class="govuk-body">It can take us several hours to check the availability of a document. We will aim to add it to a company's filing history that day if the request is received between 8:30am and 3pm, Monday to Friday (excluding bank holidays).</p>
+        
+
+    <p class="govuk-body">If you make a request after 3pm, we will add the document the next working day. </p>
+    
+    <p class="govuk-body">After you have made the request, you can check the company's filing history for updates on the document's availability.</p>
+ 
+    <p class="govuk-body">Requesting a document takes around 5 minutes.</p>
+        
+
+  
+
+        
+
+
+        {{ govukButton({
+          text: "Start now",
+          href: "certificate-delivery-option",
+          classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+          isStartButton: true
+        }) }}
+
+        <h2 class="govuk-heading-m">Fee</h2>
+        <p class="govuk-body">It costs £3 to request a document. If we cannot add the document to the filing history we will contact you to issue a refund.</p>
+        <p class"govuk-body">You can pay by debit or credit card. You cannot pay using a Companies House account.</p>
+        
+
+
+
+
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
