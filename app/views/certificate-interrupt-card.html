@@ -18,13 +18,17 @@
       <div class="interrupt-card">
         <h1 class="govuk-heading-l">Before you order a digital certificate</h3> 
 
-        <p class="govuk-body">You should contact the person asking for the certificate to check if they will accept a digital certificate with an electronic Companies House signature.</p>
-        
-        <p class="govuk-body">Digital certificates are only valid in digital form. You may need to order a paper certificate if the person who is asking for it needs:</p>  
-          <ul class="govuk-list govuk-list--bullet">
-            <li>to include a statement of good standing</li>
-            <li>a paper copy with a wet ink signature</li>
+        <p class="govuk-body">You should check that a digital certificate with an electronic Companies House signature will be accepted by:</p>
+
+          <ul class="govuk-body">
+            <li>the person or organisation asking for the certificate (for example, the bank or embassy)</li>
+            <li>your notary, if you are getting the certificate notarised</li>
           </ul>
+        
+        <p class="govuk-body">If they need a paper certificate with a wet ink signature, you should order a paper certificate instead.</p>  
+
+        <p class="govuk-body">Digital certificates do not include a statement of good standing. If you need a statement of good standing, you should order a paper certificate instead.</p>  
+
 
           {{ govukRadios({
 
@@ -43,7 +47,7 @@
     },
     {
       value: "no",
-      text: "No"
+      text: "No, I want a paper certificate"
     }
     
   ]
