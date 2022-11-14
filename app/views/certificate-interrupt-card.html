@@ -20,43 +20,48 @@
 
         <p class="govuk-body">You should check that a digital certificate with an electronic Companies House signature will be accepted by:</p>
 
-          <ul class="govuk-body">
+          <ul class="govuk-body govuk-list--bullet govuk-list--spaced">
             <li>the person or organisation asking for the certificate (for example, the bank or embassy)</li>
             <li>your notary, if you are getting the certificate notarised</li>
           </ul>
         
         <p class="govuk-body">If they need a paper certificate with a wet ink signature, you should order a paper certificate instead.</p>  
 
-        <p class="govuk-body">Digital certificates do not include a statement of good standing. If you need a statement of good standing, you should order a paper certificate instead.</p>  
+       <p class="govuk-body">Digital certificates do not include a statement of good standing. If you need a statement of good standing, you should order a paper certificate instead.</p>  
+
+       <!--  {{ govukWarningText({
+          text: "Digital certificates do not include a statement of good standing. If you need a statement of good standing, you should order a paper certificate instead.",
+          iconFallbackText: "Warning"
+        }) }} -->
 
 
           {{ govukRadios({
 
-  name: "do-you-want-digital",
-  fieldset: {
-    legend: {
-      text: "Do you want a digital certificate?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--m"
-    }
-  },
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No, I want a paper certificate"
-    }
-    
-  ]
-}) }}
+            name: "do-you-want-digital",
+            fieldset: {
+              legend: {
+                text: "Do you want a digital certificate?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m  govuk-!-padding-top-3"
+              }
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No, I want a paper certificate"
+              }
+              
+            ]
+          }) }}
 
 
         {{ govukButton({
           text: "Continue",
-          href:"basket/basket-two-items"
+          href:"basket/basket-one-digital-item"
         }) }}
 
       </div>
