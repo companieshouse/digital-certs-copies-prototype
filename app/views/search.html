@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+
+{% endset%}
+
+{% block pageTitle %}
+  Find and update company information - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: ""
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  {% set overviewHtml %}
+
+
+
+
+  <ul class='govuk-list'>
+  <li>Registered office address</li>
+  <li><strong>00006400</strong></li>
+    <br>
+  <li>Company status</li>
+  <li><strong>Active</strong></li>
+    <br>
+  <li>Company type</li>
+  <li><strong>Private limited company use of 'Limited' exemption</strong></li>
+    <br>
+    <br>
+  <h2 class="govuk-heading-m"> Accounts</h2>
+  <li>Next accounts made up to <strong>31 August 2022</strong> due by <strong>31 May 2023</strong></li>
+  <li>Last accounts made up to <strong>31 August 2021</strong></li>
+  <br>
+  <br>
+  <h2 class="govuk-heading-m"> Nature of business (SIC)</h2>
+    <li>85100 - Pre-primary education</li>
+    <li>85200 - Primary education</li>
+    <li>85310 - General secondary education</li>
+    <br>
+    <br>
+  </ul>
+    {% from "govuk/components/table/macro.njk" import govukTable %}
+
+    {{ govukTable({
+      caption: "Previous company names",
+      captionClasses: "govuk-table__caption--m",
+      firstCellIsHeader: true,
+      head: [
+        {
+          text: "Name"
+        },
+        {
+          text: "Period"
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "THE GIRLS' DAY SCHOOL TRUST (1872)"
+          },
+          {
+            text: "28 Apr 1998 - 01 Sep 2003"
+          }
+        ],
+        [
+          {
+            text: "THE GIRLS' PUBLIC DAY SCHOOL TRUST (1872)	"
+          },
+          {
+            text: "25 Aug 1993 - 28 Apr 1998"
+          }
+        ],
+        [
+          {
+            text: "GIRL'S PUBLIC DAY SCHOOL TRUST(THE)"
+          },
+          {
+            text: "26 Jun 1872 - 25 Aug 1993"
+          }
+        ]
+      ]
+    }) }}
+
+
+  {% endset -%}
+
+<h1 class="govuk-heading-l">Search the register </h1>
+<p class="govuk-body">Enter company name, number or officer name</p>
+
+  <div class="searchfield">
+  {{ govukInput({
+    label: {
+      text: "Search",
+      classes: "govuk-visually-hidden",
+      isPageHeading: false
+    }
+  }) }}
+</div>
+{{ govukButton({
+  text: "Search",
+  href:"company-overview-woolco"
+}) }}
+<p class="govuk-body"><a href="#" class="govuk-link">Advanced company search</a></p>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    </div/>
+
+</div>
+
+
+
+
+
+  
+
+{% endblock %}

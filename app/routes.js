@@ -120,22 +120,34 @@ router.post('/delivery-details', function(req, res) {
   else
   {
 
-/* Emma - need to check if they are on the certificates or certified docs journey */
-
-   /* if(app.settings.paperOption == 'standard')
-    {
-      res.redirect('basket/basket-two-items')
-    }
-    else if(app.settings.paperOption == 'express')
-    {
-      res.redirect('basket/basket-three-items')
-    }
-*/
-
-
     
   }
 })
+
+router.post('/sign-in-wool', function (req, res) {
+
+  //set the wool journey
+  app.set('companyname','woolco');
+  res.redirect('certificate-delivery-option')
+  
+})
+
+router.post('/certificate-interrupt-card', function (req, res) {
+
+  if(app.settings.companyname == 'woolco'){
+
+    res.redirect('basket/basket-two-items')
+
+  }
+  else
+  {
+     res.redirect('basket/basket-one-digital-item')
+  }
+ 
+})
+
+
+
 
 
 
@@ -223,13 +235,7 @@ router.post('/delivery-details', function (req, res) {
     {
       res.redirect('basket/basket-two-items')
     }
-    // take the user to the basket with certificate included 
-   /* else if(app.settings.journey == 'certificates')
-    {
 
-      //2 certified docs and 1 certificate
-      res.redirect('basket/basket-mixed')
-    }*/
 
 })
 

@@ -1,0 +1,88 @@
+{% set title = "Sign in to Companies House" %}
+{% extends "layout.html" %}
+{% set serviceName %}
+{% endset%}
+{% block pageTitle %}
+  {{title}}
+  - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half-from-desktop">
+      {% if errorEmail == true or errorPassword == true %}
+        {{ govukErrorSummary({
+            titleText: "There is a problem",
+            errorList: errorList
+          }) }}
+      {% endif %}
+      <h1 class="govuk-heading-l">{{title}}</h1>
+      {{ govukInsetText({
+      text: "You must sign in to or create a Companies House account. Your WebFiling details will not work with this service."
+    }) }}
+      <form action="/sign-in-wool" method="post">
+        {% if errorEmail == true %}
+          {{ govukInput({
+            label: {
+              text: "Email address"
+            },
+            id: "email",
+            type: "email",
+            name: "email",
+            autocomplete: "email",
+            errorMessage: {
+              text: "Enter your email address"
+            }
+          }) }}
+        {% else %}
+          {{ govukInput({
+            label: {
+              text: "Email address"
+            },
+            type: "email",
+            autocomplete: "email",
+            id: "email",
+            name: "email"
+          }) }}
+        {% endif %}
+        {% if errorPassword == true %}
+          {{ govukInput({
+            label: {
+              text: "Password"
+            },
+            id: "password",
+            name: "password",
+            type: "password",
+            errorMessage: {
+              text: "Enter your password"
+            }
+          }) }}
+        {% else %}
+          {{ govukInput({
+            label: {
+              text: "Password"
+            },
+            id: "password",
+            name: "password",
+            type: "password"
+          }) }}
+        {% endif %}
+        {{ govukButton({
+        text: "Sign in"
+        }) }}
+        
+        <p>
+          <a href="create-account" class="govuk-link govuk-link--no-visited-state">Create an account</a>
+        </p>
+        <p>
+          <a href="forgot-password" class="govuk-link govuk-link--no-visited-state">I've forgotten my password</a>
+        </p>
+      </form>
+    </div>
+  </div>
+{% endblock %}
