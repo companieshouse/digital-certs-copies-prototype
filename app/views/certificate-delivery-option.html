@@ -37,15 +37,17 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             value: "digital",
             text: "Digital",
             hint: {
-            html: '<p class="govuk-body  govuk-!-padding-top-4">A digital certificate is a PDF document, embedded with an approved Companies House electronic signature. It will:</p>
+            html: '<p class="govuk-body  govuk-!-padding-top-4">A digital certificate is a PDF document, embedded with an approved Companies House electronic signature. It will include:</p>
                   <ul class="govuk-list govuk-list--bullet">
-                      <li>cost £XX</li>
-                      <li>be ready to download from Your orders within 1 hour</li>
-                      <li>be available to download for XX days</li>
+                      <li>company name and number</li>
+                      <li>incorporation date</li>
+                      <li>current registered office address</li>
+                      <li>directors</li>
+                      <li>secretaries</li>
                     </ul>
                   <p class="govuk-body">A digital certificate cannot be customised and will not include a statement of good standing.</p>
                   
-                        <details class="govuk-details" data-module="govuk-details">
+                  <!---      <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             What information does a digital certificate include?
@@ -64,7 +66,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
           </ul>
 
         </div>
-      </details>
+      </details> -->
                   
                   
                   '
@@ -74,13 +76,16 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             value: "paper",
             text: 'Paper',
             hint: {
-            html: '<p class="govuk-body  govuk-!-padding-top-4">A paper certificate is signed in person by one of our officials. Certificates are sent by Royal Mail. You can choose:</p>
+            html: '<p class="govuk-body  govuk-!-padding-top-4">A paper certificate is signed in person by one of our officials. It will include the company name, number and incorporation date. You can add information, including:</p>
                     <ul class="govuk-list govuk-list--bullet">
-                      <li>standard dispatch for £15 - we will aim to send out the certificate within 10 working days</li>
-                      <li>express dispatch for £50 – orders received before 11am will be sent out the same day and orders received after 11am the next working day</li>
+                      <li>a statement of good standing</li>
+                      <li>current and previous registered office address</li>
+                      <li>directors</li>
+                      <li>secretaries</li>
+                      <li>company objects</li>
                     </ul>
                     
-                          <details class="govuk-details" data-module="govuk-details">
+                     <!---     <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             What information does a paper certificate include?
@@ -99,7 +104,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
           </ul>
 
         </div>
-      </details>
+      </details> -->
 
                     '
           }
@@ -111,6 +116,63 @@ Choose a dispatch option -  Find and update company details - GOV.UK
           text: "Continue",
           href:"certificate-interrupt-card"
     }) }}
+
+    {% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  caption: "Costs and dispatch information",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Service",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Cost",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Dispatch information",
+      classes: 'app-custom-class'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Digital"
+      },
+      {
+        text: "£XX"
+      },
+      {
+        text: "Your document will be available to download from Your orders within 1 hour. It will be available to download for XX days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with standard dispatch)"
+      },
+      {
+        text: "£15"
+      },
+      {
+        text: "We will aim to send out the certificate within 10 working days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with express dispatch)"
+      },
+      {
+        text: "£50"
+      },
+      {
+        text: "Orders received before 11am will be sent out the same day and orders received after 11am the next working day."
+      }
+    ]
+  ]
+}) }}
 
     </form>
   </div>

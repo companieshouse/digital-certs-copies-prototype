@@ -37,23 +37,14 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             value: "digital",
             html: '<p class="govuk-!-font-weight-bold"> Digital</p>',
             hint: {
-            html: '<p class="govuk-body">The digital document will be PDF document, signed with an approved Companies House electronic signature. The document will:</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>cost £XX (incorporation orders cost (£XX)</li>
-                      <li>be ready to download from Your orders within 1 hour</li>
-                      <li>be available to download for XX days</li>
-                    </ul>'
+            html: '<p class="govuk-body">The digital document will be PDF document, signed with an approved Companies House electronic signature. </p>'
           }
           },
           {
             value: "paper",
             html: '<p class="govuk-!-font-weight-bold"> Paper</p>',
             hint: {
-            html: '<p class="govuk-body">Paper documents will be signed in person by one of our officials. Documents are sent by Royal Mail, you can choose:</p>
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>standard dispatch for £15 (incorporation orders cost £30) - we will aim to send out the certificate within 10 working days</li>
-                      <li>express dispatch for £50 (incorporation orders cost £100) – orders received before 11am will be sent out the same day and orders received after 11am the next working day </li>
-                    </ul>'
+            html: '<p class="govuk-body">Paper documents will be signed in person by one of our officials. </p>'
           }
           }
         ]
@@ -63,6 +54,61 @@ Choose a dispatch option -  Find and update company details - GOV.UK
     {{ govukButton({
           text: "Continue"
     }) }}
+
+    {{ govukTable({
+  caption: "Costs and dispatch information",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Service",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Cost",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Dispatch information",
+      classes: 'app-custom-class'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Digital"
+      },
+      {
+        text: "£XX (incorporation orders cost £XX)"
+      },
+      {
+        text: "Your document will be available to download from Your orders within 1 hour. It will be available to download for XX days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with standard dispatch)"
+      },
+      {
+        text: "£15 (incorporation orders cost £30)"
+      },
+      {
+        text: "We will aim to send out the certificate within 10 working days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with express dispatch)"
+      },
+      {
+        text: "£50 (incorporation orders cost £100)"
+      },
+      {
+        text: "Orders received before 11am will be sent out the same day and orders received after 11am the next working day."
+      }
+    ]
+  ]
+}) }}
 
     </form>
   </div>
