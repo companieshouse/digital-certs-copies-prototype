@@ -124,7 +124,7 @@ router.post('/delivery-details', function(req, res) {
   }
 })
 
-router.post('/sign-in-wool', function (req, res) {
+router.post('/order-certified-document-wool', function (req, res) {
 
   //set the wool journey
   app.set('companyname','woolco');
@@ -137,6 +137,7 @@ router.post('/certificate-interrupt-card', function (req, res) {
   if(app.settings.companyname == 'woolco'){
 
     res.redirect('basket/basket-two-items')
+    app.set('companyname','');
 
   }
   else
