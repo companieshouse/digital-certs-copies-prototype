@@ -35,9 +35,10 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         items: [
           {
             value: "digital",
-            text: "Digital",
+            html: '<p class="govuk-body govuk-!-font-weight-bold"> Digital</p>',
+            class:"govuk-body govuk-!-font-weight-bold",
             hint: {
-            html: '<p class="govuk-body  govuk-!-padding-top-4">A digital certificate is a PDF document, embedded with an approved Companies House electronic signature. It will include the:</p>
+            html: '<p class="govuk-body">A digital certificate is a PDF document, embedded with an approved Companies House electronic signature. It will include the:</p>
                   <ul class="govuk-list govuk-list--bullet">
                       <li>company name and number</li>
                       <li>incorporation date</li>
@@ -46,38 +47,19 @@ Choose a dispatch option -  Find and update company details - GOV.UK
                       <li>current secretaries</li>
                       <li>business description</li>
                     </ul>
-                  <p class="govuk-body">A digital certificate cannot be customised and will not include a statement of good standing.</p>
-                  
-                  <!---      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            What information does a digital certificate include?
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p>Digital certificates will include:</p>
-          <ul class="govuk-list govuk-list--bullet">
-                      <li>company name and number</li>
-                      <li>incorporation date</li>
-                      <li>current registered office address</li>
-                      <li>directors</li>
-                      <li>secretaries</li>
-                      <li>company objects</li>
 
-          </ul>
+                  <!--<p class="govuk-body">A digital certificate cannot be customised and will not include a statement of good standing.</p> -->
 
-        </div>
-      </details> -->
-                  
-                  
-                  '
+                  <div class="govuk-inset-text">
+                    A digital certificate cannot be customised and will not include a statement of good standing.
+                  </div>'
           }
           },
           {
             value: "paper",
-            text: 'Paper',
+            html: '<p class="govuk-body govuk-!-font-weight-bold"> Paper</p>',
             hint: {
-            html: '<p class="govuk-body  govuk-!-padding-top-4">A paper certificate is signed in person by one of our officials. It will include the company name, number and incorporation date. You can add information, including:</p>
+            html: '<p class="govuk-body">A paper certificate is signed in person by one of our officials. It will include the company name, number and incorporation date. You can add information, including:</p>
                     <ul class="govuk-list govuk-list--bullet">
                       <li>a statement of good standing</li>
                       <li>current and previous registered office address</li>
