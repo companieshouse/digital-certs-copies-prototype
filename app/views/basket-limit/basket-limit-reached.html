@@ -30,10 +30,10 @@
     <div class="govuk-grid-column-two-thirds">
       <form action="/interrupt-card" method="post">
       <div class="interrupt-card">
-        <h1 class="govuk-heading-l">Basket limit reached</h3> 
+        <h1 class="govuk-heading-l">Your basket is full</h3> 
 
-        <p class="govuk-body">You cannot add another item to your basket. The order limit is 10.</p>
-        <p class="govuk-body">View your basket to either contiue to payment or edit your order.</p>
+        <p class="govuk-body">You cannot add more than 10 items to your order. You cannot add any more to this order.</p>
+        <p class="govuk-body"><a href="/basket-limit/basket-warning">Go to your basket</a> to review your order.</p>
 
          
 
@@ -43,12 +43,12 @@
 </div>
 
 
-
+<!-- (Have hidden button for now and added hyperlink, but can switch this if needed)
 
        {{ govukButton({
           text: "View basket"
         }) }}
-
+-->
       </div>
 
       </form>
