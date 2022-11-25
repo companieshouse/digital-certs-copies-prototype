@@ -227,22 +227,33 @@
 
     <h2 class="govuk-heading-m">Delivery details</h2>
 
+    {{ govukErrorMessage({
+      text: "Rhowch eich enw llawn",
+      visuallyHiddenText: "Gwall"
+    }) }}
+
 
 
      {{ govukSummaryList({
-       classes: 'govuk-!-margin-bottom-9',
+       classes: 'govuk-!-margin-bottom-9 govuk-form-group--error',
         rows: [
         {
           key: {
           text: "Address"
           },
           value: {
-                  text: ""
+                  text: "",
+                  errorMessage: {
+    text: "Enter your full name"
+  }
           },
           errorMessage: {
             text: "Select if you are British, Irish or a citizen of a different country"
           },
           actions: {
+            errorMessage: {
+            text: "Select if you are British, Irish or a citizen of a different country"
+          },
            items: [
             {
                href: "../../delivery-details",
@@ -254,8 +265,31 @@
         }
         ]
       }) }}
-      </div>
-      </div>
+
+      <dl class="govuk-summary-list govuk-error-message">
+        <div class="govuk-summary-list__row govuk-error-message">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Sarah Philips
+          </dd>
+          <dd class="govuk-summary-list__actions govuk-error-message">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+
+      <p class="govuk-error-message">
+        <span class="govuk-visually-hidden">Gwall:</span> Rhowch eich enw llawn
+      </p>
+
+
 
 
 
