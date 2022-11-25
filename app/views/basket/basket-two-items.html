@@ -24,27 +24,20 @@
     <div class="govuk-grid-column-full">
 
         <h1 class="govuk-heading-xl">Your basket</h1>
+        <p class="govuk-body"> You can only add 10 items to your basket.</p>
+        {{ govukButton({
+             text: "Add another certified document or certificate",
+              classes: "govuk-button--secondary govuk-!-margin-bottom-1",
+              href:"../add-another-document-company"
+        }) }}
 
-        <p class="govuk-body"> <a href="#" class="govuk-link govuk-link--no-visited-state">Add a certified document or certificate for another company</a></p>
+        
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
             <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
 
-            <div class="govuk-button-group govuk-!-padding-left-0 govuk-!-padding-top-2 govuk-!-margin-bottom-4">
-
-                      {{ govukButton({
-                        text: "Add a certified document",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../filter-document-list"
-                      }) }}
-                      {{ govukButton({
-                        text: "Add a certified certificate",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../order-certified-certificate"
-                      }) }} 
-
-                    </div>
+            
 
              
                 
@@ -121,20 +114,7 @@
 
 
 <h2 class="govuk-heading-m">THE WOOL COMPANY LIMITED (10987888)</h2>
-<div class="govuk-button-group govuk-!-padding-left-0 govuk-!-padding-top-2 govuk-!-margin-bottom-4">
 
-                      {{ govukButton({
-                        text: "Add a certified document",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../filter-document-list"
-                      }) }}
-                      {{ govukButton({
-                        text: "Add a certified certificate",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../order-certified-certificate"
-                      }) }} 
-
-                    </div>
 
  <div class="govuk-summary-card govuk-!-margin-bottom-9">
              <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
@@ -217,11 +197,17 @@
 
     <h4 class="govuk-heading-m">Total £XX</h4>
 
-      <div class="govuk-button-group">
+     <div class="govuk-button-group">
 
         {{ govukButton({
             text: "Continue to payment",
             href:"../payment"
+        }) }}
+
+        {{ govukButton({
+            text: "Add another certified document or certificate",
+            classes: "govuk-button--secondary",
+            href:"../add-another-document-company"
         }) }}
 
 

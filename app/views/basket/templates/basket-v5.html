@@ -1,0 +1,512 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your basket -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar-basket-two-items.html" %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<form action="/payment-review" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Your basket</h1>
+
+        <p class="govuk-body"> You can only add 10 items to your basket.</p>
+        {{ govukButton({
+             text: "Add another certified document or certificate",
+              classes: "govuk-button--secondary govuk-!-margin-bottom-1",
+              href:"../add-another-document-company"
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+
+
+ 
+
+<!-- <h2 class="govuk-heading-m">Missing image requests</h2>
+       <div class="govuk-summary-card govuk-!-margin-bottom-9">
+                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">THE GIRLS DAY SCHOOL TRUST (00006400)</h3>
+                </div>
+
+                <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+                  {{ govukTable({
+                       caption: "Missing image requests for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                      captionClasses: "govuk-visually-hidden",
+                       classes: "govuk-!-margin-bottom-4",
+                        head: [
+
+                        {
+                          html: "Date filed"
+
+                        },
+                        {
+                          html: "Document type"
+                        },
+                        {
+                          html: "Description"
+                        },
+                        {
+                          html: "Fee"
+                        },
+                        {
+                          html: '<span class="govuk-visually-hidden">Remove</span>'
+                        }
+
+                        ],
+                        rows: [
+                          [
+                          {
+                            text: "7 July 2022"
+                          },
+                            {
+                              text: "AA"
+                            },
+                            {
+                            text: "Accounts made for 'small' co. Made up to 25/07/94."
+                            },
+
+                            {
+                              text: "£XX"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Accounts made for small co Made up to 25/07/94</span></a>'
+                            }
+                          ]
+
+                        ]
+
+                    }) }}
+
+                    <div class="govuk-button-group govuk-!-margin-bottom-0">
+
+                      {{ govukButton({
+                        text: "Add a certified document",
+                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
+                        href:"../filter-document-list"
+                      }) }}
+                      {{ govukButton({
+                        text: "Add a certified certificate",
+                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
+                        href:"../order-certified-certificate"
+                      }) }}
+
+                    </div> -->
+
+                    <!-- <div class="govuk-button-group govuk-!-margin-bottom-0">
+                      <p class="govuk-body">It can take us several hours to check the availability of a document. We will aim to add it to the company's filing history the same day if you submit your request before 3pm, Monday to Friday (excluding bank holidays).</p>
+                      <p class="govuk-body">If you submit your request after 3pm or at the weekend, we will add the document the next working day.
+                    </div> 
+                  </div> -->
+    
+
+
+
+
+
+            <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
+
+             <div class="govuk-summary-card govuk-!-margin-bottom-4">
+                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h3>
+                </div>
+                
+                <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+                  {{ govukTable({
+                       caption: "Certified documents for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                      captionClasses: "govuk-visually-hidden",
+                       classes: "govuk-!-margin-bottom-0",
+                        head: [
+                        {
+                          html: "Date filed",
+                          class: "no-wrap"
+                        },
+                        {
+                          html: "Document type"
+                        },
+                        {
+                          html: "Description",
+                          classes: 'govuk-!-width-one-third'
+                        },
+                        {
+                          html: "Dispatch method"
+                        },
+                        {
+                          html: "Fee"
+                        },
+                        {
+                          html: '<span class="govuk-visually-hidden">Remove</span>'
+                        }
+
+                        ],
+                        rows: [
+                          [
+                          {
+                            text: "04 Jul 2018"
+                          },
+                            {
+                              text: "CS01"
+                            },
+                            {
+                            html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
+                            },
+                            {
+                              text:"Digital"
+                            },
+                            {
+                              text:"£XX"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Confirmation statementmade on 27 June 2018 with no updates</span></a>'
+                            }
+                          ],
+                          [
+                          {
+                            text: "29 Jun 2017"
+                          },
+                            {
+                              text: "AA"
+                            },
+                            {
+                            html: "<span class='govuk-body govuk-!-font-weight-bold'> Group of companies' accounts </span> made up to 28 January 2017"
+                            },
+                            {
+                              text:"Paper - standard"
+                            },
+                            {
+                              text:"£XX"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Confirmation statementmade on 27 June 2018 with no updates</span></a>'
+                            }
+                          ]
+                        ]
+
+
+                    }) }}
+
+                    
+                  </div>
+                </div>
+
+
+
+                <div class="govuk-summary-card govuk-!-margin-bottom-9">
+                         <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+                           <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified certificates</h3>
+                         </div>
+
+                         
+
+                         <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+                           {{ govukTable({
+                                caption: "Certified certificates for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                               captionClasses: "govuk-visually-hidden",
+                                classes: "govuk-!-margin-bottom-0",
+                                 head: [
+
+                                 {
+                                   html: "Certificate type",
+                                   classes: 'govuk-!-width-one-third'
+                                 },
+                                 {
+                                   html: "Certificate contains"
+                                 },
+                                 {
+                                   html: "Dispatch method"
+                                 },
+                                 {
+                                   html: "Fee"
+                                 },
+                                 {
+                                   html: '<span class="govuk-visually-hidden">Remove</span>'
+                                 }
+
+                                 ],
+                                 rows: [
+                                   [
+                                   {
+                                     text: "Digital"
+                                   },
+                                   {
+                                       text: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description."
+                                     },
+                                     {
+                                       text: "Digital"
+                                     },
+                                     {
+                                     html: "£XX"
+                                     },
+                                     {
+                                       html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Dissolution with all company name changes</span></a>'
+                                     }
+                                   ],
+                                   [
+                                   {
+                                     text: "Incorporation"
+                                   },
+                                   {
+                                       text: "Registered office address"
+                                     },
+                                     {
+                                       text: "Paper - express"
+                                     },
+                                     {
+                                       text: "£XX"
+                                     },
+                                     {
+                                       html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Incorporation</span></a>'
+                                     }
+                                   ]
+                                 ]
+                             }) }}
+
+                             
+                           </div>
+                         </div>
+
+
+
+<!-- second company -->
+
+
+<h2 class="govuk-heading-m">THE WOOL COMPANY LIMITED (10987888)</h2>
+
+ <div class="govuk-summary-card govuk-!-margin-bottom-4">
+    <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+      <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h3>
+    </div>
+
+    
+
+    <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+      {{ govukTable({
+           caption: "Certified documents for THE WOOL COMPANY LIMITED (10987888)",
+          captionClasses: "govuk-visually-hidden",
+           classes: "govuk-!-margin-bottom-0",
+            head: [
+            {
+              html: "Date filed",
+              class: "no-wrap"
+            },
+            {
+              html: "Document type"
+            },
+            {
+              html: "Description",
+              classes: 'govuk-!-width-one-third'
+            },
+            {
+              html: "Dispatch method"
+            },
+            {
+              html: "Fee"
+            },
+            {
+              html: '<span class="govuk-visually-hidden">Remove</span>'
+            }
+
+            ],
+            rows: [
+              [
+              {
+                text: "05 Nov 2020"
+              },
+                {
+                  text: "CS01"
+                },
+                {
+                html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 28 September 2020 with no updates"
+                },
+                {
+                  text:"Digital"
+                },
+                {
+                  text:"£XX"
+                },
+
+                {
+                  html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Confirmation statementmade on 28 September 2020 with no updates</span></a>'
+                }
+              ]
+            ]
+
+
+        }) }}
+
+        
+      </div>
+    </div>
+
+
+
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">
+             <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+               <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified certificates</h3>
+             </div>
+            
+
+
+             <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+               {{ govukTable({
+                    caption: "Certified certificates for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                   captionClasses: "govuk-visually-hidden",
+                    classes: "govuk-!-margin-bottom-0",
+                     head: [
+
+                     {
+                       html: "Certificate type",
+                       classes: 'govuk-!-width-one-third'
+                     },
+                     {
+                       html: "Certificate contains"
+                     },
+                     {
+                       html: "Dispatch method"
+                     },
+                     {
+                       html: "Fee"
+                     },
+                     {
+                       html: '<span class="govuk-visually-hidden">Remove</span>'
+                     }
+
+                     ],
+                     rows: [
+                       [
+                       {
+                         text: "Digital"
+                       },
+                       {
+                           text: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description."
+                         },
+                         {
+                           text: "Digital"
+                         },
+                         {
+                         html: "£XX"
+                         },
+                        {
+                           html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Dissolution with all company name changes</span></a>'
+                         }
+                       ],
+                       [
+                       {
+                         text: "Incorporation"
+                       },
+                       {
+                           text: "Statement of good standing"
+                         },
+                         {
+                           text: "Paper - express"
+                         },
+                         {
+                           text: "£XX"
+                         },
+                         {
+                           html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Incorporation</span></a>'
+                         }
+                       ]
+                     ]
+                 }) }}
+
+                 
+               </div>
+             </div>
+
+
+
+
+
+<!-- closing divs, put everything above these -->
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- This should only be shown if there are digital items in the basket - dynamic -->
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <!-- why is the styling above not working? -->
+    <p class="govuk-body">Digital items will be available to download from ‘Your orders’ within 1 hour. We’ll email to let you know when your order is ready to download.</p>
+
+    <p class="govuk-body">For standard delivery we aim to send your items within 10 working days. We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail International post.</p>
+
+
+    <h4 class="govuk-heading-m">Total £XX</h4>
+
+       <div class="govuk-button-group">
+
+        {{ govukButton({
+            text: "Continue to payment",
+            href:"../payment"
+        }) }}
+
+        {{ govukButton({
+            text: "Add another certified document or certificate",
+            classes: "govuk-button--secondary",
+            href:"../add-another-document-company"
+        }) }}
+
+
+      </div>
+
+
+
+
+    </div>
+    </div>
+
+</form>
+
+
+
+{% endblock %}
