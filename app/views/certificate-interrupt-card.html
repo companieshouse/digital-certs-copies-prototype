@@ -27,6 +27,14 @@
         
         <p class="govuk-body">If they need a paper certificate with a wet ink signature, you should order a paper certificate instead.</p>  
 
+              {{ govukDetails({
+  summaryText: "What is an electronic signature?",
+  text: "An electronic signature will not look like a wet ink signature. It will show the Companies House seal and the date the document was embedded with the electronic signature. 
+
+You can select the digital signature in the document to see more details and check the signature is valid.
+"
+  }) }}
+
        <p class="govuk-body">For now, digital certificates will not include a statement of good standing. If you need this, you should order a paper certificate instead.</p>  
 
        <!--  {{ govukWarningText({

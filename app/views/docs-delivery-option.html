@@ -44,12 +44,19 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             value: "paper",
             html: '<p class="govuk-!-font-weight-bold"> Paper</p>',
             hint: {
-            html: '<p class="govuk-body">Paper documents will be signed in person by one of our officials. </p>'
+            html: '<p class="govuk-body">Paper documents will be signed with a blue, wet ink signature by one of our officials.</p>'
           }
           }
         ]
       }) }}
+      
+      {{ govukDetails({
+  summaryText: "What is an electronic signature?",
+  text: "An electronic signature will not look like a wet ink signature. It will show the Companies House seal and the date the document was embedded with the electronic signature. 
 
+You can select the digital signature in the document to see more details and check the signature is valid.
+"
+  }) }}
 
     {{ govukButton({
           text: "Continue"
