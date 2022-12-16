@@ -115,66 +115,73 @@
 
 <h2 class="govuk-heading-m">THE WOOL COMPANY LIMITED (10987888)</h2>
 
+ <div class="govuk-summary-card govuk-!-margin-bottom-4">
+    <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+      <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h3>
+    </div>
 
- <div class="govuk-summary-card govuk-!-margin-bottom-9">
-             <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-               <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified certificates</h3>
-             </div>
-            
+    
+
+    <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
 
 
-             <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+      {{ govukTable({
+           caption: "Certified documents for THE WOOL COMPANY LIMITED (10987888)",
+          captionClasses: "govuk-visually-hidden",
+           classes: "govuk-!-margin-bottom-0",
+            head: [
+            {
+              html: "Date filed",
+              class: "no-wrap"
+            },
+            {
+              html: "Document type"
+            },
+            {
+              html: "Description",
+              classes: 'govuk-!-width-one-third'
+            },
+            {
+              html: "Dispatch method"
+            },
+            {
+              html: "Fee"
+            },
+            {
+              html: '<span class="govuk-visually-hidden">Remove</span>'
+            }
+
+            ],
+            rows: [
+              [
+              {
+                text: "05 Nov 2020"
+              },
+                {
+                  text: "CS01"
+                },
+                {
+                html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 28 September 2020 with no updates"
+                },
+                {
+                  text:"Digital"
+                },
+                {
+                  text:"£XX"
+                },
+
+                {
+                  html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Confirmation statementmade on 28 September 2020 with no updates</span></a>'
+                }
+              ]
+            ]
 
 
-               {{ govukTable({
-                    caption: "Certified certificates for THE GIRLS DAY SCHOOL TRUST (00006400)",
-                   captionClasses: "govuk-visually-hidden",
-                    classes: "govuk-!-margin-bottom-0",
-                     head: [
+        }) }}
 
-                     {
-                       html: "Certificate type",
-                       classes: 'govuk-!-width-one-quarter'
-                     },
-                     {
-                       html: "Certificate contains",
-                       classes: 'govuk-!-width-one-third'
-                     },
-                     {
-                       html: "Dispatch method"
-                     },
-                     {
-                       html: "Fee"
-                     },
-                     {
-                       html: '<span class="govuk-visually-hidden">Remove</span>'
-                     }
-
-                     ],
-                     rows: [
-                       [
-                       {
-                         text: "Incorporation with all company name changes"
-                       },
-                       {
-                           text: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description"
-                         },
-                         {
-                           text: "Digital"
-                         },
-                         {
-                         html: "£XX"
-                         },
-                         {
-                           html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Dissolution with all company name changes</span></a>'
-                         }
-                       ]
-                     ]
-                 }) }}
-
-                 
-               </div>
-             </div>
+        
+      </div>
+    </div>
 
 
 
