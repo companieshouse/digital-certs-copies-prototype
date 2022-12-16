@@ -3,21 +3,72 @@ const app = express()
 const router = express.Router()
 
 // Add your routes here 
+//certificate routes 
 
-////**** Routes for certified certificates
+router.post('/order-certified-certificate', function (req, res) {
 
-/*router.post('certificate-delivery-option', function (req, res) {
+  res.redirect('sign-in')
+
+})
+
+router.post('sign-in', function (req, res) {
+
+  res.redirect('certificate-delivery-option')
+
+})
+
+//if a user selects digital go to certificate-interrupt-card. If they select paper go to customise certificate page
+router.post('/certificate-delivery-option', function (req, res) {
 
   if(req.session.data['cert-digital-physical'] == "digital"){
 
-      res.redirect('certificate-interrupt-card')
+        res.redirect('certificate-interrupt-card')
+       
+    }
+    else if(req.session.data['cert-digital-physical'] == "paper"){
+
+      res.redirect('/certificate-details-selection')
+     
+    }
+
+})
+
+//defaults to basket with one item. If on the wool company journey it takes the user to a basket with two items.
+
+router.post('/certificate-interrupt-card', function (req, res) {
+
+  if(app.settings.companyname == 'woolco'){
+
+    res.redirect('basket/basket-two-items')
+    app.set('companyname','');
+
   }
-  else if(req.session.data['cert-digital-physical'] == "paper"){
+  else
+  {
+     res.redirect('basket/basket-one-digital-item')
+  }
+ 
+})
 
-      res.redirect('certificate-details-selection')
-  }  
 
-})*/
+//add another company take the user to the company overview screen or the search
+
+router.post('/add-another-document-company', function (req, res) {
+
+  if(req.session.data['company-to-order'] == "girls-day-school"){
+
+        res.redirect('company-overview-gdst')
+       
+    }
+    else if(req.session.data['company-to-order'] == "another-company"){
+
+      res.redirect('search')
+     
+    }
+  })
+
+
+// certificate paper journey
 
 router.post('/certificate-details-selection', function (req, res) {
 
@@ -124,6 +175,8 @@ router.post('/delivery-details', function(req, res) {
   }
 })
 
+//wool digital certificate routing
+
 router.post('/order-certified-document-wool', function (req, res) {
 
   //set the wool journey
@@ -131,23 +184,6 @@ router.post('/order-certified-document-wool', function (req, res) {
   res.redirect('certificate-delivery-option')
   
 })
-
-router.post('/certificate-interrupt-card', function (req, res) {
-
-  if(app.settings.companyname == 'woolco'){
-
-    res.redirect('basket/basket-two-items')
-    app.set('companyname','');
-
-  }
-  else
-  {
-     res.redirect('basket/basket-one-digital-item')
-  }
- 
-})
-
-
 
 
 

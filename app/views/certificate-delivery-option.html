@@ -18,7 +18,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
 {% block content %}
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form action="certificate-delivery-option" method="post" novalidate>
+    <form action="certificate-delivery-option" method="post">
 
       {{ govukCheckboxes({
         name: "cert-digital-physical",
@@ -98,8 +98,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
 
 
     {{ govukButton({
-          text: "Continue",
-          href:"certificate-interrupt-card"
+          text: "Continue"
     }) }}
 
     {% from "govuk/components/table/macro.njk" import govukTable %}
