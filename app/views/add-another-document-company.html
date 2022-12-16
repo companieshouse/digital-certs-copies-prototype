@@ -18,10 +18,10 @@ Choose a dispatch option -  Find and update company details - GOV.UK
 {% block content %}
   <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds-from-desktop">
-    <form action="/docs-dispatch-option" method="post" novalidate>
+    <form action="/add-another-document-company" method="post" novalidate>
 
     {{ govukRadios({
-      name: "choose-paper-option",
+      name: "company-to-order",
       fieldset: {
         legend: {
           text: "Select the company you want to order for",
@@ -31,7 +31,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
       },
       items: [
         {
-          value: "express",
+          value: "girls-day-school",
           text: "THE GIRLS DAY SCHOOL TRUST (00006400)"
           
         },
@@ -40,7 +40,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         divider: "or"
       },
       {
-        value: "abroad",
+        value: "another-company",
         text: "Another company"
       }
       ]
@@ -48,7 +48,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
 
     {{ govukButton({
           text: "Continue",
-          href:"add-another-document-type"
+          href:"search"
     }) }}
 
     </form>

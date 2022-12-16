@@ -203,7 +203,7 @@ router.post('/interrupt-card', function (req, res) {
 
   if(req.session.data['docs-physical-digital'] == "digital"){
 
-          res.redirect('basket/basket-one-digital-item')
+          res.redirect('basket/basket-two-items')
       }
       else if(req.session.data['docs-physical-digital'] == "physical"){
 
