@@ -20,7 +20,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
   <div class="govuk-grid-column-two-thirds-from-desktop">
     <form action="certificate-delivery-option" method="post">
 
-      {{ govukCheckboxes({
+      {{ govukRadios({
         name: "cert-digital-physical",
         fieldset: {
           legend: {
@@ -30,7 +30,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
           }
         },
         hint: {
-          text: "Select all that apply."
+          text: "Select one option."
         },
         items: [
           {
