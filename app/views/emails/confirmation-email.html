@@ -30,72 +30,23 @@
           We’ll email to let you know you when all digital items on your order are ready to download. Some items may be ready sooner than others.
       </p>
 
-
-
-
       <h2 class="govuk-heading-l">Your order summary</h2>
 
-     <!--  <h3 class="govuk-heading-m">Certified documents</h3>
-
-        {{ govukTable({
-          caption: "",
-              head: [
-                {
-                  html: "Company"
-                },
-                {
-                  html: "Date filed"
-                },
-                {
-                  html: "Description",
-                  classes: 'govuk-!-width-one-third'
-                },
-                {
-                  html: "Dispatch method"
-                },
-                {
-                  html: "Fee"
-                }
-
-              ],
-              rows: [
-                [
-                  {
-                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
-                  },
-                  {
-                     text: "04 Jul 2018"
-                  },
-                  {
-                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
-                  },
-                  {
-                    text: "Digital"
-                  },
-                  {
-                    text:"£XX"
-                  }
-                ]
-              ]
-          }) }} -->
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-
-
+      <h3 class="govuk-heading-m">THE GIRL'S DAY SCHOOL TRUST (00006400)</h2>
+        
      <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
-
-      <h3 class="govuk-heading-m">Certificates</h3>
+      
+      <h4 class="govuk-heading-s">Certified certificates</h4>
 
         {{ govukTable({
           caption: "",
+          classes:"govuk-!-font-size-16",
               head: [
                 {
-                  html: "Company"
-                },
-                
-                {
-                  html: "Certificate contains",
-                  classes: 'govuk-!-width-one-third'
+                  html: "Certificate contains"
                 },
                 {
                   html: "Dispatch method"
@@ -114,41 +65,16 @@
               rows: [
                 [
                   {
-                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
-                  },
-                  
-                  {
                     html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
                   },
                   {
                     text: "Digital"
                   },
                   {
-                    text: "No"
+                    text: "-----"
                   },
                   {
-                    text: "1"
-                  },
-                  {
-                    text:"£9"
-                  }
-                ],
-                [
-                  {
-                    html: "THE WOOL COMPANY (10987888)"
-                  },
-                  
-                  {
-                    html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
-                  },
-                  {
-                    text: "Digital"
-                  },
-                  {
-                    text: "Yes"
-                  },
-                  {
-                    text: "1"
+                    text: "-----"
                   },
                   {
                     text:"£9"
@@ -156,6 +82,61 @@
                 ]
               ]
           }) }}
+
+
+
+      <h3 class="govuk-heading-m">THE WOOL COMPANY (10987888)</h2>
+        
+     <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
+      
+      <h4 class="govuk-heading-s">Certified certificates</h4>
+
+        {{ govukTable({
+          caption: "",
+          classes:"govuk-!-font-size-16",
+              head: [
+                {
+                  html: "Certificate contains"
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Email copy"
+                },
+                {
+                  html: "Quantity"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
+                  },
+                  {
+                    text: "Digital"
+                  },
+                  {
+                    text: "-----"
+                  },
+                  {
+                    text: "-----"
+                  },
+                  {
+                    text:"£9"
+                  }
+                ]
+              ]
+          }) }}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters govuk-!-padding-top-4">
+      
 
 <!-- do we need the address/would we show it if the order only contains digital docs? -->
       <h3 class="govuk-heading-m">Delivery details</h3>
@@ -172,11 +153,11 @@
 
           </div> -->
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+            <dt class="govuk-summary-list__key govuk-!-font-size-16">
               Email
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">sarah.phillips@example.com</p>
+              <p class="govuk-body govuk-!-font-size-16">sarah.phillips@example.com</p>
             </dd>
 
           </div>
@@ -187,28 +168,28 @@
 
 
             <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <dt class="govuk-summary-list__key govuk-!-font-size-16">
                 Amount paid
               </dt>
-              <dd class="govuk-summary-list__value">
+              <dd class="govuk-summary-list__value govuk-!-font-size-16">
                 £18
               </dd>
 
             </div>
             <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <dt class="govuk-summary-list__key govuk-!-font-size-16">
                 Payment reference
               </dt>
               <dd class="govuk-summary-list__value">
-                <p class="govuk-body">RS5VSN6DRE</p>
+                <p class="govuk-body govuk-!-font-size-16 ">RS5VSN6DRE</p>
               </dd>
 
             </div>
           </dl>
+        </div>
+        </div>
   <h3 class="govuk-heading-m">How to contact us</h3>
-  <p class="govuk-body">Email <a href="enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> if you have questions about your order.</p>
-
-  <p class="govuk-body">Include your order reference number when you contact us.
+  <p class="govuk-body">Email <a href="enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> if you have questions about your order. Include your order reference number when you contact us.
 </p>
     </div>
   </div>

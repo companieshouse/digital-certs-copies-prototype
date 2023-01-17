@@ -25,60 +25,21 @@
     
 
       <h2 class="govuk-heading-l">Your order summary</h2>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-      <!-- <h3 class="govuk-heading-m">Certified documents</h3>
-
-        {{ govukTable({
-          caption: "",
-              head: [
-                {
-                  html: "Company"
-                },
-                {
-                  html: "Date filed"
-                },
-                {
-                  html: "Description",
-                  classes: 'govuk-!-width-one-third'
-                },
-
-                {
-                  html: "Fee"
-                }
-
-              ],
-              rows: [
-                [
-                  {
-                    text: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
-                  },
-                  {
-                     text: "04 Jul 2018"
-                  },
-                  {
-                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
-                  },
-
-                  {
-                    text:"£XX"
-                  }
-                ]
-              ]
-          }) }} -->
-
-         <h3 class="govuk-heading-m">Certificates</h3>
+      <h3 class="govuk-heading-m">THE GIRL'S DAY SCHOOL TRUST (00006400)</h2>
+        
+     <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
+      
+      <h4 class="govuk-heading-s">Certified certificates</h4>
 
         {{ govukTable({
           caption: "",
+          classes:"govuk-!-font-size-16",
               head: [
                 {
-                  html: "Company"
-                },
-              
-                {
-                  html: "Certificate contains",
-                  classes: 'govuk-!-width-one-third'
+                  html: "Certificate contains"
                 },
                 {
                   html: "Dispatch method"
@@ -97,41 +58,16 @@
               rows: [
                 [
                   {
-                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
-                  },
-                 
-                  {
                     html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
                   },
                   {
                     text: "Digital"
                   },
                   {
-                    text: "No"
+                    text: "-----"
                   },
                   {
-                    text: "1"
-                  },
-                  {
-                    text:"£9"
-                  }
-                ],
-                [
-                  {
-                    html: "THE WOOL COMPANY (10987888)"
-                  },
-                  
-                  {
-                    html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
-                  },
-                  {
-                    text: "Digital"
-                  },
-                  {
-                    text: "Yes"
-                  },
-                  {
-                    text: "1"
+                    text: "-----"
                   },
                   {
                     text:"£9"
@@ -139,6 +75,61 @@
                 ]
               ]
           }) }}
+
+
+
+      <h3 class="govuk-heading-m">THE WOOL COMPANY (10987888)</h2>
+        
+     <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
+      
+      <h4 class="govuk-heading-s">Certified certificates</h4>
+
+        {{ govukTable({
+          caption: "",
+          classes:"govuk-!-font-size-16",
+              head: [
+                {
+                  html: "Certificate contains"
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Email copy"
+                },
+                {
+                  html: "Quantity"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
+                  },
+                  {
+                    text: "Digital"
+                  },
+                  {
+                    text: "-----"
+                  },
+                  {
+                    text: "-----"
+                  },
+                  {
+                    text:"£9"
+                  }
+                ]
+              ]
+          }) }}
+
+
+
+
+      
     <p class="govuk-body">Email <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> if you have questions about your order. Include your order reference number when you contact us.</p>
 
 

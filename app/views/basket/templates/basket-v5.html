@@ -141,7 +141,7 @@
                         head: [
                         {
                           html: "Date filed",
-                          class: "no-wrap"
+                          classes: "no-wrap"
                         },
                         {
                           html: "Document type"
@@ -170,7 +170,8 @@
                         rows: [
                           [
                           {
-                            text: "04 Jul 2018"
+                            text: "04 Jul 2018",
+                            classes: "no-wrap"
                           },
                             {
                               text: "CS01"
@@ -182,10 +183,10 @@
                               text:"Digital"
                             },
                             {
-                              text:"Yes"
+                              text:"------"
                             },
                             {
-                              text:"1"
+                              text:"------"
                             },
                             {
                               text:"£XX"
@@ -197,7 +198,8 @@
                           ],
                           [
                           {
-                            text: "29 Jun 2017"
+                            text: "29 Jun 2017",
+                            classes: "no-wrap"
                           },
                             {
                               text: "AA"
@@ -209,10 +211,10 @@
                               text:"Paper - standard"
                             },
                             {
-                              text:"No"
+                              text:"------"
                             },
                             {
-                              text:"2"
+                              text:"------"
                             },
                             {
                               text:"£XX"
@@ -280,10 +282,10 @@
                                        text: "Digital"
                                      },
                                      {
-                                     text: "Yes"
+                                     text: "------"
                                      },
                                      {
-                                     text: "1"
+                                     text: "------"
                                      },
                                      {
                                      text: "£XX"
@@ -385,10 +387,10 @@
                   text:"Digital"
                 },
                 {
-                  text:"No"
+                  text:"------"
                 },
                 {
-                  text:"2"
+                  text:"------"
                 },
                 {
                   text:"£XX"
@@ -409,7 +411,7 @@
 
 
 
-    <div class="govuk-summary-card govuk-!-margin-bottom-9">
+    <div class="govuk-summary-card govuk-!-margin-bottom-7">
              <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
                <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified certificates</h3>
              </div>
@@ -456,10 +458,10 @@
                            text: "Digital"
                          },
                          {
-                           text: "No"
+                           text: "------"
                          },
                          {
-                           text: "2"
+                           text: "------"
                          },
                          {
                          html: "£XX"
@@ -495,12 +497,38 @@
                  
                </div>
              </div>
+      </div>
+    </div>
 
 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
 
+        <h2 class="govuk-heading-m">Delivery details</h2>
 
+             {{ govukSummaryList({
+               classes: 'govuk-!-margin-bottom-7',
+               rows: [
+                 {
+                   key: {
+                     text: "Address"
+                   },
+                   value: {
+                     html: "64 Zoo Lane, London, W1 2OO"
+                   },
+                   actions: {
+                     items: [
+                     {
+                       href: "#",
+                       text: "Change",
+                       visuallyHiddenText: "address"
+                     }
+                     ]
+                   }
+                 }
 
-<!-- closing divs, put everything above these -->
+             ]
+           }) }}
       </div>
     </div>
 
@@ -530,8 +558,6 @@
       <!-- why is the styling above not working? -->
     <p class="govuk-body">Digital items will be available to download from ‘Your orders’ within 1 hour. Items will be available to download for XX days. </p>
     <p class="govuk-body">  We’ll email <strong>user@companieshouse.gov.uk</strong> to let you know when your order is ready to download.</p>
-    <p class="govuk-body">  Email copies will be sent to <strong>user@companieshouse.gov.uk</strong>.</p>
-
 
     <p class="govuk-body">For standard delivery we aim to send your items within 10 working days. We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail International post.</p>
 
