@@ -50,13 +50,17 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         ]
       }) }}
       
-      {{ govukDetails({
-  summaryText: "What is an electronic signature?",
-  text: "An electronic signature will not look like a wet ink signature. It will show the Companies House seal and the date the document was embedded with the electronic signature. 
-
-You can select the electronic signature in the document to see more details and check the signature is valid.
-"
-  }) }}
+          <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+            What is an electronic signature?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>An electronic signature will not look like a wet ink signature. It will show the Companies House seal and the date that the document was embedded with the electronic signature. </p>
+            <p>You will need to open the PDF in Adobe reader to view the signature.</p>
+          </div>
+        </details>   
 
     {{ govukButton({
           text: "Continue"
