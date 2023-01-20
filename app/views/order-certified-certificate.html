@@ -4,10 +4,10 @@
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% set serviceName %}
-  Order a certified certificate
+  Order a company certificate
 {% endset%}
 {% block pageTitle %}
-  Order a certified certificate
+  Order a company certificate
 {% endblock %}
 
 {% block beforeContent %}
@@ -47,7 +47,7 @@
       <form action="/order-certified-certificate" method="post">
 
       <span class="govuk-caption-l">THE GIRLS' DAY SCHOOL TRUST</span>  
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Order a certified certificate</h1>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Order a company certificate</h1>
 
       <p class="govuk-body-l">Use this service to order a paper or digital signed certificate for a company. </p>
 
@@ -77,42 +77,6 @@
         <h2 class="govuk-heading-m">Choosing paper or digital</h2>
         <p class="govuk-body">A certificate includes certified details about a company. The information you can include will depend on whether you order a paper or digital certificate. </p>
 
-        <p class="govuk-body">A paper certificate will include basic information, including the company name, company number and incorporation date. You can choose to add more information about the company, for example a statement of good standing.  </p>
-
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-            What is a statement of good standing?
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            <p>The good standing wording says that a company has been in continuous, unbroken existence since its incorporation and that no action is currently being taken to strike the company off the register.</p>
-            <p>We’ll only issue a good standing statement if the company is up to date with its filings. It must be a:</p>
-              <ul>
-                <li>private limited company with at least one director who’s a natural person</li>
-                <li>public limited company with a secretary and at least 2 directors (one must be a natural person)</li>
-              </ul>
-            <p>You cannot order certificates with information on stakeholders shareholdings or statement of capital.</p>
-
-          </div>
-        </details>
-
-             <p class="govuk-body">For now, digital certificates will include set company information and cannot be customised. They will not include a statement of good standing. If you need this, you should order a paper certificate instead.</p>
-        
-
-
-        <p class="govuk-body"><a class="govuk-link" href="/guidance#order-cert">Read the guidance to find out what information can be included on paper and digital certificates.</a> </p>
-
-
-
-        <h2 class="govuk-heading-s">Check if a digital certificate will be accepted</h2>
-
-        <p class="govuk-body">You should check that a digital certificate with an electronic Companies House signature will be accepted by:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>the person or organisation asking for the certificate (for example, the bank or embassy)</li>
-            <li>your notary, if you are getting the certificate notarised</li>
-          </ul>
-        
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
@@ -125,6 +89,18 @@
             <p>An electronic signature will not look like a wet ink signature. It will show the Companies House seal and the date that the document was embedded with the electronic signature. </p>
           </div>
         </details>   
+
+        <p class="govuk-body">A paper certificate will include basic information, including the company name, company number and incorporation date. You can choose to add more information about the company, for example a statement of good standing.  </p>
+
+             <p class="govuk-body">For now, digital certificates will include set company information and cannot be customised. They will not include a statement of good standing. If you need this, you should order a paper certificate instead.</p>
+        
+
+
+        <p class="govuk-body"><a class="govuk-link" href="/guidance#order-cert">Read the guidance to find out what information can be included on paper and digital certificates.</a> </p>
+
+
+        
+
 
 
         {{ govukButton({
