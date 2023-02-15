@@ -1,0 +1,285 @@
+{% extends "layout.html" %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block pageTitle %}
+Choose a dispatch option -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "filter-document-list"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">What type of certificate do you need?</h1>
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="certificate-delivery-option" method="post">
+<p class="govuk-body">Certified certificates are available in digital or paper format.</p>
+<p class="govuk-body">A digital certificate is a PDF document, embedded with an approved electronic signature. It cannot be customised and will include set information.</p>
+<p class="govuk-body">A paper certificate will be signed with a blue, wet ink signature by one of our officials. It will include basic company information and you can choose to add more information if you need to.</p>
+<p class="govuk-body">You can compare the differences between digital and paper in the table below.</p>
+    {{ govukTable({
+  caption: "",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Information",
+      classes: 'govuk-!-width-one-half'
+    },
+    {
+      text: "Digital",
+      classes: 'govuk-!-width-one-quarter'
+    },
+    {
+      text: "Paper",
+      classes: 'govuk-!-width-one-quarter'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Company name and number"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "Yes"
+      }
+    ],
+    [
+      {
+        text: "Incorporation date"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "Yes"
+      }
+    ],
+    [
+      {
+        text: "Current registered office address"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Previous registered office address"
+      },
+      {
+        text: "No"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Current directors"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Previous directors"
+      },
+      {
+        text: "No"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Current secretaries"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Previous secretaries"
+      },
+      {
+        text: "No"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Nature of business"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "No"
+      }
+    ],
+    [
+      {
+        text: "Company objects"
+      },
+      {
+        text: "No"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Statement of good standing"
+      },
+      {
+        text: "No"
+      },
+      {
+        text: "Yes - can be added"
+      }
+    ],
+    [
+      {
+        text: "Wet signature"
+      },
+      {
+        text: "No"
+      },
+      {
+        text: "Yes"
+      }
+    ],
+    [
+      {
+        text: "Electronic signature"
+      },
+      {
+        text: "Yes"
+      },
+      {
+        text: "No"
+      }
+    ]
+  ]
+}) }}
+
+
+
+{{ govukTable({
+  caption: "Costs and dispatch information",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Service",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Cost",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "How long it will take",
+      classes: 'app-custom-class'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Digital"
+      },
+      {
+        text: "£9"
+      },
+      {
+        text: "Your document will be available to download from Your orders within 1 hour. It will be available to download for XX days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with standard dispatch)"
+      },
+      {
+        text: "£15"
+      },
+      {
+        text: "We will aim to send out the certificate within 10 working days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with express dispatch)"
+      },
+      {
+        text: "£50"
+      },
+      {
+        text: "Orders received before 11am will be sent out the same day and orders received after 11am the next working day."
+      }
+    ]
+  ]
+}) }}
+    
+    
+    {{ govukRadios({
+  name: "which-certificate-type",
+  fieldset: {
+    legend: {
+      text: "Do you want to order digital or paper?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "digital",
+      text: "Digital"
+    },
+    {
+      value: "paper",
+      text: "Paper"
+    }
+  ]
+}) }}
+
+ {{ govukButton({
+  text: "Continue"
+}) }}   
+    
+    
+
+
+    
+    
+    
+    </form>
+  </div>
+</div>
+
+{% endblock %}
