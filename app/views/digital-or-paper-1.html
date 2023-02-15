@@ -16,12 +16,70 @@ Choose a dispatch option -  Find and update company details - GOV.UK
 {% endblock %}
 
 {% block content %}
+<h1 class="govuk-heading-l">What type of certificate do you need?</h1>
   <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-from-desktop">
+  <div class="govuk-grid-column-one-half">
     <form action="certificate-delivery-option" method="post">
+    <h2 class="govuk-heading-m">Digital</h2>  
+      <p class="govuk-body">A digital certificate is a PDF document, embedded with an approved electronic signature.</p>
+      <p class="govuk-body">It cannot be customised and will include set information.</p>
+    <p class="govuk-body">A digital certificate will include:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>company name and number</li>
+  <li>incorporation date</li>
+  <li>current registered office address</li>
+  <li>current directors</li>
+  <li>current secretaries</li>
+  <li>nature of business</li>
 
-      
+</ul>
 
+<div class="govuk-inset-text">
+  A digital certificate will not include a statement of good standing.
+</div>
+
+<h3 class="govuk-heading-s">Cost and dispatch</h3>
+<p class="govuk-body">Digital: £9</p>
+<p class="govuk-body">	Your document will be available to download from Your orders within 1 hour. It will be available to download for XX days.</p>
+  
+  {{ govukButton({
+  text: "Choose and continue"
+}) }}
+    </form>
+  </div>
+
+
+  <div class="govuk-grid-column-one-half">
+    <form action="certificate-delivery-option" method="post">
+      <h2 class="govuk-heading-m">Paper</h2>   
+      <p class="govuk-body">A paper certificate will be signed with a blue, wet ink signature by one of our officials.</p>
+      <p class="govuk-body">It will include basic company information and you can choose to add more information if you need to.</p>
+    <p class="govuk-body">A paper certificate will include:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>company name and number</li>
+  <li>incorporation date</li>
+  </ul>
+  <p class="govuk-body">You can customise a paper certificate by adding:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Statement of good standing</li>
+  <li>current and previous registered office address</li>
+  <li>current and previous directors</li>
+  <li>current and previous secretaries</li>
+  <li>company objects</li>
+
+</ul>
+
+<h3 class="govuk-heading-s">Cost and dispatch</h3>
+<p class="govuk-body">Standard dispatch: £15 </p>
+<p class="govuk-body">We will aim to send out the certificate within 10 working days.</p>
+<p class="govuk-body-!-margin-bottom-0">Express dispatch: £50 </p>
+<p class="govuk-body-!-margin-bottom-0">Orders received before 11am will be sent out the same day and orders received after 11am the next working day.</p>
+    {{ govukButton({
+  text: "Choose and continue"
+}) }}
+    
+    
+    
     </form>
   </div>
 </div>
