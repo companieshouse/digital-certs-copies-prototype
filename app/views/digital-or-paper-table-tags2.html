@@ -1,0 +1,336 @@
+{% extends "layout.html" %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% block pageTitle %}
+Choose a dispatch option -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "filter-document-list"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">What type of certificate do you need?</h1>
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="certificate-delivery-option" method="post">
+<p class="govuk-body">Certified certificates are available in digital or paper format.</p>
+<p class="govuk-body">A digital certificate is a PDF document, embedded with an approved electronic signature. It cannot be customised and will include set information.</p>
+<p class="govuk-body">A paper certificate will be signed with a blue, wet ink signature by one of our officials. It will include basic company information and you can choose to add more information if you need to.</p>
+<p class="govuk-body">You can compare the differences between digital and paper in the table below.</p>
+    
+    
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col"> Information </th>
+      <th class="govuk-table__header" scope="col"> Digital </th>
+      <th class="govuk-table__header" scope="col"> Paper </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Company name and number
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Incorporation Date
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Statement of good standing
+      </td>
+      <td class="govuk-table__cell">
+        
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Current registered office address
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Previous registered office address
+      </td>
+      <td class="govuk-table__cell">
+        
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Current directors
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Previous directors
+      </td>
+      <td class="govuk-table__cell">
+       
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Current secretaries
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Previous secretaries
+      </td>
+      <td class="govuk-table__cell">
+        
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Nature of business
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Company objects
+      </td>
+      <td class="govuk-table__cell">
+        
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Wet signature
+      </td>
+      <td class="govuk-table__cell">
+        
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Electronic signature
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Yes",
+          classes: "govuk-tag--green"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+{{ govukTable({
+  caption: "Costs and dispatch information",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Service",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "Cost",
+      classes: 'app-custom-class'
+    },
+    {
+      text: "How long it will take",
+      classes: 'app-custom-class'
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Digital"
+      },
+      {
+        text: "£9"
+      },
+      {
+        text: "Your document will be available to download from Your orders within 1 hour. It will be available to download for XX days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with standard dispatch)"
+      },
+      {
+        text: "£15"
+      },
+      {
+        text: "We will aim to send out the certificate within 10 working days."
+      }
+    ],
+    [
+      {
+        text: "Paper (with express dispatch)"
+      },
+      {
+        text: "£50"
+      },
+      {
+        text: "Orders received before 11am will be sent out the same day and orders received after 11am the next working day."
+      }
+    ]
+  ]
+}) }}
+    
+    
+    {{ govukRadios({
+  name: "which-certificate-type",
+  fieldset: {
+    legend: {
+      text: "Do you want to order digital or paper?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "digital",
+      text: "Digital"
+    },
+    {
+      value: "paper",
+      text: "Paper"
+    }
+  ]
+}) }}
+
+ {{ govukButton({
+  text: "Continue"
+}) }}   
+    
+    
+
+
+    
+    
+    
+    </form>
+  </div>
+</div>
+
+{% endblock %}
