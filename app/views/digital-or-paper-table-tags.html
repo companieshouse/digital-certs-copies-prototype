@@ -71,6 +71,23 @@ Choose a dispatch option -  Find and update company details - GOV.UK
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
+        Statement of good standing
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "No",
+          classes: "govuk-tag--red"
+        })}}
+      </td>
+      <td class="govuk-table__cell">
+        {{govukTag({
+          text: "Optional",
+          classes: "govuk-tag--blue"
+        })}}
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
         Current registered office address
       </td>
       <td class="govuk-table__cell">
@@ -86,6 +103,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         })}}
       </td>
     </tr>
+    
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         Previous registered office address
@@ -205,23 +223,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
         })}}
       </td>
     </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">
-        Statement of good standing
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "No",
-          classes: "govuk-tag--red"
-        })}}
-      </td>
-      <td class="govuk-table__cell">
-        {{govukTag({
-          text: "Optional",
-          classes: "govuk-tag--blue"
-        })}}
-      </td>
-    </tr>
+    
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">
         Wet signature
