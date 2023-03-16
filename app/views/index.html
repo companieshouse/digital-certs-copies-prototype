@@ -495,7 +495,13 @@
                     <div class="govuk-details__text">
                       <ul class="govuk-list--bulletlist">
                         <li>
-                        To be added
+                        Removed time to live (notifcation banners saying 20 days to download) on Order details pages
+                        </li>
+                        <li>
+                        Added example of MID in basket and order details pages
+                        </li>
+                        <li>
+                        Added example of possible grid/table option to show differences between paper/digital cert
                         </li>
                       </ul>
                     </div>
@@ -514,7 +520,8 @@
                 </th>
                 <td class="govuk-table__cell">{{ govukDetails({
                       summaryText: "Summary of scenario",
-                      html: "."
+                      html: "This version was not tested with users but included small changes made in the time between Alpha and Beta
+"
                     }) }}
                 </td>
                 <td class="govuk-table__cell">
@@ -527,17 +534,27 @@
                     <div class="govuk-details__text">
                       <ul class="govuk-list--bulletlist">
                         <li>
-                        To be added
+                          Slight tweaks with content on Cert start page. Now only the one H2, details component and link to guidance are swapped in order
+                        </li>
+                        <li>
+                          Tweaks to Doc start page. Added content at the top about incorporation packages. This used to be under a header before the start button, which had caused confusion.
+                        </li>
+                        <li>
+                          Changes to Digital or Paper selection screen. Now option is 'Select one option' with radio buttons, not checkboxes. Bullet points of what each type includes are now in details components.
+                        </li>
+                        <li>
+                          Ran accessibility checks using WAVE and Lighthouse and made small corrections to things like H orders, added hidden text, etc.
                         </li>
                       </ul>
                     </div>
                   </details>
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag govuk-tag--red">
-                    Not ready for testing
+                  <strong class="govuk-tag govuk-tag--green">
+                    Ready for testing
                   </strong>
                 </td>
+              </tr> 
 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
@@ -545,7 +562,7 @@
                 </th>
                 <td class="govuk-table__cell">{{ govukDetails({
                       summaryText: "Summary of scenario",
-                      html: "."
+                      html: "Ordered a certificate from one company and a document from another company"
                     }) }}
                 </td>
                 <td class="govuk-table__cell">
@@ -558,17 +575,33 @@
                     <div class="govuk-details__text">
                       <ul class="govuk-list--bulletlist">
                         <li>
-                        To be added
+                          Slight tweaks to cert start page. Added 'You'll need' bullet points and a link to CHS search to order for a different company. Added a details component for how paper and digital certs are different.
+                        </li>
+                        <li>
+                          Added line to Digital option on choice page to say digital cert cannot be customised. Tweaked content on paper to say it will be signed in wet blue ink by an official.
+                        </li>
+                        <li>
+                          Added details component to stop screen to say what an electronic signature is
+                        </li>
+                        <li>
+                        Basket changed from two add buttons to one button at the top for 'Add another item'. Add button also added next to continue button at bottom of basket. Line added at top of basket to say users can add up to 10 items.
+                        </li>
+                        <li>
+                          Added page for user to select what they want to do after clicking 'Add another item' in basket - select either a company they've already got items for in their basket or select another company which would take them to search.
+                        </li>
+                        <li>
+                          Certificate information now presented in a table format
                         </li>
                       </ul>
                     </div>
                   </details>
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag govuk-tag--red">
-                    Not ready for testing
+                  <strong class="govuk-tag govuk-tag--green">
+                    Ready for testing
                   </strong>
                 </td>
+              </tr> 
 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
@@ -576,7 +609,7 @@
                 </th>
                 <td class="govuk-table__cell">{{ govukDetails({
                       summaryText: "Summary of scenario",
-                      html: "."
+                      html: "Ordered a certificate for two different companies"
                     }) }}
                 </td>
                 <td class="govuk-table__cell">
@@ -589,17 +622,27 @@
                     <div class="govuk-details__text">
                       <ul class="govuk-list--bulletlist">
                         <li>
-                        To be added
+                        Changes to Cert start page. Removed bullet points about paper certificate content options, focus now on differences between paper and digital certs.
+                        </li>
+                        <li>
+                          Changes to What type of cert do you need page. Removed details component of what will be included, this is now in bullet points for each option. Added cost table below continue button.
+                        </li>
+                        <li>
+                          Simplified stop screen. Removed blue background. Tweaks to content and added radio button option for user to decide if they will continue with ordering digital cert or not.
+                        </li>
+                        <li>
+                          Cover sheet now has info with symbols and bullet points. Certificate signature panel is now at the bottom of the cert
                         </li>
                       </ul>
                     </div>
                   </details>
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag govuk-tag--red">
-                    Not ready for testing
+                  <strong class="govuk-tag govuk-tag--green">
+                    Ready for testing
                   </strong>
                 </td>
+              </tr> 
 
 
 
