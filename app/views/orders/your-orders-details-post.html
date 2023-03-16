@@ -21,7 +21,7 @@
 
         <form action="/your-orders" method="post">
 
-        {% set html %}
+      <!--  {% set html %}
             <p class="govuk-notification-banner__heading">
               You have 20 days left to download the digital documents.
             </p>
@@ -29,7 +29,7 @@
 
           {{ govukNotificationBanner({
             html: html
-          }) }}
+          }) }} -->
 
           <!-- <h1 class="govuk-heading-xl">Your orders</h1> -->
 
@@ -48,6 +48,71 @@
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
           <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
+
+
+<div class="govuk-summary-card govuk-!-margin-bottom-4">
+                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Missing image requests</h3>
+                </div>
+                
+                <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+                  {{ govukTable({
+                       caption: "Missing image requests for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                      captionClasses: "govuk-visually-hidden",
+                       classes: "govuk-!-margin-bottom-0",
+                        head: [
+                        {
+                          html: "Date filed",
+                          classes: "no-wrap"
+                        },
+                        {
+                          html: "Document type",
+                          classes: "no-wrap"
+                        },
+                        {
+                          html: "Description",
+                          classes: 'govuk-!-width-one-third'
+                        },
+                        {
+                          html: "Fee"
+                        },
+                        {
+                          html: '<span class="govuk-visually-hidden">Remove</span>'
+                        }
+
+                        ],
+                        rows: [
+                          [
+                          {
+                            text: "07 Jul 2010",
+                            classes: "no-wrap"
+                          },
+                            {
+                              text: "AA"
+                            },
+                            {
+                            html: "<span class='govuk-body govuk-!-font-weight-bold'> Accounts made for 'small' co.</span> Made up to 25/06/09."
+                            },
+                            
+                            {
+                              text:"£3"
+                            },
+
+                            {
+                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">digital certified document of Confirmation statement made on 27 June 2018 with no updates for The Girls Day School Trust 00006400</span></a>'
+                            }
+                          ]
+                        ]
+
+
+                    }) }}
+
+                    
+                  </div>
+                </div>
+
 
           <div class="govuk-summary-card govuk-!-margin-bottom-4">
             <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
