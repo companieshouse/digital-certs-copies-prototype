@@ -1,0 +1,268 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your orders -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+{% include "includes/back-link.html" %}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <form action="/orders/order-pending" method="post">
+
+
+
+          <span class="govuk-caption-l">Order reference</span>
+          <h1 class="govuk-heading-l">ORD-168827-927371</h1>
+
+
+          {{ govukButton({
+            text: "Back to your orders",
+            classes: "govuk-button--secondary",
+            href:"your-orders-template-v2"
+          }) }} 
+
+          <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 <br> Payment reference: RS5VSN6DRE <br> Fee: £18 </p>
+
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+        <!--  <div class="govuk-summary-card govuk-!-margin-bottom-4">
+                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-1 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+                  <h2 class="govuk-heading-m">Certified documents</h2>
+
+                </div>
+
+          <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-3  govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+          
+          {{ govukTable({
+              caption: "",
+
+
+              head: [
+                {
+                  html: "Company",
+                  classes: 'govuk-!-width-one-third'
+                },
+                {
+                  html: "Date filed"
+
+                },
+                {
+                  html: "Document type"
+
+                },
+                {
+                  html: "Description",
+                  classes: 'govuk-!-width-one-third'
+                },
+                 {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                },
+                {
+                html: 'Status<span class="govuk-visually-hidden">Download</span>'
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    html: "THE GIRL\'S DAY SCHOOL TRUST (00006400)"
+                  },
+                  {
+                  html: "CS01"
+                  },
+                  {
+                     text: "04 Jul 2018"
+                  },
+                  {
+                    html:"<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2018 with no updates"
+                  },
+                  {
+                    text:"Digital"
+                  },
+                  {
+                    text:"£XX"
+                  },
+                  {
+                    html:'<strong class="govuk-tag govuk-tag--blue">Pending </a>'
+                  }
+                ]
+              ]
+          }) }}
+
+
+        </div>
+      </div> -->
+
+      
+
+      <div class="govuk-summary-card govuk-!-margin-bottom-9">
+        <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+          <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h2>
+        </div>
+
+      
+        <div class="govuk-!-padding-top-2 govuk-!-padding-bottom-0 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+          
+          {{ govukTable({
+            caption: "Certified certificates ",
+            captionClasses: "govuk-visually-hidden",
+             classes: "govuk-!-margin-bottom-4",
+              head: [
+                {
+                  html: "Company name",
+                  classes:'no-wrap'
+                },
+                {
+                  html: "Company number"
+                },
+                {
+                  html: "Certificate contains",
+                  classes: 'govuk-!-width-one-half'
+
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                },
+                {
+                  html: "Status"
+                }
+
+              ],
+              rows: [
+               [
+                  {
+                    html:"The Girls' Day School Trust"
+                  },
+                  {
+                    html:"00006400"
+                  },
+                  {
+                     html: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description."
+                  },
+                  {
+                    html:"Digital"
+                  },
+                  {
+                    text:"£9"
+                  },
+                  {
+                    html:'<strong class="govuk-tag govuk-tag--blue">Pending </a>'
+                  }
+                ]
+              ]
+          }) }}
+
+
+        </div>
+      </div>
+
+
+
+      <h2 class="govuk-heading-m">THE WOOL COMPANY LIMITED (10987888)</h2>
+
+      <div class="govuk-summary-card govuk-!-margin-bottom-9">
+         <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+           <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h2>
+         </div>
+     
+         
+     
+         <div class="govuk-!-padding-top-2 govuk-!-padding-bottom-0 govuk-!-padding-right-3 govuk-!-padding-left-2">
+     
+          
+          {{ govukTable({
+            caption: "Certified documents",
+            captionClasses: "govuk-visually-hidden",
+            classes: "govuk-!-margin-bottom-4",
+              head: [
+                {
+                  html: "Date filed"
+
+                },
+                {
+                  html: "Document type",
+                  classes:'no-wrap'
+
+                },
+                {
+                  html: "Description"
+
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                },
+                {
+                  html: "Status"
+                }
+
+              ],
+              rows: [
+               [
+                  {
+                  html: "05 Jul 2019",
+                  classes:'no-wrap'
+                  },
+                  {
+                  html: "CS01" 
+                  },
+                  {
+                     html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2019 with updates"
+                  },
+                  {
+                    html:"Digital"
+                  },
+                  {
+                    text:"£9"
+                  },
+                  {
+                    html:'<strong class="govuk-tag govuk-tag--blue">Pending </a>'
+                  }
+                ]
+              ]
+          }) }}
+
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+{% endblock %}
