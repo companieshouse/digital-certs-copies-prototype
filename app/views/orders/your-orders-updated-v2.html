@@ -47,11 +47,11 @@
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-          <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
+          
 
           <div class="govuk-summary-card govuk-!-margin-bottom-4">
             <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-              <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h3>
+              <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h2>
             </div>
     
           
@@ -59,10 +59,17 @@
     
               
               {{ govukTable({
-                caption: "Certified certificates for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                caption: "Certified certificates",
                 captionClasses: "govuk-visually-hidden",
                  classes: "govuk-!-margin-bottom-4",
                   head: [
+                    {
+                      html: "Company name",
+                      classes:'no-wrap'
+                    },
+                    {
+                      html: "Company number"
+                    },
                     {
                       html: "Certificate contains",
                       classes: 'govuk-!-width-one-half'
@@ -82,6 +89,12 @@
                   ],
                   rows: [
                    [
+                      {
+                        html:"The Girls' Day School Trust"
+                      },
+                      {
+                        html:"00006400"
+                      },
                       {
                         html: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description."
                       },
@@ -108,7 +121,7 @@
     
           <div class="govuk-summary-card govuk-!-margin-bottom-9">
              <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-               <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h3>
+               <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h2>
              </div>
          
              
@@ -117,17 +130,24 @@
          
               
               {{ govukTable({
-                caption: "Certified documents for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                caption: "Certified documents",
                 captionClasses: "govuk-visually-hidden",
                 classes: "govuk-!-margin-bottom-4",
                   head: [
+                    {
+                      html: "Company name"
+    
+                    },
+                    {
+                      html: "Company number"
+    
+                    },
                     {
                       html: "Date filed"
     
                     },
                     {
-                      html: "Document type",
-                      classes:'no-wrap'
+                      html: "Document type"
     
                     },
                     {
@@ -148,6 +168,12 @@
                   ],
                   rows: [
                    [
+                      {
+                      html: "The Wool Company" 
+                      },
+                      {
+                      html: "10987888" 
+                      },
                       {
                       html: "05 Jul 2019",
                       classes:'no-wrap'
@@ -175,138 +201,13 @@
             </div>
           </div>
 
-          <h2 class="govuk-heading-m">THE WOOL COMPANY LIMITED (10987888)</h2>
+         
     
     
-
-          <div class="govuk-summary-card govuk-!-margin-bottom-4">
-                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-1 govuk-!-padding-right-3 govuk-!-padding-left-2">
-
-                  <h3 class="govuk-heading-s">Company certificates</h3>
-
-                </div>
-
-          <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-0  govuk-!-padding-right-3 govuk-!-padding-left-2">
-
+    
+         
+    
           
-          {{ govukTable({
-                caption: "Certified certificates for THE WOOL COMPANY LIMITED (10987888)",
-                captionClasses: "govuk-visually-hidden",
-                 classes: "govuk-!-margin-bottom-4",
-                  head: [
-                    {
-                      html: "Certificate contains",
-                      classes: 'govuk-!-width-one-half'
-    
-                    },
-                    {
-                      html: "Dispatch method",
-                      classes:'no-wrap'
-                    },
-                    {
-                      html: "Fee"
-                    },
-                    {
-                      html: "Status"
-                    }
-    
-                  ],
-                  rows: [
-                   [
-                      {
-                        html: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description."
-                      },
-                      {
-                        html:"Digital"
-                      },
-                      {
-                        text:"£9"
-                      },
-                      {
-                        html:'<a href="javascript:void(0)">Download (PDF)<span class="govuk-visually-hidden">company certificate for the Wool Company 10987888</span></a>'
-                      }
-                    ]
-                  ]
-              }) }}
-    
-    
-            </div>
-          </div>
-    
-    
-    
-         
-    
-          <div class="govuk-summary-card govuk-!-margin-bottom-9">
-             <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-               <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h3>
-             </div>
-         
-             
-         
-             <div class="govuk-!-padding-top-2 govuk-!-padding-bottom-0 govuk-!-padding-right-3 govuk-!-padding-left-2">
-         
-              
-              {{ govukTable({
-                caption: "Certified documents for THE WOOL COMPANY LIMITED (10987888)",
-                captionClasses: "govuk-visually-hidden",
-                classes: "govuk-!-margin-bottom-4",
-                  head: [
-                    {
-                      html: "Date filed"
-    
-                    },
-                    {
-                      html: "Document type",
-                      classes:'no-wrap'
-    
-                    },
-                    {
-                      html: "Description"
-    
-                    },
-                    {
-                      html: "Dispatch method",
-                      classes:'no-wrap'
-                    },
-                    {
-                      html: "Fee"
-                    },
-                    {
-                      html: "Status"
-                    }
-    
-                  ],
-                  rows: [
-                   [
-                      {
-                      html: "05 Jul 2019",
-                      classes:'no-wrap'
-                      },
-                      {
-                      html: "CS01" 
-                      },
-                      {
-                         html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2019 with updates"
-                      },
-                      {
-                        html:"Digital"
-                      },
-                      {
-                        text:"£9"
-                      },
-                      {
-                        html:'<a href="javascript:void(0)">Download (PDF) <span class="govuk-visually-hidden">confirmation statement made on 27 June 2019 with updates for The Wool Company 10987888</span></a>'
-                      }
-                    ]
-                  ]
-              }) }}
-
-
-        </div>
-
-
-    </div>
 
 
 

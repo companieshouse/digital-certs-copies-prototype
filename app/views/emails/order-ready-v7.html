@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block header %}
+    {{ govukHeader({ serviceName: "" }) }}
+{% endblock %}
+
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+{% block pageTitle %}
+   Order ready -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukPanel({
+        titleText: "Your digital order is ready",
+        html: "Your reference number<br><strong>ORD-145116-625550</strong>"
+      }) }}
+
+      <h2 class="govuk-heading-m">Download your documents</h2>
+
+      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated-v2">Sign in to your Companies House account</a> to download your digital items. Digital items will be available to download for XX days.</p>
+    
+
+      <h2 class="govuk-heading-l">Your order summary</h2>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+      
+        
+     <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
+      
+      <h3 class="govuk-heading-s">Certified certificates</h3>
+
+        {{ govukTable({
+          caption: "",
+          classes:"govuk-!-font-size-16",
+              head: [
+                {
+                  html: "Company name"
+                },
+                {
+                  html: "Company number"
+                },
+                {
+                  html: "Certificate contains"
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Email copy"
+                },
+                {
+                  html: "Quantity"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    text: "The Girls' Day School Trust"
+                  },
+                  {
+                    text: "00006400"
+                  },
+                  {
+                    html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
+                  },
+                  {
+                    text: "Digital"
+                  },
+                  {
+                    text: "-----"
+                  },
+                  {
+                    text: "1"
+                  },
+                  {
+                    text:"£9"
+                  }
+                ]
+              ]
+          }) }}
+
+
+
+      
+        
+     <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
+      
+      <h3 class="govuk-heading-s">Certified documents</h3>
+
+        {{ govukTable({
+          caption: "",
+          classes:"govuk-!-font-size-16",
+              head: [
+                {
+                  html: "Company name"
+                },
+                {
+                  html: "Company number"
+                },
+                {
+                  html: "Date filed"
+                },
+                {
+                  html: "Document type"
+                },
+                {
+                  html: "Description"
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    text: "The Wool Company"
+                  },
+                  {
+                    text: "10987888"
+                  },
+                  {
+                    text: "10 Oct 2010"
+                  },
+                  {
+                    text: "CS01"
+                  },
+                  {
+                    html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2019 with updates"
+                  },
+                  {
+                    text: "Digital"
+                  },
+                  {
+                    text:"£9"
+                  }
+                ]
+              ]
+          }) }}
+
+
+
+
+      
+    <p class="govuk-body">Email <a href="mailto:enquiries@companieshouse.gov.uk">enquiries@companieshouse.gov.uk</a> if you have questions about your order. Include your order reference number when you contact us.</p>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
