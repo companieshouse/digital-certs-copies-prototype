@@ -35,110 +35,35 @@
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
-
-
-
- 
-
-<!-- <h2 class="govuk-heading-m">Missing image requests</h2>
-       <div class="govuk-summary-card govuk-!-margin-bottom-9">
-                <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">THE GIRLS DAY SCHOOL TRUST (00006400)</h3>
-                </div>
-
-                <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-
-
-                  {{ govukTable({
-                       caption: "Missing image requests for THE GIRLS DAY SCHOOL TRUST (00006400)",
-                      captionClasses: "govuk-visually-hidden",
-                       classes: "govuk-!-margin-bottom-4",
-                        head: [
-
-                        {
-                          html: "Date filed"
-
-                        },
-                        {
-                          html: "Document type"
-                        },
-                        {
-                          html: "Description"
-                        },
-                        {
-                          html: "Fee"
-                        },
-                        {
-                          html: '<span class="govuk-visually-hidden">Remove</span>'
-                        }
-
-                        ],
-                        rows: [
-                          [
-                          {
-                            text: "7 July 2022"
-                          },
-                            {
-                              text: "AA"
-                            },
-                            {
-                            text: "Accounts made for 'small' co. Made up to 25/07/94."
-                            },
-
-                            {
-                              text: "£XX"
-                            },
-
-                            {
-                              html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Accounts made for small co Made up to 25/07/94</span></a>'
-                            }
-                          ]
-
-                        ]
-
-                    }) }}
-
-                    <div class="govuk-button-group govuk-!-margin-bottom-0">
-
-                      {{ govukButton({
-                        text: "Add a certified document",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../filter-document-list"
-                      }) }}
-                      {{ govukButton({
-                        text: "Add a certified certificate",
-                        classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-                        href:"../order-certified-certificate"
-                      }) }}
-
-                    </div> -->
-
-                    <!-- <div class="govuk-button-group govuk-!-margin-bottom-0">
-                      <p class="govuk-body">It can take us several hours to check the availability of a document. We will aim to add it to the company's filing history the same day if you submit your request before 3pm, Monday to Friday (excluding bank holidays).</p>
-                      <p class="govuk-body">If you submit your request after 3pm or at the weekend, we will add the document the next working day.
-                    </div> 
-                  </div> -->
     
 
 
 
 
 
-            <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
+           
 
              <div class="govuk-summary-card govuk-!-margin-bottom-4">
                 <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Missing image requests</h3>
+                  <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Missing image requests</h2>
                 </div>
                 
                 <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
 
 
                   {{ govukTable({
-                       caption: "Missing image requests for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                       caption: "Missing image requests",
                       captionClasses: "govuk-visually-hidden",
                        classes: "govuk-!-margin-bottom-0",
                         head: [
+                        {
+                          html: "Company name",
+                          classes: "no-wrap"
+                        },
+                        {
+                          html: "Company number",
+                          classes: "no-wrap"
+                        },
                         {
                           html: "Date filed",
                           classes: "no-wrap"
@@ -161,6 +86,12 @@
                         ],
                         rows: [
                           [
+                          {
+                              text: "The Girls' Day School Company"
+                            },
+                            {
+                              text: "00006400"
+                            },
                           {
                             text: "07 Jul 2010",
                             classes: "no-wrap"
@@ -195,24 +126,30 @@
 
              <div class="govuk-summary-card govuk-!-margin-bottom-4">
                 <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-                  <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h3>
+                  <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h2>
                 </div>
                 
                 <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
 
 
                   {{ govukTable({
-                       caption: "Certified documents for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                       caption: "Certified documents",
                       captionClasses: "govuk-visually-hidden",
                        classes: "govuk-!-margin-bottom-0",
                         head: [
+                        {
+                          html: "Company name"
+                        },
+                        {
+                          html: "Company number"
+                        },
                         {
                           html: "Date filed",
                           classes: "no-wrap"
                         },
                         {
-                          html: "Document type",
-                          classes: "no-wrap"
+                          html: "Document type"
+                         
                         },
                         {
                           html: "Description",
@@ -221,9 +158,6 @@
                         {
                           html: "Dispatch method",
                           classes: "no-wrap"
-                        },
-                        {
-                          html: "Quantity"
                         },
                         {
                           html: "Fee"
@@ -235,6 +169,12 @@
                         ],
                         rows: [
                           [
+                          {
+                              text: "The Girls' Day School Trust"
+                            },
+                            {
+                              text: "00006400"
+                            },
                           {
                             text: "04 Jul 2018",
                             classes: "no-wrap"
@@ -248,9 +188,7 @@
                             {
                               text:"Digital"
                             },
-                            {
-                              text:"1"
-                            },
+                          
                             {
                               text:"£9"
                             },
@@ -260,6 +198,12 @@
                             }
                           ],
                           [
+                          {
+                              text: "The Wool Company"
+                            },
+                            {
+                              text: "10987888"
+                            },
                           {
                             text: "29 Jun 2017",
                             classes: "no-wrap"
@@ -273,9 +217,7 @@
                             {
                               text:"Paper - standard"
                             },
-                            {
-                              text:"1"
-                            },
+                            
                             {
                               text:"£15"
                             },
@@ -297,7 +239,7 @@
 
                 <div class="govuk-summary-card govuk-!-margin-bottom-9">
                          <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-                           <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h3>
+                           <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h2>
                          </div>
 
                          
@@ -306,18 +248,26 @@
 
 
                            {{ govukTable({
-                                caption: "Company certificates for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                                caption: "Company certificates",
                                captionClasses: "govuk-visually-hidden",
                                 classes: "govuk-!-margin-bottom-0",
                                  head: [
+                                 {
+                                   html: "Company name",
+                                   classes: "no-wrap"
+                                 },
+                                 {
+                                   html: "Company number",
+                                   classes: "no-wrap"
+                                 },
+                                 {
+                                   html: "Company number"
+                                 },
                                  {
                                    html: "Certificate contains"
                                  },
                                  {
                                    html: "Dispatch method"
-                                 },
-                                 {
-                                   html: "Quantity"
                                  },
                                  {
                                    html: "Fee"
@@ -330,14 +280,18 @@
                                  rows: [
                                    [
                                     {
+                                       text: "The Girls' Day School Trust"
+                                     },
+                                     {
+                                       text: "00006400"
+                                     },
+                                    {
                                       text: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description."
                                      },
                                      {
                                        text: "Digital"
                                      },
-                                     {
-                                     text: "1"
-                                     },
+                                     
                                      {
                                      text: "£9"
                                      },
@@ -348,16 +302,20 @@
                                    [
                                    
                                    {
+                                       text: "The Wool Company"
+                                     },
+                                     {
+                                       text: "10987888"
+                                     },
+                                   {
                                        text: "Registered office address"
                                      },
                                      {
                                        text: "Paper - express with an email copy"
                                      },
+                                    
                                      {
-                                       text: "3"
-                                     },
-                                     {
-                                       text: "£150"
+                                       text: "£50"
                                      },
                                      {
                                        html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Paper company certificate with express delivery and email copy containing Registered Office Address for The Girls Day School Trust 00006400</span></a>'
@@ -372,167 +330,10 @@
 
 
 
-<!-- second company -->
-
-
-<h2 class="govuk-heading-m">THE WOOL COMPANY LIMITED (10987888)</h2>
-
- <div class="govuk-summary-card govuk-!-margin-bottom-4">
-    <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-      <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Certified documents</h3>
-    </div>
-
-    
-
-    <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-
-
-      {{ govukTable({
-           caption: "Certified documents for THE WOOL COMPANY LIMITED (10987888)",
-          captionClasses: "govuk-visually-hidden",
-           classes: "govuk-!-margin-bottom-0",
-            head: [
-            {
-              html: "Date filed",
-              class: "no-wrap"
-            },
-            {
-              html: "Document type",
-              classes: "no-wrap"
-            },
-            {
-              html: "Description",
-              classes: 'govuk-!-width-one-third'
-            },
-            {
-              html: "Dispatch method",
-              classes: "no-wrap"
-            },
-            {
-              html: "Quantity"
-            },
-            {
-              html: "Fee"
-            },
-            {
-              html: '<span class="govuk-visually-hidden">Remove</span>'
-            }
-
-            ],
-            rows: [
-              [
-              {
-                text: "05 Nov 2020",
-                classes: "no-wrap"
-              },
-                {
-                  text: "CS01"
-                },
-                {
-                html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 28 September 2020 with no updates"
-                },
-                {
-                  text:"Digital"
-                },
-                {
-                  text:"1"
-                },
-                {
-                  text:"£9"
-                },
-                {
-                  html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Digital certified document of Confirmation statementmade on 28 September 2020 with no updates for The Wool Company 10987888</span></a>'
-                }
-              ]
-            ]
-
-
-        }) }}
-
-        
-      </div>
-    </div>
 
 
 
-    <div class="govuk-summary-card govuk-!-margin-bottom-7">
-             <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-               <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h3>
-             </div>
-            
 
-
-             <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-
-
-               {{ govukTable({
-                    caption: "Certified certificates for THE WOOL COMPANY LIMITED (10987888)",
-                   captionClasses: "govuk-visually-hidden",
-                    classes: "govuk-!-margin-bottom-0",
-                     head: [
-
-                    
-                     {
-                       html: "Certificate contains"
-                     },
-                     {
-                       html: "Dispatch method",
-                       classes: "no-wrap"
-                     },
-                     {
-                       html: "Quantity"
-                     },
-                     {
-                       html: "Fee"
-                     },
-                     {
-                       html: '<span class="govuk-visually-hidden">Remove</span>'
-                     }
-
-                     ],
-                     rows: [
-                       [
-                       
-                       {
-                           text: "Company name and number, incorporation date, current registered office address, current directors,  current secretaries and business description."
-                         },
-                         {
-                           text: "Digital"
-                         },
-                         {
-                           text: "1"
-                         },
-                         {
-                         html: "£9"
-                         },
-                        {
-                           html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Digital company certificate for The Wool Company 10987888</span></a>'
-                         }
-                       ],
-                       [
-                       
-                       {
-                           text: "Statement of good standing"
-                         },
-                         {
-                           text: "Paper - express"
-                         },
-                         {
-                           text: "1"
-                         },
-                         {
-                           text: "£15"
-                         },
-                         {
-                           html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Paper company certificate with express delivery, including statement of good standing for The Wool Company 10987888</span></a>'
-                         }
-                       ]
-                     ]
-                 }) }}
-
-                 
-               </div>
-             </div>
       </div>
     </div>
 

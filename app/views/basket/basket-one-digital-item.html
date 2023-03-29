@@ -28,25 +28,33 @@
         {{ govukButton({
              text: "Add another item",
               classes: "govuk-button--secondary govuk-!-margin-bottom-1",
-              href:"../add-another-document-company"
+              href:"../search"
         }) }}
 
         <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-            <h2 class="govuk-heading-m">THE GIRLS DAY SCHOOL TRUST (00006400)</h2>
+            
 
             <div class="govuk-summary-card govuk-!-margin-bottom-7"> 
             <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
-               <h3 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h3>
+               <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h2>
              </div>
 
              <div class="govuk-!-padding-top-2 govuk-!-padding-bottom-0 govuk-!-padding-right-3 govuk-!-padding-left-2">
 
                {{ govukTable({
-                    caption: "Company certificates for THE GIRLS DAY SCHOOL TRUST (00006400)",
+                    caption: "Company certificates",
                    captionClasses: "govuk-visually-hidden",
                     classes: "govuk-!-margin-bottom-4",
                      head: [
+                     {
+                       html: "Company name",
+                       classes:'no-wrap'
+                     },
+                     {
+                       html: "Company number",
+                       classes:'no-wrap'
+                     },
                      {
                        html: "Certificate contains"
                      },
@@ -64,7 +72,12 @@
                      ],
                      rows: [
                        [
-                       
+                       {
+                           text: "The Girls' Day School Trust"
+                         },
+                         {
+                           text: "00006400"
+                         },
                        {
                            text: "Company name and number, incorporation date, current registered office address, current directors, current secretaries and nature of business."
                          },
@@ -111,7 +124,7 @@
         {{ govukButton({
             text: "Add another item",
             classes: "govuk-button--secondary",
-            href:"../add-another-document-company"
+            href:"../search"
         }) }}
 
 
