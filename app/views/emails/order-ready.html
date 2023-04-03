@@ -21,18 +21,18 @@
 
       <h2 class="govuk-heading-m">Download your documents</h2>
 
-      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated-v2">Sign in to your Companies House account</a> to download your digital items. Digital items will be available to download for XX days.</p>
+      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated-v2">Sign in to your Companies House account</a> to download your digital items. </p>
     
 
       <h2 class="govuk-heading-l">Your order summary</h2>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-      <h3 class="govuk-heading-m">THE GIRL'S DAY SCHOOL TRUST (00006400)</h2>
+     <!-- <h3 class="govuk-heading-m">THE GIRL'S DAY SCHOOL TRUST (00006400)</h2> -->
         
      <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
       
-      <h4 class="govuk-heading-s">Certified certificates</h4>
+     <!--  <h4 class="govuk-heading-s">Certified certificates</h4>
 
         {{ govukTable({
           caption: "",
@@ -74,7 +74,7 @@
                   }
                 ]
               ]
-          }) }}
+          }) }} -->
 
 
 
@@ -82,23 +82,29 @@
         
      <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
       
-      <h4 class="govuk-heading-s">Certified certificates</h4>
+      <h4 class="govuk-heading-s">Certified documents</h4>
 
         {{ govukTable({
           caption: "",
           classes:"govuk-!-font-size-16",
               head: [
                 {
-                  html: "Certificate contains"
+                  html: "Company name"
+                },
+                {
+                  html: "Company number"
+                },
+                {
+                  html: "Date filed"
+                },
+                {
+                  html: "Document type"
+                },
+                {
+                  html: "Description"
                 },
                 {
                   html: "Dispatch method"
-                },
-                {
-                  html: "Email copy"
-                },
-                {
-                  html: "Quantity"
                 },
                 {
                   html: "Fee"
@@ -108,16 +114,22 @@
               rows: [
                 [
                   {
-                    html:"Company name and number, incorporation date, current registered office address, current directors and secretaries."
+                    html:"Link Exports (UK) LTD"
                   },
                   {
-                    text: "Digital"
+                    text: "12953358"
                   },
                   {
-                    text: "-----"
+                    text: "22 February 2021"
                   },
                   {
-                    text: "1"
+                    text:"AD01"
+                  },
+                  {
+                    text: "Change of Registered Office Address"
+                  },
+                  {
+                    text:"Digital"
                   },
                   {
                     text:"£9"
