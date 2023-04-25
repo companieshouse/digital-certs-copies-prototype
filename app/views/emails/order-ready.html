@@ -21,7 +21,7 @@
 
       <h2 class="govuk-heading-m">Download your documents</h2>
 
-      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/sign-in">Sign in to your Companies House account</a> to download your digital items. </p>
+      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated-v2">Sign in to your Companies House account</a> to download your digital items. </p>
     
 
       <h2 class="govuk-heading-l">Your order summary</h2>
@@ -81,7 +81,52 @@
       
         
      <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
-      
+      <h4 class="govuk-heading-s">Certified certificates</h4>
+
+        {{ govukTable({
+          caption: "",
+          classes:"govuk-!-font-size-16",
+              head: [
+                {
+                  html: "Company name"
+                },
+                {
+                  html: "Company number"
+                },
+                {
+                  html: "Certificate contains"
+                },
+                {
+                  html: "Dispatch method"
+                },
+                {
+                  html: "Fee"
+                }
+
+              ],
+              rows: [
+                [
+                  {
+                    html:"THE GIRLS DAY SCHOOL TRUST"
+                  },
+                  {
+                    text: "10987888"
+                  },
+                  {
+                    text: "Company name and number, incorporation date, current registered office address, current directors, current secretaries and nature of business."
+                  },
+                  {
+                    text:"Digital"
+                  },
+                  {
+                    text:"£9"
+                  }
+                ]
+              ]
+          }) }}
+
+
+
       <h4 class="govuk-heading-s">Certified documents</h4>
 
         {{ govukTable({
@@ -114,19 +159,19 @@
               rows: [
                 [
                   {
-                    html:"Link Exports (UK) LTD"
+                    html:"THE WOOL COMPANY"
                   },
                   {
-                    text: "12953358"
+                    text: "10987888"
                   },
                   {
-                    text: "22 February 2021"
+                    text: "05 Jul 2019"
                   },
                   {
-                    text:"AD01"
+                    text:"CS01"
                   },
                   {
-                    text: "Change of Registered Office Address"
+                    text: "Confirmation statement made on 27 June 2019 with updates"
                   },
                   {
                     text:"Digital"

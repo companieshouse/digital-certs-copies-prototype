@@ -105,7 +105,70 @@
           </div> -->
 
 
+ <div class="govuk-summary-card govuk-!-margin-bottom-7"> 
+            <div class="govuk-summary-card_heading govuk-!-padding-top-4 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+               <h2 class="govuk-heading-s govuk-!-font-weight-bold govuk-!-margin-0">Company certificates</h2>
+             </div>
 
+             <div class="govuk-!-padding-top-2 govuk-!-padding-bottom-0 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+               {{ govukTable({
+                    caption: "Company certificates",
+                   captionClasses: "govuk-visually-hidden",
+                    classes: "govuk-!-margin-bottom-4",
+                     head: [
+                     {
+                       html: "Company name",
+                       classes:'no-wrap'
+                     },
+                     {
+                       html: "Company number",
+                       classes:'no-wrap'
+                     },
+                     {
+                       html: "Certificate contains"
+                     },
+                     {
+                       html: "Dispatch method",
+                       classes:'no-wrap'
+                     },
+                     {
+                       html: "Fee"
+                     },
+                     {
+                       html: '<span class="govuk-visually-hidden">Remove</span>'
+                     }
+
+                     ],
+                     rows: [
+                       [
+                       {
+                           text: "THE GIRLS' DAY SCHOOL TRUST"
+                         },
+                         {
+                           text: "00006400"
+                         },
+                       {
+                           text: "Company name and number, incorporation date, current registered office address, current directors, current secretaries and nature of business."
+                         },
+                         {
+                           text: "Digital"
+                         },
+                         {
+                            html: "£9"
+                         },
+                         {
+                            html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Digital company certificate for The Girls Day School Trust 00006400</span></a>'
+                         }
+                       ]
+                     ]
+                 }) }}
+
+                 
+               </div>
+
+             
+                </div>
 
 
  <div class="govuk-summary-card govuk-!-margin-bottom-4">
@@ -116,6 +179,9 @@
     
 
     <div class="govuk-!-padding-top-1 govuk-!-padding-bottom-4 govuk-!-padding-right-3 govuk-!-padding-left-2">
+
+
+      
 
 
       {{ govukTable({
@@ -155,20 +221,20 @@
             rows: [
               [
               {
-                  text: "LINK EXPORTS (UK) LTD"
+                  text: "THE WOOL COMPANY"
                 },
                 {
-                  text: "12953358"
+                  text: "10987888"
                 },
               {
-                text: "22 February 2021",
+                text: "05 Jul 2019",
                 classes: "no-wrap"
               },
                 {
                   text: "CS01"
                 },
                 {
-                html: "<span class='govuk-body govuk-!-font-weight-bold'> Change of Registered Office Address </span> made on 22 February 2021"
+                html: "<span class='govuk-body govuk-!-font-weight-bold'> Confirmation statement </span> made on 27 June 2019 with updates"
                 },
                 {
                   text:"Digital"
