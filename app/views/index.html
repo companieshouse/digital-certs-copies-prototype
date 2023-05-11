@@ -605,13 +605,87 @@
                   </strong>
                 </td>
               </tr> -->
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="https://digital-certs-and-copies-v9.herokuapp.com/">Version 9</a>
+                </th>
+                <td class="govuk-table__cell">{{ govukDetails({
+                      summaryText: "Summary of scenario",
+                      html: "TBD."
+                    }) }}
+                </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Changes included in version 9
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <ul class="govuk-list--bulletlist">
+                        
+                        
+                      </ul>
+                    </div>
+                  </details>
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag govuk-tag--red">
+                    Not ready for testing
+                  </strong>
+                </td>\
 
+
+
+               <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">
+                  <a href="https://digital-certs-and-copies-v8.herokuapp.com/">Version 8</a>
+                </th>
+                <td class="govuk-table__cell">{{ govukDetails({
+                      summaryText: "Summary of scenario",
+                      html: "This version was used for usability testing.
+                      Users were asked to add a digital certificate for GDST and a paper cert doc with standard delivery for The Wool Company. This was to test a mixed delivery order journey and to see how users responded to the mixed basket and order screens. Users downloaded their digital item and checked the signature."
+                    }) }}
+                </td>
+                <td class="govuk-table__cell">
+                  <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                      <span class="govuk-details__summary-text">
+                        Changes included in version 8
+                      </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                      <ul class="govuk-list--bulletlist">
+                        <li>
+                        Digital item download was set to forcibly download to a users device rather than open in browser
+                        </li>
+                        <li>
+                          Content changes to cover sheet
+                        </li>
+                        <li>
+                          Added some content on how to open item in Adobe reader on Order details screen
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </details>
+                </td>
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag govuk-tag--green">
+                    Ready for testing
+                  </strong>
+                </td>\
 
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">
                   <a href="https://digital-certs-and-copies-v7.herokuapp.com/">Version 7</a>
                 </th>
-                <td class="govuk-table__cell">To be added</td>
+                <td class="govuk-table__cell">{{ govukDetails({
+                      summaryText: "Summary of scenario",
+                      html: "This version was used for accessiblity testing.
+                      Tested the downloading and opening of a digital item, using the digital item liek finding the signature and signature validation, the emails confirming order and notifying order was ready, and finding your orders."
+                    }) }}
+                </td>
                 <td class="govuk-table__cell">
                   <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
@@ -636,13 +710,19 @@
                         <li>
                         Add another item button in basket now routes to the search screen rather than the selection page - another dev effot change.
                         </li>
+                        <li>
+                        Digital item for download was added to prototype with working 'download' link. The file opened to view in another tab in browser in this version.
+                        </li>
+                        <li>
+                          Digital item had new functionality - the check signature validation link was workable in Adobe reader
+                        </li>
                       </ul>
                     </div>
                   </details>
                 </td>
                 <td class="govuk-table__cell">
-                  <strong class="govuk-tag govuk-tag--red">
-                    Not ready for testing
+                  <strong class="govuk-tag govuk-tag--green">
+                    Ready for testing
                   </strong>
                 </td>
 
