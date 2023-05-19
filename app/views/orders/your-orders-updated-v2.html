@@ -43,7 +43,17 @@
             href:"your-orders-template-v2-updated"
           }) }} 
 
-          <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 <br> Payment reference:RS5VSN6DRE <br> Fee: £18 </p>
+          <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 <br> Payment reference: RS5VSN6DRE <br> Fee: £18 </p>
+
+          {{ govukDetails({
+  summaryText: "How to view digital signatures",
+  text: "You will need to download digital items to your device. You must open the files in Adobe Reader to view the electronic signature. You can download Adobe Reader for free.
+"
+}) }}
+{{ govukDetails({
+  summaryText: "When you'll get your paper items",
+  text: "We cannot update the status of paper items to show when we’ve sent the order. The status for paper items will always show as ‘ordered’. We aim to send standard paper orders within 10 working days. We send express orders the same day if you order before 11am. If you order after 11am, we’ll send your order the next working day."
+}) }}
 
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -105,7 +115,7 @@
                         text:"£9"
                       },
                       {
-                        html:'<a href="/public/certified-document/cert-doc-v7.pdf" download>Download (PDF) <span class="govuk-visually-hidden">Change of registered office address for Link Exports (UK) LTD 12953358</span></a>'
+                        html:'Ready to <a href="/public/certified-document/cert-doc-v7.pdf" download>download (PDF) <span class="govuk-visually-hidden">Change of registered office address for Link Exports (UK) LTD 12953358</span></a>'
                       }
                     ]
                   ]
@@ -202,7 +212,7 @@
           </div>
 
          
-          <h2 class="govuk-heading-l">Information about your order</h2>
+        <!--  <h2 class="govuk-heading-l">Information about your order</h2>
         
               <h3 class="govuk-heading-m">Accessing your digital items </h3>
 
@@ -218,7 +228,7 @@
           
 
         <p class="govuk-body">We send express orders the same day if you order before 11am. If you order after 11am, we’ll send your order the next working day. 
- </p>        
+ </p>        -->
 
 
       </form>
