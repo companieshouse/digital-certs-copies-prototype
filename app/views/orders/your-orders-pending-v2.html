@@ -35,6 +35,17 @@
 
           <p class="govuk-body govuk-!-padding-top-2">Date ordered: 2 November 2022 <br>Delivery address: 64 Zoo Lane, London, W1 <br> Payment reference: RS5VSN6DRE <br> Fee: £18 </p>
 
+ {{ govukDetails({
+  summaryText: "How to access your digital items and view the signature",
+  text: "You will need to download digital items to your device. You must open the files in Adobe Reader to view the electronic signature. 
+"
+}) }}
+{{ govukDetails({
+  summaryText: "When we'll send your paper items",
+  html: "<p> We cannot update the status of paper items to show when we’ve sent the order. The status for paper items will always show as ‘ordered’. </p> <p>We aim to send standard paper orders within 10 working days. We send express orders the same day if you order before 11am. If you order after 11am, we’ll send your order the next working day.</p>"
+}) }}
+
+
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
 
