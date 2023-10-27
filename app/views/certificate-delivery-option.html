@@ -29,9 +29,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             classes: "govuk-fieldset__legend--l"
           }
         },
-        hint: {
-          text: "Select one option."
-        },
+
         items: [
           {
             value: "digital",
@@ -39,7 +37,10 @@ Choose a dispatch option -  Find and update company details - GOV.UK
             class:"govuk-body govuk-!-font-weight-bold",
             hint: {
             html: '<p class="govuk-body">A digital certificate is a PDF document, embedded with an approved electronic signature. You will need to open the PDF in Adobe Reader to view the signature.</p> 
-            <p class="govuk-body">It cannot be customised and will include set information.</p>
+
+                              <div class="govuk-inset-text">
+                    A digital certificate cannot be customised and will not include a statement of good standing.
+                  </div>
 
             <details class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
@@ -47,6 +48,10 @@ Choose a dispatch option -  Find and update company details - GOV.UK
                   What information will a digital certificate include?
                 </span>
               </summary>
+
+
+
+
             <div class="govuk-details__text">
               <p>A digital certificate will include:</p>
                     <ul class="govuk-list govuk-list--bullet">
@@ -56,13 +61,7 @@ Choose a dispatch option -  Find and update company details - GOV.UK
                       <li>nature of business</li>
                     </ul>
             </div>
-            </details>
-
-
-
-                  <div class="govuk-inset-text">
-                    A digital certificate will not include a statement of good standing.
-                  </div>'
+            </details>'
           }
           },
           {
