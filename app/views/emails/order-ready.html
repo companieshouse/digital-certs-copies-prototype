@@ -15,13 +15,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       {{ govukPanel({
-        titleText: "Your digital order is ready",
+        titleText: "Your digital item is ready",
         html: "Your reference number<br><strong>ORD-145116-625550</strong>"
       }) }}
 
-      <h2 class="govuk-heading-m">Download your documents</h2>
+      <h2 class="govuk-heading-m">Download your document</h2>
 
-      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated-v2">Sign in to your Companies House account</a> to download your digital items. </p>
+      <p class="govuk-body"><a class="govuk-link--no-visited-state" href="/orders/your-orders-updated-v2">Sign in to your Companies House account</a> to download your digital item. </p>
     
 
       <h2 class="govuk-heading-l">Your order summary</h2>
@@ -81,49 +81,7 @@
       
         
      <!-- <p class="govuk-body">We aim to send standard orders within 10 working days. Standard UK orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/uk/2nd-class" target="_blank">Royal Mail 2nd Class post (opens in new tab)</a>. Standard international orders are sent by <a class="govuk-link govuk-link--no-visited-state" href="https://www.royalmail.com/sending/international/international-standard" target="_blank">Royal Mail International post (opens in new tab)</a>.</p> -->
-      <h4 class="govuk-heading-s">Certified certificates</h4>
-
-        {{ govukTable({
-          caption: "",
-          classes:"govuk-!-font-size-16",
-              head: [
-                {
-                  html: "Company name"
-                },
-                {
-                  html: "Company number"
-                },
-                {
-                  html: "Certificate contains"
-                },
-                {
-                  html: "Dispatch method"
-                },
-                {
-                  html: "Fee"
-                }
-
-              ],
-              rows: [
-                [
-                  {
-                    html:"THE GIRLS DAY SCHOOL TRUST"
-                  },
-                  {
-                    text: "10987888"
-                  },
-                  {
-                    text: "Company name and number, incorporation date, current registered office address, current directors, current secretaries and nature of business."
-                  },
-                  {
-                    text:"Paper - standard"
-                  },
-                  {
-                    text:"£15"
-                  }
-                ]
-              ]
-          }) }}
+ 
 
 
 
