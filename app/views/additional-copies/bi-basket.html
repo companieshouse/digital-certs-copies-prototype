@@ -1,0 +1,195 @@
+
+{% extends "layout.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block pageTitle %}
+  Your basket -  Find and update company details - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar-basket-two-items.html" %}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">Your basket</h1>
+        <p class="govuk-body">You can add up to 10 items to your basket.</p> <!-- this is not in the live service but is it useful to keep? -->
+       
+
+        
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+           
+
+        <!-- do we need this heading that says 'for delivery'? -->
+          <h2 class="govuk-heading-m govuk-!-font-weight-bold govuk-!-margin-0">For delivery</h2>
+ <br>
+            <!-- we had changed this to 'Company certificates'. I've matched it to live, do we want to change this to Company certificate now? -->
+               <h2 class="govuk-heading-m govuk-!-font-weight-bold govuk-!-margin-0">Certified certificates</h2>
+             
+
+             <div class="govuk-!-padding-top-2 govuk-!-padding-bottom-0 govuk-!-padding-right-0 govuk-!-padding-left-0">
+
+               {{ govukTable({
+                    caption: "Certificate type",
+                   captionClasses: "govuk-visually-hidden",
+                    classes: "govuk-!-margin-bottom-4",
+                     head: [
+                     {
+                       html: "Company name",
+                       classes:'no-wrap'
+                     },
+                     {
+                       html: "Company number",
+                       classes:'no-wrap'
+                     },
+                     {
+                       html: "Dispatch method"
+                     },
+                     {
+                       html: "Number of copies",
+                       classes:'no-wrap'
+                     },
+                     {
+                       html: "Fee"
+                     },
+                     {
+                       html: '<span class="govuk-visually-hidden">View/Change certificate options</span>'
+                     },
+                     {
+                       html: '<span class="govuk-visually-hidden">Remove</span>'
+                     }
+
+                     ],
+                     rows: [
+                       [
+                       {
+                           text: "Incorporation with all company name changes"
+                         },
+                         {
+                           text: "00006400"
+                         },
+                       {
+                           text: "Express"
+                         },
+                         {
+                           text: "2"
+                         },
+                         {
+                            html: "£60"
+                         },
+                         {
+                            html:'<a href="">View/Change certificate options<span class="govuk-visually-hidden">Digital company certificate for The Girls Day School Trust 00006400</span></a>'
+                         },
+                         {
+                            html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Digital company certificate for The Girls Day School Trust 00006400</span></a>'
+                         }
+                       ],
+                       [
+                       {
+                           text: "Incorporation with all company name changes"
+                         },
+                         {
+                           text: "00006400"
+                         },
+                       {
+                           text: "Express"
+                         },
+                         {
+                           text: "2"
+                         },
+                         {
+                            html: "£60"
+                         },
+                         {
+                            html:'<a href="">View/Change certificate options<span class="govuk-visually-hidden">Digital company certificate for The Girls Day School Trust 00006400</span></a>'
+                         },
+                         {
+                            html:'<a href="javascript:void(0)">Remove<span class="govuk-visually-hidden">Digital company certificate for The Girls Day School Trust 00006400</span></a>'
+                         }
+                       ]
+                     ]
+                 }) }}
+
+                 
+               
+
+             
+                
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+   
+    <h3 class="govuk-heading-m">Delivery details</h3>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body govuk-!-font-weight-bold">Delivery address</p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p>Mr R Lion<br>64 Zoo Lane<br>London<br>W1 500</p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p><a href="#" class="govuk-link">Change</a></p>
+  </div>
+</div>
+
+
+
+
+    <h3 class="govuk-heading-m">Dispatch information</h3>
+    
+    <p class="govuk-body">For standard paper dispatch we aim to send your items within 10 working days. We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail international post.</p>
+    
+    <h4 class="govuk-heading-m">Total: £24</h4>
+
+     <div class="govuk-button-group">
+
+        {{ govukButton({
+            text: "Continue to payment",
+            href:"../payment"
+        }) }}
+<!-- this says 'add another document' in live, do we want to change that to 'item' -->
+        {{ govukButton({
+            text: "Add another item",
+            classes: "govuk-button--secondary",
+            href:"../search2"
+        }) }}
+
+
+      </div>
+
+
+
+
+    </div>
+    </div>
+</form>
+
+
+
+{% endblock %}
