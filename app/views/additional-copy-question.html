@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% set serviceName %}
+  Order a certificate
+{% endset%}
+{% block pageTitle %}
+Choose certificate information
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: ""
+  }) }}
+{% endblock %}
+
+{% block content %}
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <form action="" method="post">
+
+          {{ govukRadios({
+            name: "additional-copies",
+            fieldset: {
+              legend: {
+                text: "Would you like additional copies of the certificate?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+              hint: {
+                text: "The first copy is £XX and additional copies are £YY each. You can order up to 10 additional copies."
+              },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ]
+          }) }}
+
+
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </form>
+      </div>
+</div>
+
+<!-- need to add if else href - link to delivery details if no email copy selected, link straight to basket if email selected -->
+
+
+{% endblock %}
