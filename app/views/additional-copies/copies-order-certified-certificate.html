@@ -1,0 +1,168 @@
+<!-- copied from order certified doc, change to make order certificate -->
+{% extends "layout.html" %}
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% set serviceName %}
+  Order a company certificate
+{% endset%}
+{% block pageTitle %}
+  Order a company certificate
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/user-bar.html" %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/#view-all"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<!--
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+{% set html %}
+ <p class="govuk-notification-banner__heading">
+    This order will be for THE GIRLS' DAY SCHOOL TRUST (00006400).
+
+  </p>
+  <p class="govuk-body"> If you want to order a certificate for a different company, you will need to <a class="govuk-notification-banner__link" href="#">search for the company on the register,</a> then use the 'More' tab on the company page to re-enter this service.</p>
+  <p class="govuk-notification-banner__heading">
+    Try our new digital service.
+
+  </p>
+  
+  <p class="govuk-body"> You may get the option to choose a digital certificate for your order.</p>
+  
+
+{% endset %}
+
+{{ govukNotificationBanner({
+  html: html
+}) }} -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/order-certified-certificate" method="post">
+
+      <span class="govuk-caption-l">THE GIRLS' DAY SCHOOL TRUST</span>  
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Order a company certificate</h1>
+
+      <p class="govuk-body-l">Use this service to order a signed certificate for a company, including all company name changes. </p>
+
+      <p class="govuk-body">You can add company information to the certificate, including:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>a summary statement (this used to be known as a statement of good standing)</li>
+            <li>the registered office address</li>
+            <li>company directors</li>
+            <li>company secretaries</li>
+            <li>company objects</li>
+  </ul>
+
+      
+        <div class="govuk-inset-text">
+          A company certificate is different to the certificate of incorporation from when the company was formed. Copies of these can be ordered through the <a href="order-certified-document" class="govuk-link">Order a certified document service</a>.
+        </div>
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+  
+        <p class="govuk-body">You should check the company information is up to date before you order. The information on the certificate will be taken from the company’s filing history at the time of ordering.</p>
+      
+     <!-- <p class="govuk-body">Check that you’re using the right service. Use this service to order a company certificate with certified information about the company.</p> 
+      <p class="govuk-body">A certificate can be used to prove that a company is incorporated, and that no action is being taken to remove the company from the register.</p> -->
+
+
+
+
+      <h2 class="govuk-heading-m">What you'll need</h2>
+
+      <p class="govuk-body">You'll need:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>to sign in to or create an account</li>
+          <li>a debit or credit card</li>
+        </ul>
+      <p class="govuk-body">To order for a different company, <a href="">search for the company on the register</a>.</p>
+
+
+  <!--      <h2 class="govuk-heading-s">Ordering incorporation documents</h2>
+
+        <p class="govuk-body">Orders for incorporation documents consist of only the memorandum and articles. If these are not available, we will include IN01 or an equivalent documents instead.</p>
+
+
+          <p class="govuk-body">You cannot use this service to order:</p>
+          <ul class="govuk-list govuk-list--bullet">
+          <li>a copy of the certificate of incorporation that was issued when the company was formed. It can only be ordered by calling Companies House on 0303 1234 500.</li>
+            <li> a certificate that confirms company details and can include a statement of good standing (also known as a certificate of good standing). For this, you'll need to use our <a href="#" class="govuk-link">Order a certificate service</a>.</li>
+          </ul> -->
+
+
+
+        
+        
+
+
+
+
+
+        
+
+
+
+        {{ govukButton({
+          text: "Start now",
+          classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+          isStartButton: true
+        }) }}
+
+        {{ govukTable({
+                  caption: "Costs",
+                  captionClasses: "govuk-table__caption--m",
+                  firstCellIsHeader: true,
+                   head: [
+                    {
+                      text: "Service"
+                    },
+                    {
+                      text: "Cost"
+                    }, 
+                    {
+                      text: "Dispatch information"
+                    }
+                  ],
+                  rows: [
+
+            [
+              {
+                text: "Standard"
+              },
+              {
+                text: "£15"
+              }, 
+              {
+                text: "We will aim to send out the order within 10 working days. We send UK orders by Royal Mail 2nd Class post and international orders by Royal Mail International Standard post."
+              }
+            ],
+            [
+              {
+                text: "Express"
+              },
+              {
+                text: "£50"
+              }, 
+              {
+                text: "Orders received before 11am will be sent out the same working day. Orders received after 11am will be sent out the next working day. We send UK orders by Royal Mail 1st Class post and international orders by Royal Mail International post."
+              }
+            ]
+          ]
+        }) }}
+
+
+
+
+
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
